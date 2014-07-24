@@ -7,7 +7,8 @@
 }
 
 .nav li {
-  display: inline;
+  display: none;
+
 }
 
 .jumbotron {
