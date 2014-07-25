@@ -40,7 +40,7 @@
 
 @media only screen and (max-device-width: 480px) {
    .neighborhood-guides{display:none;}
-   .jumbotron{height:800px;}
+   .jumbotron{height:700px;}
 }
 .neighborhood-guides{
     background-color:#efefef;
