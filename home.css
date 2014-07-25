@@ -15,7 +15,7 @@
 
 .jumbotron {
   background-image:url('http://goo.gl/b8rZUV');
-  background-repeat: no-repeat;
+  border-image-repeat: stretch;
   height: 500px;
 }
 
