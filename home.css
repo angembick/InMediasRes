@@ -39,24 +39,24 @@
 }
 
 @media only screen and (max-device-width: 480px) {
-   .neighborhood-guides{display:none;}
+   .country-profiles{display:none;}
    .jumbotron{height:700px;}
    .nav a {font-size: 25px;
             padding: 14px 10px;}
 }
-.neighborhood-guides{
+.country-profiles{
     background-color:#efefef;
     border-bottom:1px solid #dbdbdb;
 }
-.neighborhood-guides h2{
+.country-profiles h2{
     color:#393c3d;
     font-size: 24px;
 }
-.neighborhood-guides p{
+.country-profiles p{
     font-size:15px;
     margin-bottom:13px;
     }
-.neighborhood-guides .row img{
+.ncountry-profiles .row img{
   height: 200px;
   width: 300px;
   background-repeat: no-repeat;
