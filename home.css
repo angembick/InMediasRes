@@ -11,9 +11,7 @@
 .nav .container ul li {
   display: inline;
 }
-.test ul li{
-  display: inline;
-}
+
 .jumbotron {
   background-image:url('http://goo.gl/b8rZUV');
   height: 500px;
