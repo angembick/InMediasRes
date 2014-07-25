@@ -14,12 +14,10 @@
 }
 
 .jumbotron {
-  background:url('http://goo.gl/b8rZUV')no-repeat center center;
+  background:url('http://goo.gl/b8rZUV')no-repeat center center fixed;
   height: 500px;
 }
-.jumbotron img{
 
-}
 .jumbotron .container {
   position: relative;
   top:10px;
@@ -40,6 +38,9 @@
     color:green;
 }
 
+@media only screen and (max-device-width: 480px) {
+   .neighborhood-guides{display:none;}
+}
 .neighborhood-guides{
     background-color:#efefef;
     border-bottom:1px solid #dbdbdb;
