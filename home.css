@@ -36,19 +36,26 @@
 }
 .jumbotron a{
     color:green;
-    }
+}
+
 .neighborhood-guides{
     background-color:#efefef;
     border-bottom:1px solid #dbdbdb;
-    }
+}
 .neighborhood-guides h2{
     color:#393c3d;
     font-size: 24px;
-    }
+}
 .neighborhood-guides p{
     font-size:15px;
     margin-bottom:13px;
     }
+.neighborhood-guides .row img{
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .learn-more {
   background-color: #f7f7f7;
 }
