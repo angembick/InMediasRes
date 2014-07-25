@@ -44,6 +44,13 @@
    .nav a {font-size: 25px;
             padding: 14px 10px;}
 }
+@media only screen and (max-device-width: 1440px) {
+   .neighborhood-guides{display:none;}
+   .jumbotron{height:700px;}
+   .nav a {font-size: 20px;
+            padding: 14px 10px;}
+    .neighborhood-guides .row img{ height:100px; width: 100px;}
+}
 .neighborhood-guides{
     background-color:#efefef;
     border-bottom:1px solid #dbdbdb;
