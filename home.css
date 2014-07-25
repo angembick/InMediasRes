@@ -50,13 +50,13 @@
 }
 .neighborhood-guides h2{
     color:#393c3d;
-    font-size: 44px;
+    font-size: 24px;
 }
 .neighborhood-guides p{
     font-size:15px;
     margin-bottom:13px;
     }
-.neighborhood .row img{
+.neighborhood-guides .row img{
   height: 200px;
   width: 300px;
   background-repeat: no-repeat;
