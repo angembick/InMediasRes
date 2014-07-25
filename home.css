@@ -49,14 +49,14 @@
     border-bottom:1px solid #dbdbdb;
 }
 .country-profiles h2{
-    color:#393c3d;
+    color:blue;
     font-size: 24px;
 }
 .country-profiles p{
     font-size:15px;
     margin-bottom:13px;
     }
-.country-profiles .row img{
+.country-profiles img{
   height: 200px;
   width: 300px;
   background-repeat: no-repeat;
