@@ -18,6 +18,9 @@
   height: 500px;
 }
 
+.jumbotron img{
+  background-repeat: no-repeat;
+}
 .jumbotron .container {
   position: relative;
   top:10px;
