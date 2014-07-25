@@ -14,10 +14,12 @@
 }
 
 .jumbotron {
-  background:url('http://goo.gl/b8rZUV')no-repeat center center fixed;
+  background:url('http://goo.gl/b8rZUV')no-repeat center center;
   height: 500px;
 }
+.jumbotron img{
 
+}
 .jumbotron .container {
   position: relative;
   top:10px;
