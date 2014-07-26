@@ -39,8 +39,7 @@
 }
 
 @media only screen and (max-device-width: 480px) {
-   .neighborhood-guides{display:none;}
-   .neighborhood-guides img{display:none;}
+   .countries {display:none;}
    .jumbotron{height:700px;}
    .nav a {font-size: 25px;
             padding: 14px 10px;}
@@ -61,6 +60,15 @@
   height: 200px;
   width: 300px;
   background-repeat: no-repeat;
+}
+.countries img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.countries img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
 }
 
 .learn-more {
