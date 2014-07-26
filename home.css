@@ -66,6 +66,10 @@
   filter: grayscale(1);
 }
 
+.countries img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 
 .learn-more {
   background-color: #f7f7f7;
