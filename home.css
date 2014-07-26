@@ -73,8 +73,8 @@
 }
 .countries .imgDescription {
   position: absolute;
-  top:90px;
-  left:center;
+  top:10px;
+  left:10px;
   color: white;
   font-weight: bold;
   font-size: 30px;
