@@ -72,14 +72,12 @@
   -webkit-filter: grayscale(0%);
 }
 .countries .imgDescription {
-  position: center;
-  font-size: 25px;
-  font-weight: bold;
-  background: no-repeat;
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
+  background: rgba(29, 106, 154, 0.72);
   color: #fff;
 
 
