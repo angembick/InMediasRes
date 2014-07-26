@@ -40,6 +40,7 @@
 
 @media only screen and (max-device-width: 480px) {
    .neighborhood-guides{display:none;}
+   .neighborhood-guides img{display:none;}
    .jumbotron{height:700px;}
    .nav a {font-size: 25px;
             padding: 14px 10px;}
