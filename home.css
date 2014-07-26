@@ -74,8 +74,8 @@
 .countries .imgDescription {
   position: absolute;
   top:10px;
-  left:10px;
-  color: white;
+  left:30px;
+  color: #CDFECD;
   font-weight: bold;
   font-size: 30px;
   visibility: visible;
