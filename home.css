@@ -67,6 +67,7 @@
 }
 
 .countries img:hover {
+  -webkit-transition: all .6s ease; 
   filter: none;
   -webkit-filter: grayscale(0%);
 }
