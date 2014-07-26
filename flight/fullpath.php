@@ -1,5 +1,25 @@
-<?php
-$dir = dirname(__FILE__);
-echo "<p>Full path to this dir: " . $dir . "</p>";
-echo "<p>Full path to a .htpasswd file in this dir: " . $dir . "/.htpasswd" . "</p>";
+<!DOCTYPE>
+<html>
+<head>
+
+</head>
+<body>
+	<div>
+		<!--<img src="flight/image.jpg">
+	--></div>
+	< ?php
+
+$path = phpinfo();
+
 ?>
+
+
+
+< ?php echo " the path is " .$path; ?>
+< ?php
+
+phpinfo();
+
+?>
+</body>
+</html>
