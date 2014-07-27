@@ -1,4 +1,0 @@
-AuthType Basic  
-AuthName "restricted area"  
-AuthUserFile /flight/flight-plan/.htpasswd  
-require valid-user
