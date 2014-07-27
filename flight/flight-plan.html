@@ -7,7 +7,7 @@
 	<div>
 		<!--<img src="flight/image.jpg">
 	--></div>
-	< ?php
+	<?php
 
 $path = phpinfo();
 
@@ -15,8 +15,8 @@ $path = phpinfo();
 
 
 
-< ?php echo " the path is " .$path; ?>
-< ?php
+<?php echo " the path is " .$path; ?>
+<?php
 
 phpinfo();
 
