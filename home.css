@@ -30,9 +30,13 @@
   font-weight: bold;
 }
 
-.jumbotron p {
+.jumbotron h2 {
   font-size: 20px;
   color: #5a5a5a;
+}
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
 }
 .jumbotron a{
     color:green;
