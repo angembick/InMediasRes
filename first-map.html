@@ -10,14 +10,16 @@
       border-radius: 20px;
       box-shadow: rgba(0, 0, 0, 0.55) 10px 20px 20px;
       border: 1px solid red;}
-      .gm-style {
-    overflow:hidden;
-    border-radius: 20px;
+ #map-canvas .gm-style , #map-canvas > .gm-style > div  {
+    overflow:hidden !important;
+    border-radius: 20px !important;
 }
     </style>
     
-   <script src="http://maps.google.com/maps/api/js?v=3.13&sensor=false"></script>
-
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
+      >
+    </script>
     <script type="text/javascript" src="map.js">
     </script>
   </head>
