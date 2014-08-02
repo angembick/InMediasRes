@@ -3,48 +3,12 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <style type="text/css">
-          .gmap {
-      position: absolute;
-      height: 425px;
-      width: 550px;
-      background: url(http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Abh%C3%B6ranlage_Gablingen.JPG/640px-Abh%C3%B6ranlage_Gablingen.JPG);
-    }
-    http://jsfiddle.net/wmcmeans/mPGWx/10/#fork.left { left: 20px; }
-    .right {left: 600px; }
-    .top { top: 30px; }
-    .bottom { top: 500px; }
-    .bling {
-      overflow: hidden;
-    -moz-border-radius:20px;
-    -webkit-border-radius:20px;
-      border-radius: 20px;
-      box-shadow: rgba(0, 0, 0, 0.55) 10px 20px 20px;
-      border: 1px solid red;
-    }
-    .txt {
-      position: absolute;
-      top: 12px;
-      width: 550px;
-      font-size: 12px;
-      font-family: Arial;
-      text-align: center;
-    }
-    .txt2 {
-      position: absolute;
-      top: 482px;
-      width: 550px;
-      font-size: 12px;
-      font-family: Arial;
-      text-align: center;
-    }
-
-#map1 > .gm-style > div, #map1 > .gm-style > div > div  {
-    overflow:hidden;
-    border-radius: 20px;
-}
-}
-
-}
+      html { height: 100% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 50%;
+       width: 50%;
+        overflow: hidden; 
+        border-radius:50%;}
     </style>
     
     <script type="text/javascript"
@@ -53,55 +17,18 @@
     </script>
     <script type="text/javascript">
       function initialize() {
-    var myLatlng = new google.maps.LatLng(48.451123,10.862346);
-    var myOptions = {
-      zoom: 16,
-      center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.HYBRID
-    }
-    
-    var map = new google.maps.Map(document.getElementById("map1"), myOptions);
-    
-    var contentString = 
-        '<div id="infowindow">' +
-        '<b>AN/FLR-9 CDDA "Elephant Cage" Antenna</b><br />' +
-        'Located  outside Gablingen, Germany, this receive-only<br>' +
-        'antenna is used by the BND (German CIA). It was<br>' +
-        'formerly operated by the US Army, 66th MI Brigade (USAFSA).' +
-        '</div>'
-    ;
-
-    var infowindow = new google.maps.InfoWindow();
-    
-    var marker = new google.maps.Marker({
-        position: myLatlng,
-        map: map,
-        title: 'The Roundhouse'
-    });
-    google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(contentString);
-        infowindow.open(map, marker);
-    });
-}
-
-window.onload = function() {
-    initialize();
-};
-
+        var mapOptions = {
+          center: new google.maps.LatLng(37.7423320, -122.4524330),
+          zoom: 8
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    >
     </script>
   </head>
   <body>
-        <div id="map1" class="gmap left top bling"></div>
-
-    <iframe id="map2" class="gmap right top bling" height="425" width="550" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;q=augsburg+germany&amp;ie=UTF8&amp;hq=&amp;hnear=Augsburg,+Bavarian+Swabia,+Bavaria,+Germany&amp;t=h&amp;ll=48.451123,10.862346&amp;spn=0.004981,0.00912&amp;z=18&amp;output=embed"></iframe>
-
-    <div id="map3" class="gmap left bottom bling"></div>
-
-    <p class="txt left"><b>API V3</b>: Any pointed corners indicate map tiles are overdrawing the container.</p>
-
-    <p class="txt right"><b>IFRAME</b>: The map respects the border-radius styling of the parent iframe.</p>
-
-    <p class="txt2 left"><b>NOMAP</b>: A DIV styled with border-radius having no map.</p>
-
+    <div id="map-canvas"/>
   </body>
 </html>
