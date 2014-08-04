@@ -50,3 +50,6 @@ body {
 .jumbotron a{
     color:green;
 }
+@media only screen and (max-device-width: 480px) {
+  .jumbotron {background-image:url('IMG_1003.png')}
+}
