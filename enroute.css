@@ -22,7 +22,7 @@ body {
 }
 
 .jumbotron {
-  background:url('IMG_1003.png')no-repeat;
+  background:url('IMG_1003.png');
   height: 90%;
 }
 
@@ -48,4 +48,11 @@ body {
 }
 .jumbotron a{
     color:green;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .jumbotron { 
+    background:url('IMG_1003.png')no-repeat center center;
+    height: 90%;
+  }
 }
