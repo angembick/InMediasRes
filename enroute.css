@@ -22,8 +22,7 @@ body {
 }
 
 .jumbotron {
-  background-image:url('IMG_1003.png')no-repeat center center;
-  background-size: 100%;
+  background:url('IMG_1003.png')no-repeat center center;
   height: 90%;
 }
 
