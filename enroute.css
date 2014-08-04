@@ -41,7 +41,7 @@ body {
 
 .jumbotron h2 {
   font-size: 20px;
-  color: #F0FFFF;
+  color:lightgray;
 }
 .jumbotron p {
   font-size: 20px;
@@ -55,7 +55,7 @@ body {
     background:url('IMG_1003.png') no-repeat center center;
     background-size: 100%;
     height: 85%;
-    background-color: gray;
+    background-color: #F0FFFF;
   }
   .jumbotron h1{
     float: left;
