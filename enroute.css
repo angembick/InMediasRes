@@ -64,8 +64,8 @@ body {
     display: none;
   } 
   .nav a {
-    font-size: 50px;       
-    padding: 5px 5px;
+    font-size: 50px; 
+  padding: 14px 10px;
   }
 }
 }
