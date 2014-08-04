@@ -54,5 +54,7 @@ body {
   .jumbotron {
     background:url('IMG_1003.png') no-repeat center center;
     background-size: 100%;
+    height: 85%;
+    background-color: gray;
 }
 }
