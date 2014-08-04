@@ -1,4 +1,4 @@
 AuthType Basic  
 AuthName "restricted area"  
-AuthUserFile aangelinaa.github.io/flight/flight-plan/.htpasswd  
+AuthUserFile waangelinaa.github.io/flight/flight-plan/.htpasswd  
 Require valid-user
