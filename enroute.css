@@ -1,0 +1,112 @@
+.nav a {
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+.nav  ul{
+  list-style: none;
+  text-decoration: none;
+}
+.nav  ul li {
+  display: inline;
+}
+
+.jumbotron {
+  background:url('IMG_1003.JPG')no-repeat center center;
+  height: 500px;
+}
+
+.jumbotron .container {
+  position: relative;
+  top:10px;
+}
+
+.jumbotron h1 {
+  color: #5c5c5c;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron h2 {
+  font-size: 20px;
+  color: #5a5a5a;
+}
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+.jumbotron a{
+    color:green;
+}
+
+@media only screen and (max-device-width: 480px) {
+   .countries {display:none;}
+   .jumbotron{height:700px;}
+   .nav a {font-size: 25px;
+            padding: 14px 10px;}
+}
+.countries{
+    background-color:#efefef;
+    border-bottom:1px solid #dbdbdb;
+}
+.countries h2{
+    color:#393c3d;
+    font-size: 24px;
+}
+.countries p{
+    font-size:15px;
+    margin-bottom:13px;
+    }
+.countries .row img{
+  height: 200px;
+  width: 300px;
+  background-repeat: no-repeat;
+}
+.countries img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+
+.countries img:hover {
+  -webkit-transition: all .6s ease; 
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+.countries .imgDescription {
+  position: absolute;
+  top:10px;
+  left:30px;
+  color: #CDFECD;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  font-weight: bold;
+  font-size: 30px;
+  visibility: visible;
+  opacity: 1;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+
+.countries .thumbnail:hover .imgDescription {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: green;
+}
