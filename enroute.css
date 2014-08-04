@@ -22,7 +22,7 @@ body {
 }
 
 .jumbotron {
-  background:url('IMG_1003.png')no-repeat center center;
+  background:url('IMG_1003.png')no-repeat;
   height: 90%;
 }
 
