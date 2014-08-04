@@ -61,6 +61,11 @@ body {
     float: left;
   } 
   .jumbotron h2 {
-    float: left;
+    display: none;
   } 
+  .nav a {
+    font-size: 25px;       
+    padding: 14px 10px;
+  }
+}
 }
