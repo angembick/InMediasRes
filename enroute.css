@@ -57,7 +57,10 @@ body {
     height: 85%;
     background-color: gray;
   }
-  .jumbotron h1, .jumbotron h2 {
+  .jumbotron h1{
+    float: left;
+  } 
+  .jumbotron h2 {
     float: left;
   } 
 }
