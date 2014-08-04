@@ -6,6 +6,8 @@
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
       #map-canvas { height: 100% }
+      #wrapper { position: relative; }
+   #over_map { position: absolute; top: 10px; left: 10px; z-index: 99; }
     </style>
     
     <script type="text/javascript"
@@ -26,6 +28,13 @@
     <title>Enroute</title>
   </head>
   <body>
-    <div id="map-canvas"/>
+    <div id="wrapper">
+   
+      <div id="map-canvas"/>
+
+      <div id="over_map">
+
+      </div>
+    </div>
   </body>
 </html>
