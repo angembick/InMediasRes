@@ -15,6 +15,7 @@
 
 .jumbotron {
   background:url('IMG_1003.JPG');
+  height: 80%;
 }
 
 .jumbotron .container {
