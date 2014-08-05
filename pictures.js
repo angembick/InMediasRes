@@ -10,6 +10,9 @@ var main = function() {
         $(".popular").append("<li><a target='_blank' href='" + data.data[i].link + "'><img src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
       }
     }
+for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li>hi</li>");
+
   });
 }
 
