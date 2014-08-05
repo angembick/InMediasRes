@@ -1,5 +1,5 @@
 
-$(document).ready(function(){
+var main = function() {
   $.ajax({
     type: "GET",
     dataType: "jsonp",
@@ -11,4 +11,7 @@ $(document).ready(function(){
       }
     }
   });
-});
+}
+
+
+$(document).ready(main);
