@@ -44,7 +44,7 @@
 
     var access_parameters = {access_token:access_token};
 
-    function grabImages() {
+    function grabImages(access_parameters) {
 
       var instagramUrl = 'https://api.instagram.com/v1/tags/' + tag + '/media/recent?callback=?&count='+ count;
 
@@ -52,7 +52,7 @@
 
     }
 
-    function onDataLoaded() {
+    function onDataLoaded(access_parameters) {
       // instagram_data.meta is where the secret messages from Instagram live
       // and instagram_data.meta.code holds the status code of the request
       // 404 means nothing was found, and 200 means everything is all good so...
@@ -86,7 +86,6 @@
         }
       }
     }
-    grabImages(access_parameters);
 
   });
 
