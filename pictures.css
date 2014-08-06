@@ -1,6 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Lato);
+html { height: 100% }
 body {
   background: #EDEDED;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 .popular li, .latest li {
   display: inline-block;
@@ -34,3 +38,4 @@ span {
   display: block;
   padding: 10px 0px;
 }
+#map-canvas { height: 100% }
