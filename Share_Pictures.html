@@ -2,6 +2,7 @@
 <html>
 
   <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" type="text/css" href="pictures.css">
   
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
@@ -9,6 +10,21 @@
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     
     <link rel="stylesheet" href="enroute.css">
+
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
+      >
+      </script>
+      <script type="text/javascript">
+
+  function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(33.989854, -118.473859),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+        </script>
     
     <title>Enroute.Pictures</title>
   </head>
@@ -46,20 +62,7 @@
 
     <div id="map-canvas"/>
 
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
-      >
-      </script>
-      <script type="text/javascript">
-
-  function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(33.989854, -118.473859),
-          zoom: 13
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-        </script>
+    
     <!--<script type="text/javascript" src="pictures.js">
 
     </script>-->
