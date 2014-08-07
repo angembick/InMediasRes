@@ -19,7 +19,7 @@ function initialize() {
         //Setting the shape to be used with the Glastonbury map marker.
         var markerShape = {
          coords: [0,0,20],
-         type: 'circle'
+         shape: 'circle'
         };
 
         var marker = new google.maps.Marker({
