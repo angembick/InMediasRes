@@ -9,7 +9,7 @@ function initialize() {
 
 
   //Setting the position of the Glastonbury map marker.
-  var markerPositionGlastonbury = new google.maps.LatLng(53.989854, -118.473859);
+  var markerPositionGlastonbury = new google.maps.LatLng(33.989854, -118.473859);
    
   //Setting the icon to be used with the Glastonbury map marker.
   var markerIconGlastonbury = {
