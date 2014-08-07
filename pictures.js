@@ -18,7 +18,8 @@ function initialize() {
         
         //Setting the shape to be used with the Glastonbury map marker.
         var markerShape = {
-         coord: [12,4,216,22,212,74,157,70,184,111,125,67,6,56]
+         coord: [0,0,20],
+         type: 'circle'
         };
 
         var marker = new google.maps.Marker({
@@ -26,8 +27,7 @@ function initialize() {
           map: map,
          icon: image,
          shape: markerShape,
-         title: 'Hello World!',
-         type: 'poly'
+         title: 'Hello World!'
         });
  
       }
