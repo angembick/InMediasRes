@@ -7,7 +7,7 @@ function initialize() {
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
 
-        var image = 'DSCF1309.PNG';
+        var image = 'flower.png';
         var marker = new google.maps.Marker({
          position: myLatlng,
           map: map,
