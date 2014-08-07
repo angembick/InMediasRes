@@ -15,10 +15,18 @@ function initialize() {
           origin: new google.maps.Point(0, 0),
           //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
           anchor: new google.maps.Point(189, 116)}
+        
+        //Setting the shape to be used with the Glastonbury map marker.
+        var markerShape = {
+         coord: [12,4,216,22,212,74,157,70,184,111,125,67,6,56],
+         type: 'poly'
+        };
+
         var marker = new google.maps.Marker({
          position: myLatlng,
           map: map,
          icon: image,
+         shape: markerShape,
          title: 'Hello World!'
         });
  
