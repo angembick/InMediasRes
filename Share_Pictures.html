@@ -18,20 +18,28 @@
 
   $(document).ready(function(){
 
+
+    //Append an empty grid with id="pics" to the gallery page content.
+    $("<div>").attr("id", "pics").attr("class", "ui-grid-b").appendTo('#gallery [data-role="content"]');
+ 
+
 //Connects to the Flickr API and reads the results of the query into a JSON array. This query uses the 'flickr.people.getPublicPhotos' method to access all the photos in a particular person's user account. It passes the resultant JSON array of data to the 'displayImages1' function below.
 //query the Flickr API
     $.getJSON("https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?",
     {
       api_key: "864e93f93bdb17c0e9ddab03b2c14709",
-      user_id: "936420066@N07",
-      format: "json"
-        }, displayImages1);
+      user_id: "936420066@N07"
+    format: "json"
+        },
+        function(data) {
+            $.each(data.items, function(i,item){
+                //append image to the grid, wrap with a link tag so it's clickable
+                $("<img/>").attr("src", item.media.m).appendTo("#pics").wrap("<a href=" + item.link + "></a>");
+                if ( i >= 8 ) return false; //display 9 images
+            });
+        });
 
-//This function actually does something with the data after it has been read in from the Flickr API.  
-function displayImages1(data) { 
-                     //Loop through the results in the JSON array of data. The 'data.photos.photo' 
-          $("#images1").append("<p>jquerytest<p>"); 
-}); 
+  });
 </script> 
 
 <title>Pictures</title>
@@ -55,7 +63,7 @@ function displayImages1(data) {
         </ul>
       </div>
     </div><!--The div where the javascript function (above) loads the photos etc.-->
-<div id="images1"> </div>
+<div id="gallery"> </div>
 <p>Test &nbsp;</p>
 
 
