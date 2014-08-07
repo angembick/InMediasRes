@@ -41,6 +41,7 @@
 
 
 <div id="images"></div>
+<div id="instaimages"></div>
  
 <script>
 (function() {
@@ -49,6 +50,7 @@
     id: "36420066@N07",
     tagmode: "any",
     format: "json"
+    //864e93f93bdb17c0e9ddab03b2c14709
   })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
@@ -58,6 +60,22 @@
         }
       });
     });
+
+
+
+
+  var instaAPI ="https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37";
+   $.getJSON( instaAPI)
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#instaimages" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+
+
 })();
 </script>
 
