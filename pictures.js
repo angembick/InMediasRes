@@ -18,7 +18,7 @@ function initialize() {
         
         //Setting the shape to be used with the Glastonbury map marker.
         var markerShape = {
-         coord: [0,0,20],
+         coords: [0,0,20],
          type: 'circle'
         }
 
