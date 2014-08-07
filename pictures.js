@@ -8,7 +8,7 @@ function initialize() {
             mapOptions);
 
         var image = {
-          url:'flower.png';
+          url:'flower.png',
           //The size image file.
           size: new google.maps.Size(225, 120),
           //The point on the image to measure the anchor from. 0, 0 is the top left.
