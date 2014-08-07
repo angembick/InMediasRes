@@ -20,7 +20,7 @@ function initialize() {
         var markerShape = {
          coords: [0,0,20],
          shape: 'circle'
-        };
+        }
 
         var marker = new google.maps.Marker({
          position: myLatlng,
