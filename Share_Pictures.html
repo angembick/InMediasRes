@@ -44,11 +44,8 @@
  
 <script>
 (function() {
-  var flickerAPI = "http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=864e93f93bdb17c0e9ddab03b2c14709&user_id=936420066@N07";
-  $.getJSON( flickerAPI, 
-    tagmode: "any",
-    format: "json"
-  })
+  var flickerAPI = "http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=[your api key here]&user_id=936420066@N07";
+  $.getJSON( flickerAPI)
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
