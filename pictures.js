@@ -7,13 +7,6 @@ function initialize() {
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
 
-        var image = 'DSCF1309.PNG';
-        var marker = new google.maps.Marker({
-         position: myLatlng,
-          map: map,
-         title: 'Hello World!'
-        });
- 
 
   //Setting the position of the Glastonbury map marker.
   var markerPositionGlastonbury = new google.maps.LatLng(53.989854, -118.473859);
@@ -40,7 +33,7 @@ function initialize() {
    //uses the position set above.
    position: markerPositionGlastonbury,
    //adds the marker to the map.
-   map: festivalMap,
+   map: map,
    title: 'Glastonbury Festival',
    //assigns the icon image set above to the marker.
    icon: markerIconGlastonbury,
