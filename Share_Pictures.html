@@ -10,13 +10,6 @@
 
 
 
-  <style>
-  img {
-    height: 100px;
-    float: left;
-  }
-  </style>
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
 <title>Pictures</title>
   </head>
   <body>
@@ -44,8 +37,12 @@
  
 <script>
 (function() {
-  var flickerAPI = "http://api.flickr.com/services/rest/?&method=flickr.people.getPublicPhotos&api_key=[your api key here]&user_id=35404722@N02";
-  $.getJSON( flickerAPI)
+  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+  $.getJSON( flickerAPI, {
+    tags: "south america",
+    tagmode: "any",
+    format: "json"
+  })
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
         $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
