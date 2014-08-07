@@ -26,7 +26,7 @@ function initialize() {
          position: myLatlng,
           map: map,
          icon: image,
-         shape: markerShape,
+         area: markerShape,
          title: 'Hello World!'
         });
  
