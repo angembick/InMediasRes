@@ -11,7 +11,6 @@ function initialize() {
         var marker = new google.maps.Marker({
          position: myLatlng,
           map: map,
-         icon: image,
          title: 'Hello World!'
         });
  
