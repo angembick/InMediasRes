@@ -1,4 +1,4 @@
-var main = function(){
+$(document).ready(function(){
   var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
   $.getJSON( flickerAPI, {
     id: "36420066@N07",
@@ -13,7 +13,4 @@ var main = function(){
         }
       });
     });
-};
-
-    
-$(document).ready(main);
+});
