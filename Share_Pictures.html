@@ -4,11 +4,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
 
     <link rel="stylesheet" type="text/css" href="pictures.css">
-  
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    
     <link rel="stylesheet" href="enroute.css">
 
 
@@ -26,28 +23,8 @@ $.getJSON("http://api.flickr.com/services/rest/?method=flickr.people.getPublicPh
 
 //This function actually does something with the data after it has been read in from the Flickr API.  
 function displayImages1(data) { 
-                     //Loop through the results in the JSON array of data. The 'data.photos.photo' bit is what you are trying to 'get at'. i.e. this loop looks at each photo in turn.
-                    $.each(data.photos.photo, function(i,item){
-          
-          //Reads in each photo id. 
-                    var photoID = item.id;
-          
-          //Adds the photo id to the 'images1' div (created in the main body of this html page).          
-          $('#images1').append(photoID); 
-          
-          //Gets the url for the image.
-          var photoURL = 'http://farm' + item.farm + '.static.flickr.com/' + item.server + '/' + item.id + '_' + item.secret + '_m.jpg';
-          
-          //Uses this URL to creats a html 'img' tag.
-          htmlString = '<img src="' + photoURL + '">';      
-          
-          //Adds this image to the 'images1' div.
-          $('#images1').append(htmlString); 
-          
-          //Adds some basic formatting to seperate out the images.
-          $('#images1').append("<br/><hr/><br/>");
-          
-          }); 
+                     //Loop through the results in the JSON array of data. The 'data.photos.photo' 
+          $.('#images1').append('test'); 
 }
 }); 
 </script> 
