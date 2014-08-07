@@ -17,7 +17,7 @@ function initialize() {
  //The point on the image to measure the anchor from. 0, 0 is the top left.
  origin: new google.maps.Point(0, 0),
  //The x y coordinates of the anchor point on the marker. e.g. If your map marker was a drawing pin then the anchor would be the tip of the pin.
- anchor: new google.maps.Point(189, 116)
+ anchor: new google.maps.Point(189, 116),
          title: 'Hello World!'
         });
  
