@@ -68,7 +68,7 @@
    $.getJSON( instaAPI)
     .done(function( data ) {
       $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#instaimages" );
+        $( "<img>" ).attr( "src", item.url.m ).appendTo( "#instaimages" );
         if ( i === 3 ) {
           return false;
         }
