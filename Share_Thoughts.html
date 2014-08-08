@@ -11,7 +11,7 @@
     <title>Enroute.Posts</title>
   </head>
 
-  <body>
+<body onload="init()">
     <div class="nav">
       <div class="container">
         <ul class="pull-left">
@@ -54,6 +54,7 @@
   })
 
 }
+google.blogger.event.addDomListener(window, 'load', init);
 
 
 </script>
