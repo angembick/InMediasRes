@@ -4,6 +4,8 @@ html {
 @import url(http://fonts.googleapis.com/css?family=Lato);
 body {
   background: #EDEDED;
+  height: 100%;
+  width: 100%;
 }
 .popular li, .latest li {
   display: inline-block;
