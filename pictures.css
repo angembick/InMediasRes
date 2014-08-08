@@ -5,6 +5,11 @@ html {
 body {
   background: #EDEDED;
 }
+
+  img {
+    height: 100px;
+    float: left;
+  }
 .popular li, .latest li {
   display: inline-block;
   width: 306px;
