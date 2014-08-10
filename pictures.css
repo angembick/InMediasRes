@@ -49,11 +49,7 @@ span {
   display: block;
   padding: 10px 0px;
 }
-.picmap{
-  height: 100%;
-  width: 100%;
-}
-.picmap #picturemap{
+#picturemap{
   height:100%;
   width: 30%;
   margin: 10px;
