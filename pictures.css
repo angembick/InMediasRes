@@ -26,11 +26,13 @@ h1 {
   color: #4F4F4F;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
+.row{
+  position: center;
+}
 
 #images img{
   width: 100px;
   height: 100px;
-  position: center; 
   margin: 14px 10px;
   border-radius: 50px;
   border: 1px solid #DEDEDE;
