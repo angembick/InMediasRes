@@ -33,50 +33,67 @@
     </div><!--The div where the javascript function (above) loads the photos etc.-->
 
 
-<span class=tagline></span>
-<div class="row">
-<div id="images"></div>
-</row>
+    <span class=tagline></span>
+    <div class="row">
+      <div id="images"></div>
+    </row>
 
-<!--
-<h1>Instagram</h1>
-<span class=tagline></span>
-<ul class="latest">
-</ul>
- -->
-<script>
-(function() {
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    id: "36420066@N07",
-    tagmode: "any",
-    format: "json"
-    //864e93f93bdb17c0e9ddab03b2c14709
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 5 ) {
-          return false;
+    <div class="picmap">
+      <div class="picture">
+      </div>
+      <div class="picturemap">
+      </div>
+    </div>
+
+    <!--
+    <h1>Instagram</h1>
+    <span class=tagline></span>
+    <ul class="latest">
+    </ul>
+     -->
+    <script>
+    (function() {
+      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      $.getJSON( flickerAPI, {
+        id: "36420066@N07",
+        tagmode: "any",
+        format: "json"
+        //864e93f93bdb17c0e9ddab03b2c14709
+      })
+        .done(function( data ) {
+          $.each( data.items, function( i, item ) {
+            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+            if ( i === 5 ) {
+              return false;
+            }
+          });
+        });
+
+
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
         }
-      });
+      }
     });
 
+    })();
 
-$.ajax({
-  type: "GET",
-  dataType: "jsonp",
-  cache: false,
-  url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
-  success: function(data) {
-    for (var i = 0; i < 6; i++) {
-    $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
-    }
-  }
-});
-
-})();
-</script>
+    function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(33.989854, -118.473859),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("picturemap"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 
 
   </body>
