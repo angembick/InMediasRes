@@ -29,9 +29,10 @@ h1 {
 
 #images img{
   width: 100px;
-  height: 100px; 
+  height: 100px;
+  position: center; 
   margin: 14px 10px;
-  border-radius: 10px;
+  border-radius: 50px;
   border: 1px solid #DEDEDE;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
