@@ -29,6 +29,7 @@ h1 {
 
 #images img, .latest img {
   width: 15%;
+  height: 15%;
   margin: 14px 10px;
   border-radius: 10px;
   border: 1px solid #DEDEDE;
