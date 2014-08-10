@@ -27,12 +27,13 @@ h1 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 .row{
-  position: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #images img{
-  width: 15%;
-  height: 100px;
+  width: 150%;
+  height: 150px;
   margin: 14px 10px;
   border-radius: 50px;
   border: 1px solid #DEDEDE;
