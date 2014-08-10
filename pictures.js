@@ -1,16 +1,10 @@
-$(document).ready(function(){
-  var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-  $.getJSON( flickerAPI, {
-    id: "36420066@N07",
-    tagmode: "any",
-    format: "json"
-  })
-    .done(function( data ) {
-      $.each( data.items, function( i, item ) {
-        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-        if ( i === 3 ) {
-          return false;
-        }
-      });
-    });
-})();
+
+    function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(33.989854, -118.473859),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("picturemap"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
