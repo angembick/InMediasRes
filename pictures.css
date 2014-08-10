@@ -26,12 +26,6 @@ h1 {
   color: #4F4F4F;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
-.row{
-  margin-left: auto;
-  margin-right: auto;
-  position: center;
-  text-align: center;
-}
 
 #images img{
   text-align: center;
