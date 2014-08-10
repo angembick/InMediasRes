@@ -56,11 +56,11 @@ span {
 .picture{
   height:100%;
   width:60%;
-  border-radius: 10px;
   border: 1px solid black;
   box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
   display: inline;
   float: left;
+  margin: 10px;
 }
 .picmap #picturemap{
   height:100%;
