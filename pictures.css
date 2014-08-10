@@ -27,9 +27,8 @@ h1 {
   text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
-#images img, .latest img {
-  width: 20px;
-  height: 20px;
+#images img{
+  width: 20px; 
   margin: 14px 10px;
   border-radius: 10px;
   border: 1px solid #DEDEDE;
