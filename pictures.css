@@ -53,14 +53,7 @@ span {
   height: 100%;
   width: 100%;
 }
-.picture{
-  height:100%;
-  width:70%;
-  border-radius: 10px;
-  border: 1px solid black;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-}
-#picturemap{
+.picmap #picturemap{
   height:100%;
   width: 30%;
   margin: 10px;
