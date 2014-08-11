@@ -67,15 +67,16 @@
         .done(function( data ) {
           $.each( data.items, function( i, item ) {
             $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-            if(i===0){
+            if(i===2){
               $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
+
             }
-            else if ( i === 7 ) {
+            else if ( i === 5 ) {
               return false;
             }
           });
         });
-    });
+
 
     $.ajax({
       type: "GET",
