@@ -67,16 +67,19 @@
         .done(function( data ) {
           $.each( data.items, function( i, item ) {
             $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-            if(i===5){
+            if(i===0){
               $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
-
             }
-            else if ( i === 5 ) {
+            else if ( i === 7 ) {
               return false;
             }
           });
         });
 
+    &('.images').click(function(){
+      var = currentimage
+
+    });
 
     $.ajax({
       type: "GET",
