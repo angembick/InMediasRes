@@ -20,7 +20,9 @@ body {
 .nav  ul li {
   display: inline;
 }
+
 .jumbotron {
+  background-image:url('IMG_1003.png');
   background-size: 100%;
   height: 85%;
 }
