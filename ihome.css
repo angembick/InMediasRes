@@ -7,11 +7,12 @@ body {
   height: 100%;
   width: 100%;
 }
-.popular li, .latest li {
+.latest li {
   display: inline-block;
   width: 306px;
   height: 306px;
   margin: 0px 20px 20px 0px;
+  border-radius: 10px;
 }
 .nav a {
   color: #5a5a5a;
