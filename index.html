@@ -3,11 +3,12 @@
 
   <head>
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
-    
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="pictures.css">
     
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   </head>
 
   <body>
@@ -25,67 +26,46 @@
         </ul>
       </div>
     </div>
-
-    <div class="jumbotron">
-      <div class="container">
-        <h1>travel:</h1>
-        <h2> Make a journey,</br> typically of some length <br>or abroad</h2>
-        <p>Oxford Dictionaries</p>
-       <!-- <a href="#">Learn More</a>-->
-      </div>
-    </div> 
-    <div class="countries">
-        <div class="container">
-            <h2>Países</h2>
-            <p>Cuatro países en cuatro meses</p>
-            <div class="row">
-                <div class="col-md-3"> 
-                    <div class="thumbnail">
-                       <a href="http://en.wikipedia.org/wiki/Peru"><img src="http://goo.gl/RWfFR"></a>
-                       <p class="imgDescription"><span> Peru</span></p>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="thumbnail">
-                        <a href="http://en.wikipedia.org/wiki/Bolivia"><img src="http://goo.gl/7XDI6F"></a>
-                        <p class="imgDescription"><span> Bolivia</span></p>
-                    </div>
-                </div>
-                <div class="col-md-3">	
-                    <div class="thumbnail">
-                        <a href="http://en.wikipedia.org/wiki/Chile"><img src="http://goo.gl/MJGQIm"></a>
-                        <p class="imgDescription"><span> Chile</span></p>
-                    </div>
-                </div>
-                <div class="col-md-3">	
-                    <div class="thumbnail">
-                        <a href="first-map.html"><img src="http://goo.gl/6CfhXL"></a>
-                        <p class="imgDescription"><span> Argentina</span></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="learn-more">
 	  <div class="container">
 		<div class="row">
-	      <div class="col-md-4">
-			<h3>Say Hey</h3>
-			<p>Want to say hey? Do you know a place or person I must visit? Use this link to send me a message! </p>
-			<p><a href="test.html">Send a Message</a></p>
+	      <div class="col-md-8">
+           <h3>None</h3>
+			       <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>->
 	      </div>
 		  <div class="col-md-4">
-      <h3>Flight Plan</h3>
-      <p>Hello Family! This secure link will show you my flight information. If you forgot or didnt recieve your password,I will resend it to you!</p>
-      <p><a href="flight/flight-plan.php">View Flight Plan</a></p>
-		  </div>
-		  <div class="col-md-4">
-			<h3>Good Bye LA</h3>
-			<p>A map of my Venice and some of the places I loved. </p>
-			<p><a href="venice-map">View the Map</a></p>
-		  </div>
+        <h3>InstaPics</h3>
+        <span class=tagline></span>
+        <ul class="latest">
+        </ul>
+        <p><a href="flight/flight-plan.php">View Flight Plan</a></p>
 	    </div>
 	  </div>
 	</div>
+
+  <script>
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
+    });
+
+    })();
+
+    function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(33.989854, -118.473859),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("picturemap"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </body>
 </html>
