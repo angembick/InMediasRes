@@ -38,6 +38,27 @@
 
       <script>
     (function() {
+      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      $.getJSON( flickerAPI, {
+        id: "36420066@N07",
+        tagmode: "any",
+        format: "json"
+        //864e93f93bdb17c0e9ddab03b2c14709
+      })
+        .done(function( data ) {
+          $.each( data.items, function( i, item ) {
+            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+            if(i===5){
+              $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
+
+            }
+            else if ( i === 7 ) {
+              return false;
+            }
+          });
+        });
+
+
     $.ajax({
       type: "GET",
       dataType: "jsonp",
@@ -51,7 +72,6 @@
     });
 
     })();
-     });
 
     </script>
   </body>
