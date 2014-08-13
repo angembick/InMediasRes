@@ -22,12 +22,25 @@ body {
 .nav  ul li {
   display: inline;
 }
-.container{
-  height:100%;
+.blogPic{
+  height: 100%;
+  width: 100%;
 }
-.rows{
+#blog{
   height:100%;
+  width:65%;
+  display: inline;
+  float: left;
+  margin: 10px;
 }
+#pic{
+  height:100%;
+  width:30%;
+  float:right;
+  margin: 10px;
+  display: inline;
+}
+
 @media only screen and (max-device-width: 480px) {
   .jumbotron {
     background:url('IMG_1003.png') no-repeat center center;
