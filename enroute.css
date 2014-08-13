@@ -20,7 +20,12 @@ body {
 .nav  ul li {
   display: inline;
 }
-
+.expanse{
+  height: 500px;
+}
+.expanse .row{
+  height: 500px;
+}
 .jumbotron {
   background-image:url('IMG_1003.png');
   background-size: 100%;
