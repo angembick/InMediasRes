@@ -67,8 +67,10 @@ body {
     font-size: 50px; 
   padding: 14px 18px; 
   }
-  #blog {
+  #inprogess{
     display: none;
+  }
+  #blog {
     float:none;
     width: 100%;
   }
