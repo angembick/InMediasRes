@@ -8,10 +8,7 @@
     
 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/blogger/v2/blogs/2096447250273390307&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
-      >
-    </script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
   </head>
 
   <body>
@@ -30,8 +27,8 @@
       </div>
     </div>
 		<div class="blogPic">
-	      <div id="blog">
-			       <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>
+	      <div id="target">
+			      <!-- <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>-->
 	      </div>
 		  <div id="pic">
         <span class=tagline></span>
@@ -77,6 +74,25 @@
 
     })();
 
+
+    function init() {
+      gapi.client.setApiKey('AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ');
+      gapi.client.load('blogger', 'v2', function() {
+        var request = gapi.client.blogger.posts.list({
+          'blogId': 2096447250273390307,
+          'fields': 'items(content,title)'
+        }); 
+        request.execute(function(response) {
+          for (var i = 0; i < response.items.length; i++) {
+            $("#target").append("<h2>" + response.items[i].title + "</h2>");
+            $("#target").append(response.items[i].content);
+            if (i+1<response.items.length) {
+              $("#target").append("<hr/>");
+            }
+          }
+        });
+      });
+    }
 
     function initialize() {
         var mapOptions = {
