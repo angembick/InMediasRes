@@ -30,8 +30,7 @@
       </div>
     </div>
 		<div class="blogPic" >
-	      <div id="blog"  >
-			       <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>
+	      <div id="content"  >
 	      </div>
 		  <div id="pic">
         <span class=tagline></span>
@@ -39,7 +38,14 @@
         </ul>
 	    </div>
 	  </div>
-
+    <script>
+      function handleResponse(response) {
+        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+      }
+    </script>
+    <script
+    src="https://www.googleapis.com/blogger/v2/blogs/3213900/posts/8398240586497962757?callback=handleResponse&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"></script>
+  
       <script>
     (function() {
       var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
