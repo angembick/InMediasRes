@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
+    <link rel="stylesheet" href="ihome.css">
+    
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/blogger/v2/blogs/2096447250273390307&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
+      >
+    </script>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container">
+        <ul class="pull-left">
+          <!--<li><a href="index.html">Home</a></li>
+          <li><a href="#">The Places</a></li>-->
+        </ul>
+        <ul class="pull-right">
+          <!--<li><a href="#">Post Cards</a></li>
+          <li><a href="#">Playlist</a></li>
+          <li id="inprogress"><a href="Share_Pictures.html">PicturesPage (in progress)</a></li>
+          <li><a href="#">Posts</a></li> -->
+        </ul>
+      </div>
+    </div>
+		<div class="blogPic" >
+	      <div id="blog"  >
+			       <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>
+	      </div>
+		  <div id="pic">
+        <span class=tagline></span>
+        <ul class="latest">
+        </ul>
+	    </div>
+	  </div>
+
+      <script>
+    (function() {
+      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      $.getJSON( flickerAPI, {
+        id: "36420066@N07",
+        tagmode: "any",
+        format: "json"
+        //864e93f93bdb17c0e9ddab03b2c14709
+      })
+        .done(function( data ) {
+          $.each( data.items, function( i, item ) {
+            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+            if(i===5){
+              $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
+
+            }
+            else if ( i === 7 ) {
+              return false;
+            }
+          });
+        });
+
+    })();
+
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
+    });
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2399953&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
+    });
+
+    </script>
+  </body>
+</html>
