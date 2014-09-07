@@ -40,13 +40,11 @@
 	  </div>
     <script>
       function handleResponse(response) {
-          $.each( data.items, function( i, item ) {
-                $(".c").append "<h1>" + response.title + "</h1>";
-      });
+        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
       }
     </script>
     <script
-    src="https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?callback=handleResponse&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"></script>
+    src="https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts/6853749631700517490?callback=handleResponse&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"></script>
   
       <script>
     (function() {
