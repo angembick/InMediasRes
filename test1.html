@@ -41,7 +41,7 @@
     <script>
       function handleResponse(response) {
           $.each( data.items, function( i, item ) {
-        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+                $(".c").append "<h1>" + response.title + "</h1>";
       });
       }
     </script>
