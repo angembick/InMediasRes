@@ -74,7 +74,7 @@
 
 
 
-    (function init() {
+    function init() {
       gapi.client.setApiKey('AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ');
       gapi.client.load('blogger', 'v2', function() {
         var request = gapi.client.blogger.posts.list({
@@ -91,7 +91,7 @@
           }
         });
       });
-    })();
+    }
     
     $.ajax({
       type: "GET",
