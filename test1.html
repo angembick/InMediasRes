@@ -35,38 +35,8 @@
         </ul>
 	    </div>
 	  </div>
-    <script>
-      function handleResponse(response) {
-        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
-      }
-    </script>
-    <script
-    src="https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts/6853749631700517490?callback=handleResponse&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"></script>
-  
+
       <script>
-    (function() {
-      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-      $.getJSON( flickerAPI, {
-        id: "36420066@N07",
-        tagmode: "any",
-        format: "json"
-        //864e93f93bdb17c0e9ddab03b2c14709
-      })
-        .done(function( data ) {
-          $.each( data.items, function( i, item ) {
-            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-            if(i===5){
-              $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
-
-            }
-            else if ( i === 7 ) {
-              return false;
-            }
-          });
-        });
-
-    })();
-
 
     
     $.ajax({
@@ -82,12 +52,9 @@
     });
     $.ajax({
       type: "GET",
-      dataType: "jsonp",
-      url: "https://www.googleapis.com/blogger/v2/blogs/2399953&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts/6853749631700517490&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(data) {
-        for (var i = 0; i < 6; i++) {
-        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
-        }
+        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
       }
     });
 
