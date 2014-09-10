@@ -2,8 +2,6 @@
 <html>
 
   <head>
-    <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="ihome.css">
     
 
@@ -29,16 +27,14 @@
         </ul>
       </div>
     </div>
-		<div class="blogPic" >
-	      <div id="blog"  >
-			       <iframe src="http://inasthought.blogspot.com" width="100%" height="100%" frameborder="0"></iframe>
-	      </div>
-		  <div id="pic">
-        <span class=tagline></span>
-        <ul class="latest">
-        </ul>
-	    </div>
-	  </div>
+    <div class="blogPic" >
+        <div class="posts"  >
+        </div>
+        <div id="pic">
+          <ul class="latest">
+          </ul>
+      </div>
+    </div>
 
       <script>
     (function() {
@@ -70,7 +66,7 @@
       cache: false,
       url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
       success: function(data) {
-        for (var i = 0; i < 7; i++) {
+        for (var i = 0; i < 7                                       Q; i++) {
         $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
         }
       }
@@ -83,6 +79,21 @@
         for (var i = 0; i < 6; i++) {
         $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
         }
+      }
+    });
+    
+    $.ajax({
+      type: "GET",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      success: function(response) {
+        for (var i = 0; i < response.items.length; i++) {
+            $(".posts").append("<h2>" + response.items[i].title + "</h2>")
+            $(".posts").append("<h1>" + response.items[i].published + "</h1>");
+            $(".posts").append(response.items[i].content);
+            if (i+1<response.items.length) {
+              $(".posts").append("<hr/>");
+            }
+          }
       }
     });
 
