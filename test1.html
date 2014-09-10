@@ -6,10 +6,7 @@
     
 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/blogger/v2/blogs/2096447250273390307&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
-      >
-    </script>
+    <script  type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
   </head>
 
   <body>
@@ -29,7 +26,8 @@
     </div>
 		<div class="blogPic" >
         <div id="content"  >
-
+        <div id="target"  >
+        </div>
 	      </div>
 		  <div id="pic">
         <span class=tagline></span>
@@ -37,9 +35,40 @@
         </ul>
 	    </div>
 	  </div>
-    
     <script>
+      function handleResponse(response) {
+        document.getElementById("content").innerHTML += "<h1>" + response.title + "</h1>" + response.content;
+      }
+    </script>
+    <script
+    src="https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts/6853749631700517490?callback=handleResponse&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"></script>
+  
+      <script>
+    (function() {
+      var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+      $.getJSON( flickerAPI, {
+        id: "36420066@N07",
+        tagmode: "any",
+        format: "json"
+        //864e93f93bdb17c0e9ddab03b2c14709
+      })
+        .done(function( data ) {
+          $.each( data.items, function( i, item ) {
+            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+            if(i===5){
+              $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
 
+            }
+            else if ( i === 7 ) {
+              return false;
+            }
+          });
+        });
+
+    })();
+
+
+    
     $.ajax({
       type: "GET",
       dataType: "jsonp",
@@ -53,11 +82,13 @@
     });
     $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fields=items(title)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      dataType: "jsonp",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2399953&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(data) {
         for (var i = 0; i < 6; i++) {
-          $("#content").append("<h2>" + response.items[i].title + "</h2>");
-      } 
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
     });
 
     </script>
