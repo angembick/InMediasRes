@@ -7,24 +7,40 @@
 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script  type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ"
+      >
+    </script>
   </head>
 
   <body>
     <div class="nav">
       <div class="container">
-       
-      </div>
+    </div>
+  
+    <div id="journeyMap">
+    </div>
+
     </div>
 		<div class="blogPic" >
         <div class="posts"  >
 	      </div>
-		  <div id="pic">
-        <ul class="latest">
-        </ul>
+		    <div id="pic">
+          <ul class="latest">
+          </ul>
 	    </div>
 	  </div>
 
       <script>
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(33.989854, -118.473859),
+          zoom: 13
+        };
+        var map = new google.maps.Map(document.getElementById("journeyMap"),
+            mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
 
     
    $.ajax({
