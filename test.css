@@ -1,21 +1,10 @@
 html { 
   height: 100%;
    }
-@import url(http://fonts.googleapis.com/css?family=Lato);
 body {
-  background: #EDEDED;
   height: 100%;
-  width: 100%;
-}
-.latest li {
-  display: inline-block;
-  width: 306px;
-  height: 306px;
-  margin: 0px 20px 20px 0px;
-  border-radius: 10px;
-}
-.latest li img{
-  border-radius: 10px;
+  margin:0;
+  padding: 0 
 }
 .nav a {
   color: #5a5a5a;
@@ -31,25 +20,35 @@ body {
 .nav  ul li {
   display: inline;
 }
-.blogPic{
-  height: 100%;
-  width: 100%;
-}
-#blog{
-  height:100%;
-  width:65%;
-  display: inline;
-  float: left;
-  margin: 10px;
-}
-#pic{
-  height:100%;
-  width:30%;
-  float:right;
-  margin: 10px;
-  display: inline;
+.jumbotron {
+  background-size: 100%;
+  height: 85%;
 }
 
+.jumbotron .container {
+  position: relative;
+  top:10px;
+}
+
+.jumbotron h1 {
+  color: #F0FFFF ;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron h2 {
+  font-size: 20px;
+  color: #F0FFFF;
+  font-weight: normal;
+}
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+.jumbotron a{
+    color:green;
+}
 @media only screen and (max-device-width: 480px) {
   .jumbotron {
     background:url('IMG_1003.png') no-repeat center center;
@@ -67,15 +66,5 @@ body {
     font-size: 50px; 
   padding: 14px 18px; 
   }
-  #inprogess{
-    display: none;
-  }
-  #blog {
-    float:none;
-    width: 100%;
-  }
-  #pic{
-    float: none;
-    width: 100%;
-  }
+}
 }
