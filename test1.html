@@ -81,7 +81,9 @@
           'blogId': 2096447250273390307,
           'fields': 'items(content,title)'
         });
-        request.execute(function(response) {
+        
+      });
+      request.execute(function(response) {
           for (var i = 0; i < response.items.length; i++) {
             $("#target").append("<h2>" + response.items[i].title + "</h2>");
             $("#target").append(response.items[i].content);
@@ -89,7 +91,6 @@
               $("#target").append("<hr/>");
             }
           }
-        });
       });
     };
     
