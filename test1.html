@@ -25,9 +25,7 @@
       </div>
     </div>
 		<div class="blogPic" >
-        <div id="content"  >
-        <div id="target"  >
-        </div>
+        <div class="posts"  >
 	      </div>
 		  <div id="pic">
         <span class=tagline></span>
@@ -39,12 +37,23 @@
       <script>
 
     
-
+   $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
+    });
+    
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts/6853749631700517490?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
-        $(".latest").append( "<h1>" + response.title + "</h1>" + response.content);
+        $(".posts").append( "<h1>" + response.title + "</h1>" + response.content);
       }
     });
 
