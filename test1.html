@@ -59,8 +59,9 @@
       url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
         for (var i = 0; i < response.items.length; i++) {
-            $(".posts").append("<h2>" + response.items[i].title + "</h2>")
-            $(".posts").append("<h1>" + response.items[i].published + "</h1>");
+            $(".posts").append("<h2>" + response.items[i].title + "</h2>");
+            var formatter_medium = new google.visualization.DateFormat({formatType: 'medium'});
+            $(".posts").append("<h1>" +  formatter_medium.format(response.items[i].published) + "</h1>");
             $(".posts").append(response.items[i].content);
             if (i+1<response.items.length) {
               $(".posts").append("<hr/>");
