@@ -83,7 +83,6 @@ body {
     width: 100%;
   }
   #pic{
-    float: none;
-    width: 100%;
+    display: none;
   }
 }
