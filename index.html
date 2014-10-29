@@ -33,16 +33,15 @@
       cache: false,
       url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
       success: function(data) {
-        for (var i = 0; i < 8; i++) {
+        for (var i = 0; i < 7; i++) {
         $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
         }
       }
     });
     
-
     $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&updated-min=2014-10-01T00:00:00&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
         for (var i = 0; i < response.items.length; i++) {
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
