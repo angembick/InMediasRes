@@ -34,12 +34,11 @@
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(-15.840868, -70.025868),
-          zoom: 13
+          zoom: 8
         };
         var map = new google.maps.Map(document.getElementById("journeyMap"),
             mapOptions);
       }
-      google.maps.event.addDomListener(window, 'load', initialize);
 
     
    $.ajax({
@@ -71,6 +70,9 @@
           }
       }
     });
+
+    
+      google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
   </body>
