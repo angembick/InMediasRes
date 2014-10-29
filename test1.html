@@ -64,6 +64,10 @@
             if (i+1<response.items.length) {
               $(".posts").append("<hr/>");
             }
+            var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(response.items[i].lat, response.items[i].lng),
+            map: map
+            });
           }
       }
     });
