@@ -42,7 +42,7 @@
 
     $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&published-min=2014-10-01T00:00:00&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&updated-min=2014-10-01T00:00:00&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
         for (var i = 0; i < response.items.length; i++) {
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
