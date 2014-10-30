@@ -33,6 +33,54 @@
 	  </div>
 
       <script>
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-15.840868, -70.025868),
+          zoom: 5
+        };
+        var map = new google.maps.Map(document.getElementById("journeyMap"),
+            mapOptions);
+
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(-19.019585,-65.261961),
+          map: map,
+          title:"Hello World!"
+        });
+      }
+
+      function init() {
+        gapi.client.setApiKey('AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ');
+        gapi.client.load('blogger', 'v2', function() {
+          var request = gapi.client.blogger.posts.list({
+            'blogId': 2096447250273390307,
+            'fields': 'items(content,title)'
+          });
+        });
+      }
+      function init() {
+        // Get your API key from http://code.google.com/apis/console
+        gapi.client.setApiKey('AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ');
+        // Load the Blogger JSON API
+        gapi.client.load('blogger', 'v2', function() {
+          // Load the list of posts for code.blogger.com
+          var request = gapi.client.blogger.posts.list({
+            'blogId': 2096447250273390307,
+            'fields': 'items(content,title)'
+          });
+          request.execute(function(response) {
+
+            for (var i = 0; i < response.items.length; i++) {
+              // For the parts of the response, have a look at the result at: 
+              // http://code.google.com/apis/explorer/#_s=blogger&_v=v2&_m=posts.list&blogId=3213900
+              $(".posts").append("<h2>" + response.items[i].title + "</h2>");
+              $(".posts").append(response.items[i].content);
+              if (i+1<response.items.length) {
+                $(".posts").append("<hr/>");
+              }
+            }
+          });
+        });
+      }
 
     
    $.ajax({
@@ -47,6 +95,15 @@
       }
     });
     
+    
+
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+    <!--
+
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
@@ -57,32 +114,10 @@
             if (i+1<response.items.length) {
               $(".posts").append("<hr/>");
             }
-          
-        function initialize() {
-          var mapOptions = {
-            center: new google.maps.LatLng(-15.840868, -70.025868),
-            zoom: 5
-          };
-          var map = new google.maps.Map(document.getElementById("journeyMap"),
-              mapOptions);
-
-          var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(-19.019585,-65.261961),
-            map: map,
-            title:"Hello World!"
-          });
-        }
-
-
-
-
           }
       }
     });
 
-
-      google.maps.event.addDomListener(window, 'load', initialize);
-
-    </script>
+    -->
   </body>
 </html>
