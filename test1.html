@@ -64,14 +64,14 @@
               $(".posts").append("<hr/>");
             }
             var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(response.items[i].lat, response.items[i].lng),
+            position: new google.maps.LatLng(response.items[i].location.lat, response.items[i].location.lng),
             map: map
-            });
+            })
           }
       }
     });
 
-    
+
       google.maps.event.addDomListener(window, 'load', initialize);
 
     </script>
