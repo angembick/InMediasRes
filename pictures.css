@@ -65,6 +65,7 @@ span {
 #picture img{
   width: 70%;
   height: 70%;
+   float: center;
 }
 .picmap #picturemap{
   height:100%;
