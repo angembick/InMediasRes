@@ -89,8 +89,7 @@
       }, function(data) {
           $.each(data.items, function(i, item) {
               var img = $("<img/>");
-              img.attr('width', '100%');
-              img.attr('height', '100%');
+              img.attr('size', 'z');
               img.attr("src", item.media.m).appendTo("#picturess");
               if (i == 0) return false;
           });
