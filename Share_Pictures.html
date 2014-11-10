@@ -68,9 +68,12 @@
           $.each( data.items, function( i, item ) {
             $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
             if(i===5){
-              $("<img>" ).attr( "src", item.media.m ).appendTo( "#picturess" );
-
-            }
+              var img = $("<img/>");
+              img.attr('width', '100%');
+              img.attr('height', '100%');
+              img.attr("src", item.media.m).appendTo("#picture");
+              if (i == 0) return false;
+            });
             else if ( i === 7 ) {
               return false;
             }
@@ -88,7 +91,7 @@
               var img = $("<img/>");
               img.attr('width', '100%');
               img.attr('height', '100%');
-              img.attr("src", item.media.m).appendTo("#picture");
+              img.attr("src", item.media.m).appendTo("#picturess");
               if (i == 0) return false;
           });
       });
