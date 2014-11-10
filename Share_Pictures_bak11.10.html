@@ -45,8 +45,8 @@
     <div class="picmap">
       <div id="picture">
       </div>
-      <!-- <div id="picturemap">
-      </div> -->
+      <div id="picturemap">
+      </div>
     </div>
 
     <!--
@@ -67,7 +67,7 @@
         .done(function( data ) {
           $.each( data.items, function( i, item ) {
             $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
-            if(i===8){
+            if(i===5){
               $("<img>" ).attr( "src", item.media.m ).appendTo( "#picture" );
 
             }
@@ -78,22 +78,19 @@
         });
 
 
-    $(document).ready(function() {
-      $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
-          tags: "valpo",
-          tagmode: "any",
-          format: "json"
-      }, function(data) {
-          $.each(data.items, function(i, item) {
-              var img = $("<img/>");
-              img.attr('width', '200px');
-              img.attr('height', '150px');
-              img.attr("src", item.media.m).appendTo("#picture");
-              if (i == 3) return false;
-          });
-      });
+    $.ajax({
+      type: "GET",
+      dataType: "jsonp",
+      cache: false,
+      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
+      success: function(data) {
+        for (var i = 0; i < 6; i++) {
+        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
+        }
+      }
     });
 
+    })();
 
     function initialize() {
         var mapOptions = {
