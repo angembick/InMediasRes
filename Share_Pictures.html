@@ -86,8 +86,8 @@
       }, function(data) {
           $.each(data.items, function(i, item) {
               var img = $("<img/>");
-              img.attr('width', '200px');
-              img.attr('height', '150px');
+              img.attr('width', '100%');
+              img.attr('height', '100%');
               img.attr("src", item.media.m).appendTo("#picture");
               if (i == 3) return false;
           });
