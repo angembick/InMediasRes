@@ -63,6 +63,7 @@
       $.getJSON( flickerAPI, {
         id: "36420066@N07",
         tagmode: "any",
+          sizes: "l",
         format: "json"
         //864e93f93bdb17c0e9ddab03b2c14709
       })
@@ -87,7 +88,7 @@
       $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
           tags: "valpo",
           tagmode: "any",
-          sizes: "q",
+          sizes: "l",
           format: "json"
       }, function(data) {
           $.each(data.items, function(i, item) {
