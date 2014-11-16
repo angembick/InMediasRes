@@ -87,7 +87,7 @@
       $.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?", {
           tags: "valpo",
           tagmode: "any",
-          size: "q",
+          sizes: "q",
           format: "json"
       }, function(data) {
           $.each(data.items, function(i, item) {
