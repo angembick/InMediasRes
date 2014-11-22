@@ -71,7 +71,6 @@
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
             $(".posts").append(response.items[i].content);
             for (lat in response.items[i].location) {
-              $(".posts").append(response.items[i].location.lat);
             }
             if (i+1<response.items.length) {
               $(".posts").append("<hr/>");
