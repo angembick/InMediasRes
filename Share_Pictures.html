@@ -68,7 +68,7 @@
       })
         .done(function( data ) {
           $.each( data.items, function( i, item ) {
-            $( "<img>" ).attr( "src", item.media.l ).appendTo( "#images" );
+            $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
             if(i===5){
               var img = $("<img/>");
               img.attr('width', '100%');
