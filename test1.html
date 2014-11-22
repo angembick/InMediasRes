@@ -50,7 +50,7 @@
 
 
 
-      
+
    $.ajax({
       type: "GET",
       dataType: "jsonp",
@@ -65,7 +65,7 @@
     
     $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v2/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
         for (var i = 0; i < response.items.length; i++) {
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
