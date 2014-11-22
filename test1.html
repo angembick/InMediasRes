@@ -67,6 +67,16 @@
           map: map,
           title:"Helloo World!"
         });
+
+<!--//jsfiddle.net/5ADzD/1/-->
+        var $div = $("#journeyMap");
+          if ($(window).scrollTop() > $div.data("top")) { 
+              $('#journeyMap').css({'position': 'fixed', 'top': '0', 'width': '100%'}); 
+          }
+          else {
+              $('#journeyMap').css({'position': 'static', 'top': 'auto', 'width': '100%'});
+          }
+        
       
         for (var i = 0; i < response.items.length; i++) {
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
