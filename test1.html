@@ -36,7 +36,7 @@
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(-15.840868, -70.025868),
-          zoom: 5
+          zoom: 4
         };
         var map = new google.maps.Map(document.getElementById("journeyMap"),
             mapOptions);
@@ -73,10 +73,10 @@
             for (lat in response.items[i].location) {
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(-19.019585,-65.261961),
+          position: new google.maps.LatLng(-19.019585,-64.261961),
           map: map,
           title:"Hello World!"
-        });
+        })
             }
             if (i+1<response.items.length) {
               $(".posts").append("<hr/>");
