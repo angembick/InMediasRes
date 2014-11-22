@@ -38,6 +38,8 @@ body {
 #journeyMap{
   height: 20%;
   width: 100%;
+  position: fixed,
+  top: 0
 }
 .blogPic{
   height: 100%;
