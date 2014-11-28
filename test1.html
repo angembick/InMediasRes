@@ -32,23 +32,32 @@
 	    </div>
 	  </div>
 
-      <script>
+    <script>
      
+<--
+      create array outside of success loop
 
-
-
-
-   $.ajax({
-      type: "GET",
-      dataType: "jsonp",
-      cache: false,
-      url: "https://api.instagram.com/v1/users/48121533/media/recent/?access_token=48121533.5db54f4.df09ebad5d3d47d3979743c9c3b57b37",
-      success: function(data) {
-        for (var i = 0; i < 7; i++) {
-        $(".latest").append("<li><a target='_blank' href='" + data.data[i].link +"'><img   src='" + data.data[i].images.low_resolution.url +"'></img></a></li>");
-        }
+      in success Response Parse through blogger values
+      var n = response.items[i].location.name.lastIndexOf(",");
+      var country = response.items[i].location.name.substring(n);
+      if (countryArray.length >0 ) {
+        if (country not in countryArray)
+          pop into country array
+      } else {
+          pop into country array
       }
-    });
+
+      or create country array of objects
+      countries= [
+        {
+          "name" : "",
+          "latCenter" : "",
+          "lngCenter" : ""
+        }
+      ]
+-->
+
+
     
     $.ajax({
       type: "GET",
@@ -62,21 +71,6 @@
         var map = new google.maps.Map(document.getElementById("journeyMap"),
             mapOptions);
 
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(-19.019585,-65.261961),
-          map: map,
-          title:"Helloo World!"
-        });
-
-<!--//jsfiddle.net/5ADzD/1/-->
-        var $div = $("#journeyMap");
-          if ($(window).scrollTop() > $div.data("top")) { 
-              $('#journeyMap').css({'position': 'fixed', 'top': '0', 'width': '100%'}); 
-          }
-          else {
-              $('#journeyMap').css({'position': 'static', 'top': 'auto', 'width': '100%'});
-          }
-        
       
         for (var i = 0; i < response.items.length; i++) {
             $(".posts").append("<h2>" + response.items[i].title + "</h2>");
