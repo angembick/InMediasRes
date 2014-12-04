@@ -41,11 +41,11 @@ body {
   position: fixed,
   top: 0
 }
-.blogPic{
+.blog{
   height: 100%;
-  width: 100%;
+  width: 80%;
 }
-.posts{
+.postsText{
   height:59px;
   width:100%;
   display: inline;
