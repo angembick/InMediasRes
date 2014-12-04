@@ -65,6 +65,9 @@
                 zoom: 3
               };
               var blogMap = new google.maps.Map($('.postsMap')[0], mapOptions);
+              $(".postsMap").append(blogMap);
+
+
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
