@@ -50,18 +50,18 @@
           $(".blog").append("<div class=""posts"+i+""">");
 
           //add a div for the post content
-          $(".posts").append("<div class=""postsText"+i+""">");
+          $(".posts"+i+"").append("<div class=""postsText"+i+""">");
 
           $(".postsText"+i+"").append("<h2>" + response.items[i].title + "</h2>");
           $(".postsText"+i+"").append(response.items[i].content);
           
           //close div for the post content
-          $(".posts").append("</div>");
+          $(".posts"+i+"").append("</div>");
 
 
           for (lat in response.items[i].location) {
             //add a div for the post map
-            $(".posts").append("<div class=""postsMap"+i+""">";
+            $(".posts"+i+"").append("<div class=""postsMap"+i+""">";
 
               var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
@@ -70,7 +70,7 @@
               var blogMap = new google.maps.Map($(".postsMap"+1+"")[0], mapOptions);
 
             //close div for the post map
-            $(".posts").append("</div>");
+            $(".posts"+i+"").append("</div>");
 
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
@@ -83,7 +83,11 @@
             if (i+1<response.items.length) {
               $(".postsText"+i+"").append("<hr/>");
             }
+
+            //close div for the post
+            $(".blog").append("</div>");
           }
+
       }
     });
 
