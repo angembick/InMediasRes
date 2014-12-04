@@ -47,21 +47,19 @@
       
         for (var i = 0; i < response.items.length; i++) {
           //open a div for blog unique with the location in the response array
-          $(".blog").append("<div class=""posts"+i+""">");
+          $('<div></div>').addClass('posts'+i).appendTo(".blog");
 
           //add a div for the post content
-          $(".posts"+i+"").append("<div class=""postsText"+i+""">");
+          $('<div></div>').addClass('postsText'+i).appendTo(".posts");
 
           $(".postsText"+i+"").append("<h2>" + response.items[i].title + "</h2>");
           $(".postsText"+i+"").append(response.items[i].content);
           
-          //close div for the post content
-          $(".posts"+i+"").append("</div>");
 
 
           for (lat in response.items[i].location) {
             //add a div for the post map
-            $(".posts"+i+"").append("<div class=""postsMap"+i+""">";
+            $('<div></div>').addClass('postsMap'+i).appendTo(".posts");
 
               var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
@@ -69,24 +67,18 @@
               };
               var blogMap = new google.maps.Map($(".postsMap"+1+"")[0], mapOptions);
 
-            //close div for the post map
-            $(".posts"+i+"").append("</div>");
-
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
-              position: myLatlng,
-              map: map,
-              title: response.items[i].title
-            })
-            }
-            if (i+1<response.items.length) {
-              $(".postsText"+i+"").append("<hr/>");
-            }
-
-            //close div for the post
-            $(".blog").append("</div>");
+                position: myLatlng,
+                map: map,
+                title: response.items[i].title
+              })
           }
+          if (i+1<response.items.length) {
+            $(".postsText"+i+"").append("<hr/>");
+          }
+        }
 
       }
     });
