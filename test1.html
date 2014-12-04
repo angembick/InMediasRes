@@ -57,12 +57,8 @@
             $(".postsText").append("<h2>" + response.items[i].title + "</h2>");
             $(".postsText").append(response.items[i].content);
             for (lat in response.items[i].location) {
-              var mapOptions = {
-                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 3
-              };
-              var map = new google.maps.Map(document.getElementById("postsMap"),
-                  mapOptions);
+              $('.postsMap').gmap('addMarker', {'position': 'response.items[i].location.lat,response.items[i].location.lng', 'bounds': true})
+              
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
               position: myLatlng,
