@@ -45,10 +45,14 @@
 
       
         for (var i = 0; i < response.items.length; i++) {
+          //open a div for blog unique with the location in the response array
+          $(".blog").append("<div></div>");
+          $("<div></div>").addClass("posts"+i"");
+
 
 
           if (i+1<response.items.length) {
-            $(".blog").append("<hr/>");
+            $(".posts"+i"").append("<hr/>"+i"");
           }
         }
 
