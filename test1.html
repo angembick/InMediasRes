@@ -61,6 +61,9 @@
           $('#postsText'+i).append(response.items[i].content);
 
 
+          if (i+1<response.items.length) {
+            $('.posts'+i).append("<hr/>"+i);
+          }
 
           for (lat in response.items[i].location) {
 
@@ -81,9 +84,6 @@
               })
           }
 
-          if (i+1<response.items.length) {
-            $('.posts'+i).append("<hr/>"+i);
-          }
         }
 
       }
