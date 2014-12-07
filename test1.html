@@ -77,8 +77,8 @@
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
                 position: myLatlng,
-                map: map,
-                title: response.items[i].title
+                map: blogMap,
+                title: response.items[i].location
               })
           }
 
