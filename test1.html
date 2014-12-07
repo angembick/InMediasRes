@@ -46,7 +46,7 @@
       
         for (var i = 0; i < response.items.length; i++) {
           //open a div for blog unique with the location in the response array
-          $(".blog").append("<div></div>").addClass("posts"+i);
+          $('<div></div>').addClass('postsMap'+i).appendTo(".blog");
 
 
 
