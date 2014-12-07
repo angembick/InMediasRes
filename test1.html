@@ -40,10 +40,12 @@
       
         for (var i = 0; i < response.items.length; i++) {
           //open a div for blog unique with the location in the response array
-          $('<div></div>').addClass('posts'+i).appendTo(".blog");
+          $(".blog").append("<div></div>");
+          $("<div></div>").addClass("posts"+i"");
 
           //add a div for the post content
-          $('<div></div>').addClass('postsText'+i).appendTo(".posts");
+          $(".posts"+i"").append("<div></div>");
+          $("<div></div>").addClass("postsText"+i);
 
           $(".postsText"+i+"").append("<h2>" + response.items[i].title + "</h2>");
           $(".postsText"+i+"").append(response.items[i].content);
