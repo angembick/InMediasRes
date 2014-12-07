@@ -48,7 +48,7 @@
           center: new google.maps.LatLng(-15.840868, -70.025868),
           zoom: 3
         };
-        var map = new google.maps.Map(document.getElementById("journeyMap"),
+        var map = new google.maps.Map(document.getElementById('journeyMap'),
             mapOptions);
 
       
@@ -65,23 +65,6 @@
 
 
 
-          for (lat in response.items[i].location) {
-            //add a div for the post map
-            $('<div></div>').addClass('postsMap'+i).appendTo('.posts'+i);
-
-              var mapOptions = {
-                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 3
-              };
-              var blogMap = new google.maps.Map($('.postsMap'+1)[0], mapOptions);
-
-
-              var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
-              var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: response.items[i].title
-              })
 
 
           if (i+1<response.items.length) {
