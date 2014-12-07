@@ -44,6 +44,7 @@ body {
 .blog{
   height: 100%;
   width: 80%;
+  position:relative 
 }
 .postsText{
   height:100%;
@@ -53,8 +54,6 @@ body {
   margin: 10px;
 }
 .postsMap{
-  height:100px;
-  width: 20%;
   display: inline;
   float: left;
   margin: 10px;
@@ -66,6 +65,9 @@ body {
   float:right;
   margin: 10px;
   display: inline;
+}
+hr{
+  position:absolute; bottom:0;
 }
 
 @media only screen and (max-device-width: 480px) {
