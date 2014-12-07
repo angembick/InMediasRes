@@ -59,6 +59,13 @@ body {
   margin: 10px;
   display: inline;
 }
+#postsMap0{
+  height:100%;
+  width:25%;
+  float:left;
+  margin: 10px;
+  display: inline;
+}
 #pic{
   height:100%;
   width:30%;
