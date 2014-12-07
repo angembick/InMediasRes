@@ -43,8 +43,9 @@ body {
 }
 .blog{
   height: 100%;
-  width: 80%;
+  width: 90%;
   float:center; 
+  position: center;
 }
 .postsText{
   height:100%;
