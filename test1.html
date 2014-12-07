@@ -47,12 +47,11 @@
         for (var i = 0; i < response.items.length; i++) {
           //open a div for blog unique with the location in the response array
           $(".blog").append("<div></div>");
-          $("<div></div>").addClass("posts"+i"");
 
 
 
           if (i+1<response.items.length) {
-            $(".posts"+i"").append("<hr/>"+i"");
+            $(".blog").append("<hr/>"+i"");
           }
         }
 
