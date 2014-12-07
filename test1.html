@@ -73,7 +73,6 @@
               };
               var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
               $('#postsMap'+i).css('height', $('#postsText'+i).height());
-              $('#postsMap'+i).css('width', $('#postsText'+i).width());
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({

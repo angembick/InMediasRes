@@ -54,6 +54,7 @@ body {
   margin: 10px;
 }
 .postsMap{
+  width: 20%;
   display: inline;
   float: left;
   margin: 10px;
