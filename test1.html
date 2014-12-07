@@ -54,7 +54,7 @@
           $('<div></div>').addClass('posts'+i).appendTo('.blog');
 
           //add a div for the post content
-          $('<div></div>').addClass('postsText').attr('postsText'+i).appendTo('.posts'+i);
+          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
 
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
