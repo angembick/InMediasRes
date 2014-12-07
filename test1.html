@@ -61,7 +61,7 @@
 
 
 
-          for (lat in response.items[i].location) {
+          if (lat in response.items[i].location) {
             //add a div for the post map
             $('<div></div>').addClass('postsMap'+i).appendTo('.posts'+i);
 
