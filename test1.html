@@ -54,11 +54,11 @@
           $('<div></div>').addClass('posts'+i).appendTo('.blog');
 
           //add a div for the post content
-          $('<div></div>').addClass('postsText'+i).appendTo('.posts'+i);
+          $('<div></div>').addClass('postsText').attr('postsText'+i).appendTo('.posts'+i);
 
           //Add blog text and titles
-          $('.postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
-          $('.postsText'+i).append(response.items[i].content);
+          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
+          $('#postsText'+i).append(response.items[i].content);
 
 
 
