@@ -65,13 +65,13 @@
           for (lat in response.items[i].location) {
 
             //add a div for the post map
-            $('<div></div>').addClass('postsMap'+i).appendTo('.posts'+i);
+            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
 
             var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
                 zoom: 3
               };
-              var blogMap = new google.maps.Map($('.test')[0], mapOptions);
+              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
