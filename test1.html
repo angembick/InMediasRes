@@ -69,7 +69,7 @@
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
                 zoom: 3
               };
-              var blogMap = new google.maps.Map($('.postsMap'+1)[0], mapOptions);
+              var blogMap = new google.maps.Map($('.postsMap'+i)[0], mapOptions);
 
               var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
               var marker = new google.maps.Marker({
