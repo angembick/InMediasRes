@@ -44,7 +44,8 @@ body {
 .blog{
   height: 100%;
   width: 80%;
-  position:relative 
+  position:relative;
+  float:center; 
 }
 .postsText{
   height:100%;
@@ -68,7 +69,8 @@ body {
   display: inline;
 }
 hr{
-  position:absolute; bottom:0;
+  position:absolute; 
+  bottom:0;
 }
 
 @media only screen and (max-device-width: 480px) {
