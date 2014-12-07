@@ -31,15 +31,10 @@
 	    </div>
 	  </div>
 
-    <script>
-function myFunction() {
-    alert("Hello! I am an alert box!");
-}
-</script
+
 
     <script>
      
-
 
 
     
@@ -48,7 +43,6 @@ function myFunction() {
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
 
-      alert("Hello! I am an alert box!!");
       
         for (var i = 0; i < response.items.length; i++) {
           //open a div for blog unique with the location in the response array
@@ -59,10 +53,6 @@ function myFunction() {
           $(".posts"+i"").append("<div></div>");
           $("<div></div>").addClass("postsText"+i);
 
-          $(".postsText"+i+"").append("<h2>" + response.items[i].title + "</h2>");
-          $(".postsText"+i+"").append(response.items[i].content);
-          
-
 
           if (i+1<response.items.length) {
             $(".postsText"+i+"").append("<hr/>");
@@ -72,8 +62,6 @@ function myFunction() {
       }
     });
 
-
-      alert("Hello! I am an alert box!!end");
 
       google.maps.event.addDomListener(window, 'load', initialize);
 
