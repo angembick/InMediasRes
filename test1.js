@@ -8,7 +8,7 @@
 
         var mapOptions = {
           center: new google.maps.LatLng(-15.840868, -70.025868),
-          zoom: 3
+          zoom: 5
         };
         var map = new google.maps.Map(document.getElementById("journeyMap"),
             mapOptions);
