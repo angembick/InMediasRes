@@ -3,7 +3,7 @@
 
   <head>
 
-  <title> Medias Test </title>
+  <title> Medias Test! </title>
     <link rel="stylesheet" href="test1.css">
     
 
@@ -21,63 +21,17 @@
     </div>
 
     <div class="content">
+      <div class="country">
+      <h1> Argentina</h1>
+      </div>
 		  <div class="blog" >
 	    </div>
 	  </div>
 
 
 
-    <script>
-     
-
-
     
-    $.ajax({
-      type: "GET",
-      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
-      success: function(response) {
-
-      
-        for (var i = 0; i < response.items.length; i++) {
-          //open a div for blog unique with the location in the response array
-          $('<div></div>').addClass('posts'+i).appendTo('.blog');
-
-          //add a div for the post content
-          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
-
-          //Add blog text and titles
-          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
-          $('#postsText'+i).append(response.items[i].content);
-
-
-
-          for (lat in response.items[i].location) {
-
-            //add a div for the post map
-            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
-
-            var mapOptions = {
-                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 4,
-                disableDefaultUI: true
-              };
-              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
-              $('#postsMap'+i).css('height', $('#postsText'+i).height());
-
-              var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
-              var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: blogMap,
-                title: response.items[i].location.name
-              })
-          }
-        }
-
-      }
-    });
-
-
-    </script>
+  <script type="text/javascript" src="test1.js"></script>
 
   </body>
 </html>
