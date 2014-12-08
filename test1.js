@@ -1,6 +1,7 @@
 
     
-    $.ajax({
+    jQuery( document ).ready(function( $ ) {
+  $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
@@ -51,5 +52,8 @@
       }
     });
 
-
       google.maps.event.addDomListener(window, 'load', initialize);
+
+      
+// Code using $ as usual goes here.
+});
