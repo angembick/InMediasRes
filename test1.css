@@ -68,6 +68,26 @@ body {
   margin: 10px;
   display: inline;
 }
+.peruButton{
+    background:url(.Peru.png) no-repeat;
+    cursor:pointer;
+    border:none;
+    width:100px;
+    height:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (max-device-width: 480px) {
   .jumbotron {
