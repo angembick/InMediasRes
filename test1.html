@@ -22,7 +22,14 @@
 
     <div class="content">
       <div class="country">
-      <h1> Argentina</h1>
+        <div class="countryName">
+        </div>
+        <div class="countryflags">
+          <div id="Peru"></div>
+          <div id="Bolivia"></div>
+          <div id="Chile"></div>
+          <div id="Argentina"></div>
+        </div>
       </div>
 		  <div class="blog" >
 	    </div>
@@ -61,7 +68,7 @@
 
             var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 4,
+                zoom: 6,
                 disableDefaultUI: true
               };
               var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
