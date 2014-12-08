@@ -58,7 +58,8 @@
 
             var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 4
+                zoom: 4,
+                disableDefaultUI: true
               };
               var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
               $('#postsMap'+i).css('height', $('#postsText'+i).height());
