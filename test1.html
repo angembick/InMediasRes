@@ -53,8 +53,8 @@
       success: function(response) {
 
         for(var b = 0; b <response.items.length; b++){
-          while(response.items.published > '2014-11-07')
-            $('.blog').append("<h2>" + response.items[i].published+"<h2>");
+          while(response.items[b].published > '2014-11-07')
+            $('.blog').append("<h2>" + response.items[b].published+"<h2>");
         }
 
       
