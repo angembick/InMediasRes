@@ -53,9 +53,11 @@
       success: function(response) {
 
         for(var b = 0; b <response.items.length; b++){
-         
+          while(response.items[b].published > '2014-11-29T16:35:00-08:00'){
             $('.blog').append("<h2>" + response.items[b].published+"<h2>");
+          }
         }
+        
 
       
         for (var i = 0; i < response.items.length; i++) {
