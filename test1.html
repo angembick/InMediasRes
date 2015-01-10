@@ -47,7 +47,8 @@
     };
 
     var argentina = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
-    var bolivia = new Country('Bolivia',  '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
+    var bolivia = new Country('Bolivia',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
+    var chile = new Country('Country','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
     
     $.ajax({
@@ -56,13 +57,13 @@
       success: function(response) {
         //populate the country array
         for(var b = 0; b <response.items.length; b++){
-          if((response.items[b].published > "2014-12-08T11:00:00") && (response.items[b].published < "2014-12-08T11:00:00")){
+          if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
             $('.blog').append("<h2> A" + response.items[b].published+"<h2>");
           }
-          else if((response.items[b].published > "2014-11-15T11:00:00") && (response.items[b].published < "2014-12-08T11:00:00")){
+          else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
             $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
           }
-          else if((response.items[b].published > "2014-08-08T11:00:00") && (response.items[b].published < "2014-11-15T11:00:00")){
+          else if((response.items[b].published > bolivia.startDate) && (response.items[b].published < bolivia.endDate)){
             $('.blog').append("<h2> B" + response.items[b].published+"<h2>");
           }
         }
