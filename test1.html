@@ -46,6 +46,12 @@
       this.blogArray = [];
     };
 
+    function Blog(content, location, title){
+      this.content = content;
+      this.location = location;
+      this.title = title;
+    };
+
     var argentina = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
     var bolivia = new Country('Bolivia',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var chile = new Country('Country','2014-09-08T11:00:00', '2014-11-12T11:00:00');
@@ -58,7 +64,8 @@
         //populate the country array
         for(var b = 0; b <response.items.length; b++){
           if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
-            $('.blog').append("<h2> A" + response.items[b].published+"<h2>");
+            $('.blog').append("<h2> Ar" + response.items[b].published+"<h2>");
+            argentina.blogArray[blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
             $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
