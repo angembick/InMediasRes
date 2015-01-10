@@ -39,13 +39,19 @@
 
     <script>
      
-
+    function Country(name, startDate, endDate){
+      this.name = name;
+      this.startDate = startDate;
+      this.endDate = endDate;
+      this.blogArray = [];
+    };
 
     
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
+
 
       
         for (var i = 0; i < response.items.length; i++) {
@@ -68,7 +74,7 @@
 
             var mapOptions = {
                 center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 5,
+                zoom: 6,
                 disableDefaultUI: true
               };
               var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
