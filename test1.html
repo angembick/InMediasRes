@@ -25,7 +25,9 @@
         <div class="countryName">
         </div>
         <div class="countryflags">
-          <div id="peruButton"></div>
+          <div id="peruButton">
+            <img src="Peru.png" alt="Peru" height="42" width="42">
+          </div>
           <div id="Bolivia"></div>
           <div id="Chile"></div>
           <div id="Argentina"></div>
@@ -69,10 +71,11 @@
           }
           else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
             $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
-            bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+            chile.blogArray[chile.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > bolivia.startDate) && (response.items[b].published < bolivia.endDate)){
             $('.blog').append("<h2> B" + response.items[b].published+"<h2>");
+            bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
         }
         
