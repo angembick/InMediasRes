@@ -67,6 +67,9 @@
     $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
       alert(countryID);
+
+      for(var i = 0; i<Country.length; i++){ alert(Country[i].name);}
+
       for (var key in Country){
         var countryObj = Country[key];
           alert("in the loop call blogs on this obj");
