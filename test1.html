@@ -64,7 +64,7 @@
     var chile = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
-    $('.countryFlags').click(function(){
+    $('.flag').click(function(){
       var countryID = $('.flag').attr("id");
       for (var countryObj in Country){
         if(countryID === countryObj.name){
