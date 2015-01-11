@@ -76,7 +76,7 @@
     $('#countryFlags').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
-        var countryID = $('#chileFlag').attr("alt");
+        var countryID = $("img", this).attr("alt");
         alert(countryID);
          
           //open a div for blog unique with the location in the response array
