@@ -43,7 +43,7 @@
       this.name = name;
       this.startDate = startDate;
       this.endDate = endDate;
-      this.blogArray = ['test'];
+      this.blogArray = [];
     };
 
     function Blog(content, location, title){
@@ -65,10 +65,11 @@
         for(var b = 0; b <response.items.length; b++){
           if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
             $('.blog').append("<h2> A" + response.items[b].published+"<h2>");
-            argentina.blogArray[argentina.blogArray.length] = 'new Blog(response.items[b].content, response.items[b].location,response.items[b].title);'
+            argentina.blogArray[argentina.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
             $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
+            bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > bolivia.startDate) && (response.items[b].published < bolivia.endDate)){
             $('.blog').append("<h2> B" + response.items[b].published+"<h2>");
