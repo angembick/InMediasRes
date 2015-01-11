@@ -31,10 +31,10 @@
           <div class="countryFlag">
             <img src="Bolivia.png" alt="bolivia" height="42" width="54">
           </div>
-          <div class="countryFlags" >
+          <div class="countryFlag" >
             <img id="chileFlag" src="Chile.png" alt="chile" height="42" width ="54">
           </div>
-          <div class="countryFlags" >
+          <div class="countryFlag" >
             <img src="Argentina.png" alt="argentina" height="42" width="54">
           </div>
         </div>
@@ -64,7 +64,7 @@
     var chile = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
-    $('#countryFlags').click(function(){
+    $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
       alert(countryID);
       for (var countryObj in Country){
@@ -77,7 +77,7 @@
       }
     });
 
-    $('.countryFlag').click(function(){
+    $('.countryFlags').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
         var countryID = $("img", this).attr("alt");
