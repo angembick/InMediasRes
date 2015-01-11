@@ -66,7 +66,40 @@
 
     $('#chileButton').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
-        $('#chileButton').append("<h2> C" + chile.blogArray[i].title+"<h2>");
+         
+          //open a div for blog unique with the location in the response array
+          $('<div></div>').addClass('posts'+i).appendTo('.blog');
+
+          //add a div for the post content
+          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
+
+          //Add blog text and titles
+          $('#postsText'+i).append("<h2>" + chile.blogArray[i].title + "</h2>");
+          $('#postsText'+i).append(chile.blogArray[i].content);
+
+
+
+          for (lat in chile.blogArray[i].location) {
+
+            //add a div for the post map
+            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
+
+            var mapOptions = {
+                center: new google.maps.LatLng(chile.blogArray[i].location.lat,chile.blogArray[i].location.lng),
+                zoom: 6,
+                disableDefaultUI: true
+              };
+              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
+              $('#postsMap'+i).css('height', $('#postsText'+i).height());
+
+              var myLatlng = new google.maps.LatLng(chile.blogArray[i].location.lat,chile.blogArray[i].location.lng);
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: blogMap,
+                title: chile.blogArray[i].location.name
+              })
+          }
+        
       }
     });
 
@@ -88,41 +121,7 @@
         }
         
 
-      
-        for (var i = 0; i < response.items.length; i++) {
-          //open a div for blog unique with the location in the response array
-          $('<div></div>').addClass('posts'+i).appendTo('.blog');
-
-          //add a div for the post content
-          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
-
-          //Add blog text and titles
-          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
-          $('#postsText'+i).append(response.items[i].content);
-
-
-
-          for (lat in response.items[i].location) {
-
-            //add a div for the post map
-            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
-
-            var mapOptions = {
-                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 6,
-                disableDefaultUI: true
-              };
-              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
-              $('#postsMap'+i).css('height', $('#postsText'+i).height());
-
-              var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
-              var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: blogMap,
-                title: response.items[i].location.name
-              })
-          }
-        }
+     
 
       }
     });
