@@ -65,7 +65,7 @@
     var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
     $('#countryFlags').click(function(){
-      var countryID = $('.flag').attr("id");
+      var countryID = $("img", this).attr("alt");
       for (var countryObj in Country){
         if(countryID === countryObj.name){
           alert("call blogs on this obj");
@@ -76,8 +76,9 @@
     $('#countryFlags').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
-        var countryID = $("img", this).attr("alt");
-        alert(countryID);
+        //var countryID = $("img", this).attr("alt");
+
+       // alert(countryID);
          
           //open a div for blog unique with the location in the response array
           $('<div></div>').addClass('posts'+i).appendTo('.blog');
