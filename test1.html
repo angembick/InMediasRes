@@ -68,8 +68,7 @@
       var countryID = $("img", this).attr("alt");
       alert(countryID);
 
-          alert("in the loop call blogs on this obj");
-      for(var i = 0; i<Country.length; i++){ alert(countryID);}
+      for(var i = 0; i<Country.length; i++){ alert(Country[i]);}
 
       for (var key in Country){
         var countryObj = Country[key];
