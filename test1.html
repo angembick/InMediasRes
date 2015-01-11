@@ -64,7 +64,12 @@
     var bolivia = new Country('Bolivia',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var chile = new Country('Country','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
-    
+    $('#chileButton').click(function(){
+      for(var i = 0; i<chile.blogArray.length; i++){
+        $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
+      }
+    });
+
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
@@ -72,15 +77,12 @@
         //populate the country array
         for(var b = 0; b <response.items.length; b++){
           if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
-            $('.blog').append("<h2> A" + response.items[b].published+"<h2>");
             argentina.blogArray[argentina.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
-            $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
             chile.blogArray[chile.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
           else if((response.items[b].published > bolivia.startDate) && (response.items[b].published < bolivia.endDate)){
-            $('.blog').append("<h2> B" + response.items[b].published+"<h2>");
             bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
         }
