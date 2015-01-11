@@ -65,7 +65,7 @@
         for(var b = 0; b <response.items.length; b++){
           if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
             $('.blog').append("<h2> Ar" + response.items[b].published+"<h2>");
-            argentina.blogArray[blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+            argentina.blogArray[blogArray.length] = 'test5';
           }
           else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
             $('.blog').append("<h2> C" + response.items[b].published+"<h2>");
