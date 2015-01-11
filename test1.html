@@ -24,7 +24,7 @@
       <div class="country">
         <div class="countryName">
         </div>
-        <div class="countryflags">
+        <div class="countryFlags">
           <div id="peruButton">
             <img src="Peru.png" alt="Peru" height="42" width="54">
           </div>
@@ -63,6 +63,15 @@
     var argentina = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
     var chile = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
+
+    $('.countryFlags').click(function(){
+      var countryID = div.id;
+      for (var countryObj in Country){
+        if(countryID === countryObj.name){
+          alert("call blogs on this obj");
+        }
+      }
+    });
 
     $('#chileButton').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
@@ -119,10 +128,6 @@
             bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
           }
         }
-        
-
-     
-
       }
     });
 
