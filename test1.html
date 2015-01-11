@@ -67,7 +67,7 @@
     $('#countryFlags').click(function(){
       var countryID = $("img", this).attr("alt");
       for (var countryObj in Country){
-        alert(Country[countryObj].name);
+        alert(Country[countryObj]);
         if(countryID === countryObj.name){
           alert("call blogs on this obj");
         }
