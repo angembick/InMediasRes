@@ -66,15 +66,17 @@
 
     $('#countryFlags').click(function(){
       var countryID = $("img", this).attr("alt");
+      alert(countryID);
       for (var countryObj in Country){
         alert(countryObj);
+          alert("call blogs on this obj");
         if(countryID === countryObj){
           alert("call blogs on this obj");
         }
       }
     });
 
-    $('#countryFlags').click(function(){
+    $('#countryFlagss').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
         //var countryID = $("img", this).attr("alt");
