@@ -24,7 +24,7 @@
       <div class="country">
         <div class="countryName">
         </div>
-        <div class="countryFlags" >
+        <div id="countryFlags" >
           <div id="peruButton">
             <img src="Peru.png" alt="Peru" height="42" width="54">
           </div>
@@ -64,7 +64,7 @@
     var chile = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
 
-    $('.flag').click(function(){
+    $('#countryFlags').click(function(){
       var countryID = $('.flag').attr("id");
       for (var countryObj in Country){
         if(countryID === countryObj.name){
