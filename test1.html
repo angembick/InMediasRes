@@ -32,7 +32,7 @@
             <img src="Bolivia.png" alt="Bolivia" height="42" width="54">
           </div>
           <div id="chileButton" >
-            <img src="Chile.png" alt="Chile" height="42" width ="54">
+            <img id="chileFlag" src="Chile.png" alt="Chile" height="42" width ="54">
           </div>
           <div class="flag" id="Argentina">
             <img src="Argentina.png" alt="Argentina" height="42" width="54">
@@ -76,7 +76,7 @@
     $('#chileButton').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
-        var countryID = $('#chileButton').attr("alt");
+        var countryID = $('#chileFlag').attr("alt");
         alert(countryID);
          
           //open a div for blog unique with the location in the response array
