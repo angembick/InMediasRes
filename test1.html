@@ -25,16 +25,16 @@
         <div class="countryName">
         </div>
         <div id="countryFlags" >
-          <div id="peruButton">
+          <div class="countryFlag">
             <img src="Peru.png" alt="peru" height="42" width="54">
           </div>
-          <div id="Bolivia">
+          <div class="countryFlag">
             <img src="Bolivia.png" alt="bolivia" height="42" width="54">
           </div>
-          <div id="chileButton" >
+          <div class="countryFlags" >
             <img id="chileFlag" src="Chile.png" alt="chile" height="42" width ="54">
           </div>
-          <div class="flag" id="Argentina">
+          <div class="countryFlags" >
             <img src="Argentina.png" alt="argentina" height="42" width="54">
           </div>
         </div>
@@ -66,15 +66,23 @@
 
     $('#countryFlags').click(function(){
       var countryID = $("img", this).attr("alt");
-      //alert(countryID);
+      alert(countryID);
+      for (var countryObj in Country){
+          alert("in the loop call blogs on this obj");
+        alert(countryObj);
+          alert("call blogs on this obj");
+        if(countryID === countryObj){
+          alert("call blogs on this obj");
+        }
+      }
     });
 
-    $('#countryFlags').click(function(){
+    $('.countryFlag').click(function(){
       for(var i = 0; i<chile.blogArray.length; i++){
 
         var countryID = $("img", this).attr("alt");
 
-       alert(countryID);
+        alert(countryID);
          
           //open a div for blog unique with the location in the response array
           $('<div></div>').addClass('posts'+i).appendTo('.blog');
