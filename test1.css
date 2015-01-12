@@ -7,6 +7,18 @@ body {
   height: 100%;
   width: 100%;
 }
+.peruButton{
+  src :"PeruPic.jpg";
+}
+.boliviaButton{
+  src:"BoliviaPic.jpg";
+}
+.chileButton{
+  src:"ChilePic.jpg";
+}
+.argentinaButton{
+  src:"ArgentinaButton.jpg";
+}
 .countryFlags{
   position: center;
   margin: 0; 
@@ -48,12 +60,22 @@ body {
     float:none;
     width: 100%;
   }
-
-
 .countryFlags{
   position: center;
   margin: 0; 
   width: 100%;
+}
+.peruButton{
+  src:"Peru.png";
+}
+.boliviaButton{
+  src:"Bolivia.png";
+}
+.chileButton{
+  src:"Chile.png";
+}
+.argentinaButton{
+  src:"Argentina.png";
 }
 
 }
