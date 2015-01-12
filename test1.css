@@ -8,16 +8,16 @@ body {
   width: 100%;
 }
 .peruButton{
-  src :"PeruPic.jpg";
+  src :"PeruPic.png";
 }
 .boliviaButton{
-  src:"BoliviaPic.jpg";
+  src:"BoliviaPic.png";
 }
 .chileButton{
-  src:"ChilePic.jpg";
+  src:"ChilePic.png";
 }
 .argentinaButton{
-  src:"ArgentinaButton.jpg";
+  src:"Argentina.png";
 }
 .countryFlags{
   position: center;
