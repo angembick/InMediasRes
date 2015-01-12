@@ -72,17 +72,13 @@
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
-        //populate the country array
+        //populate the country array with blog content
         for(var b = 0; b <response.items.length; b++){
-          if((response.items[b].published > argentina.startDate) && (response.items[b].published < argentina.endDate)){
-            argentina.blogArray[argentina.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
-          }
-          else if((response.items[b].published > chile.startDate) && (response.items[b].published < chile.endDate)){
-            chile.blogArray[chile.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
-          }
-          else if((response.items[b].published > bolivia.startDate) && (response.items[b].published < bolivia.endDate)){
-            bolivia.blogArray[bolivia.blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
-          }
+          for(var i = 0; i< myTrip.length; i++){
+            if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
+            argentina.blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+            }
+          };  
         }
       }
     });
