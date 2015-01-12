@@ -77,7 +77,7 @@
       success: function(response) {
         //populate the country array with blog content
         for(var b = 0; b <response.items.length; b++){
-          for(var i = 0; i< myTrip.length; i++){
+          for(var i = (myTrip.length-1); i>= 0; i--){
             if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
             myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
             }
