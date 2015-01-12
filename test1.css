@@ -10,7 +10,7 @@ body {
 .countryFlags{
   position: center;
   margin: 0; 
-  width: 100%;
+  width: "230";
 }
 .countryFlag{
   position: center;
@@ -49,9 +49,11 @@ body {
     width: 100%;
   }
 
-.countryFlag img{
-  height: 10%;
-  width: 22%;
+
+.countryFlags{
+  position: center;
+  margin: 0; 
+  width: 100%;
 }
 
 }
