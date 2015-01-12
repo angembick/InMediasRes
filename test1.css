@@ -7,39 +7,12 @@ body {
   height: 100%;
   width: 100%;
 }
-.latest li {
-  display: inline-block;
-  width: 306px;
-  height: 306px;
-  margin: 0px 20px 20px 0px;
-  border-radius: 10px;
+.countryFlags{
+  position: center;
 }
-.latest li img{
-  border-radius: 10px;
-}
-.nav a {
-  color: #5a5a5a;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 14px 10px;
-  text-transform: uppercase;
-}
-.nav  ul{
-  list-style: none;
-  text-decoration: none;
-}
-.nav  ul li {
+.countryFlag{
+  position: center;
   display: inline;
-}
-.content{
-  height: 100%;
-  width: 100%;
-}
-#journeyMap{
-  height: 40%;
-  width: 100%;
-  position: fixed,
-  top: 0
 }
 .blog{
   height: 100%;
@@ -61,59 +34,12 @@ body {
   margin: 10px;
 }
 
-#pic{
-  height:100%;
-  width:30%;
-  float:right;
-  margin: 10px;
-  display: inline;
-}
-.peruButton{
-    background:url(.Peru.png) no-repeat;
-    cursor:pointer;
-    border:none;
-    width:100px;
-    height:100px;
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 @media only screen and (max-device-width: 480px) {
-  .jumbotron {
-    background:url('IMG_1003.png') no-repeat center center;
-    background-size: 100%;
-    height: 85%;
-    background-color: #F0FFFF;
-  }
-  .jumbotron h1{
-    float: left;
-  } 
-  .jumbotron h2 {
-    display: none;
-  } 
-  .nav a {
-    font-size: 50px; 
-  padding: 14px 18px; 
-  }
-  #inprogess{
-    display: none;
-  }
   #blog {
     float:none;
     width: 100%;
-  }
-  #pic{
-    display: none;
   }
 }
