@@ -72,11 +72,13 @@
 
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
+        alert('for loop'+ myTrip[i]);
         populateBlogs(myTrip[i]);
        };
       };
 
-      var populateBlogs  = function(countryObj){ 
+      function populateBlogs(countryObj){ 
+        alert('function'+countryObj);
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
