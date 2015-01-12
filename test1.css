@@ -14,7 +14,7 @@ body {
   src:"BoliviaPic.png";
 }
 .chileButton{
-  src:"ChilePic.png";
+  content:url("ChilePic.png");
 }
 .argentinaButton{
   src:"Argentina.png";
