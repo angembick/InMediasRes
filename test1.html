@@ -66,6 +66,9 @@
     myTrip[myTrip.length] = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
     myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
+    var displayCountry = myTrip[myTrip.length-1];
+    populateBlogs(displayCountry);
+
 
 
     $.ajax({
@@ -89,12 +92,16 @@
 
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
-        populateBlogs(myTrip[i]);
+        if (displayCountry != myTrip[i]){
+          displayCountry = myTrip[i];
+          populateBlogs(myTrip[i]);
+        }
        };
       };
+    });
+
 
       function populateBlogs(countryObj){ 
-        alert('function'+countryObj.blogArray.length);
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
@@ -106,11 +113,6 @@
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
           $('#postsText'+i).append(countryObj.blogArray[i].content);
-
-        alert('function'+countryObj.name);
-
-        alert('function'+countryObj.blogArray.length);
-
 
 
           for (lat in countryObj.blogArray[i].location) {
@@ -135,14 +137,6 @@
           }
         };
       }
-    });
-
-    $('.countryFlags').click(function(){
-      
-      
-    });
-
-
 
     </script>
 
