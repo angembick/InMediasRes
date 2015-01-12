@@ -76,7 +76,7 @@
         for(var b = 0; b <response.items.length; b++){
           for(var i = 0; i< myTrip.length; i++){
             if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
-            argentina.blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+            myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
             }
           };  
         }
