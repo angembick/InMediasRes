@@ -72,7 +72,6 @@
 
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
-        alert('for loop'+ myTrip[i]);
         populateBlogs(myTrip[i]);
        };
       };
@@ -90,6 +89,10 @@
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
           $('#postsText'+i).append(countryObj.blogArray[i].content);
+
+        alert('function'+countryObj.name);
+
+        alert('function'+countryObj.blogArray.length);
 
 
 
