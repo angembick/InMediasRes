@@ -16,7 +16,7 @@ body {
   position: center;
   display: inline;
 }
-.countryFlag img{
+.countryFlag {
   height: 7%;
   width: 20%;
 }
