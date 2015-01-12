@@ -7,18 +7,6 @@ body {
   height: 100%;
   width: 100%;
 }
-.peruButton{
-  src :"PeruPic.png";
-}
-.boliviaButton{
-  src:"BoliviaPic.png";
-}
-.chileButton{
-  content:url("ChilePic.png");
-}
-.argentinaButton{
-  src:"Argentina.png";
-}
 .countryFlags{
   position: center;
   margin: 0; 
@@ -29,8 +17,8 @@ body {
   display: inline;
 }
 .countryFlag img{
-  height: "42";
-  width: "56";
+  height: 10%;
+  width: 25%;
 }
 .blog{
   height: 100%;
@@ -64,18 +52,6 @@ body {
   position: center;
   margin: 0; 
   width: 100%;
-}
-.peruButton{
-  src:"Peru.png";
-}
-.boliviaButton{
-  src:"Bolivia.png";
-}
-.chileButton{
-  src:"Chile.png";
-}
-.argentinaButton{
-  src:"Argentina.png";
 }
 
 }
