@@ -26,16 +26,16 @@
         </div>
         <div id="countryFlags" >
           <div class="countryFlag">
-            <img src="Peru.png" alt="Peru" height="42" width="54">
+            <img src="Peru.png" alt="Peru">
           </div>
           <div class="countryFlag">
-            <img src="Bolivia.png" alt="Bolivia" height="42" width="54">
+            <img src="Bolivia.png" alt="Bolivia">
           </div>
           <div class="countryFlag" >
-            <img src="Chile.png" alt="Chile" height="42" width ="54">
+            <img src="Chile.png" alt="Chile">
           </div>
           <div class="countryFlag" >
-            <img src="Argentina.png" alt="Argentina" height="42" width="54">
+            <img src="Argentina.png" alt="Argentina" >
           </div>
         </div>
       </div>
@@ -77,9 +77,9 @@
       success: function(response) {
         //populate the country array with blog content
         for(var b = 0; b <response.items.length; b++){
-          for(var i = (myTrip.length-1); i>= 0; i--){
+          for(var i = 0; i< myTrip.length; i++){
             if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
-            myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+              myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
             }
           };  
         }
