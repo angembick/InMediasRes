@@ -60,15 +60,17 @@
       this.title = title;
     };
 
-    var argentina = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
-    var chile = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
-    var bolivia = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
+    var myTrip = [];
+    myTrip[myTrip.length] = new Country('Peru','2014-08-12T11:00:00', '2014-09-08T11:00:00');
+    myTrip[myTrip.length] = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
+    myTrip[myTrip.length] = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
+    myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
     $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
       alert(countryID);
 
-      for(var i = 0; i<Country.length; i++){ alert(Country[i].name);}
+      for(var i = 0; i<myTrip.length; i++){ alert(myTrip[i].name);}
 
       for (var key in Country){
         var countryObj = Country[key];
