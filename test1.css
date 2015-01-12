@@ -16,8 +16,8 @@ body {
   position: center;
   display: inline;
 }
-.countryFlag {
-  height: 7%;
+.countryFlag img{
+  height: 10%;
   width: 20%;
 }
 .blog{
