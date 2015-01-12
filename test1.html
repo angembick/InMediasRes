@@ -67,7 +67,7 @@
     myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
 
-    
+
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
@@ -98,7 +98,7 @@
       };
 
       function populateBlogs(countryObj){ 
-        alert('function'+countryObj.name);
+        alert('function'+countryObj.blogArray.length);
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
