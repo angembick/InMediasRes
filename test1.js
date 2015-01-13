@@ -55,7 +55,8 @@ $(document).ready(function() {
 
 
       function populateBlogs(countryObj){ 
-        debugger;
+        // debugger;
+        console.log('populated')
         $('.blog').empty();
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
