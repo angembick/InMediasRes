@@ -39,7 +39,15 @@ body {
   float: left;
   margin: 10px;
 }
-
+#countryFlags img {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+}
+#countryFlags img:hover {
+  -webkit-transition: all .6s ease; 
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 
 
 
