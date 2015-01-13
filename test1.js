@@ -40,6 +40,9 @@ $(document).ready(function() {
       }
     });
 
+    //load the most recent country as a default
+    populateBlogs(displayCountry);
+
     $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
 
