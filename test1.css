@@ -49,7 +49,6 @@ body {
   -webkit-filter: grayscale(0%);
 }
 #countryFlags .imgDescription {
-  position: absolute;
   top:10px;
   left:30px;
   color: #CDFECD;
