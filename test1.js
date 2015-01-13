@@ -1,59 +1,94 @@
+$(document).ready(function() {
 
-    
-    jQuery( document ).ready(function( $ ) {
-  $.ajax({
+
+   function Country(name, startDate, endDate){
+      this.name = name;
+      this.startDate = startDate;
+      this.endDate = endDate;
+      this.blogArray = [];
+    };
+
+    function Blog(content, location, title){
+      this.content = content;
+      this.location = location;
+      this.title = title;
+    };
+
+    var myTrip = [];
+    myTrip[myTrip.length] = new Country('Peru','2014-08-12T11:00:00', '2014-09-08T11:00:00');
+    myTrip[myTrip.length] = new Country('Bolivia','2014-09-08T11:00:00', '2014-11-12T11:00:00');
+    myTrip[myTrip.length] = new Country('Chile',  '2014-11-12T11:00:00', '2014-12-08T11:00:00' );
+    myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
+
+    var displayCountry = myTrip[myTrip.length-1];
+    populateBlogs(displayCountry);
+
+
+
+    $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
-
-        var mapOptions = {
-          center: new google.maps.LatLng(-15.840868, -70.025868),
-          zoom: 5
-        };
-        var map = new google.maps.Map(document.getElementById("journeyMap"),
-            mapOptions);
-
-      
-        for (var i = 0; i < response.items.length; i++) {
-          //open a div for blog unique with the location in the response array
-          $('<div></div>').addClass('posts'+i).appendTo(".blog");
-
-          //add a div for the post content
-          $('<div></div>').addClass('postsText'+i).appendTo(".posts"+i"");
-
-          $(".postsText"+i+"").append("<h2>" + response.items[i].title + "</h2>");
-          $(".postsText"+i+"").append(response.items[i].content);
-          
-
-          //create google maps for those blogs that have geolocation
-          for (lat in response.items[i].location) {
-            //add a div for the post map
-            $('<div></div>').addClass('postsMap'+i).appendTo('.posts'+i);
-
-              var mapOptions = {
-                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
-                zoom: 3
-              };
-              var blogMap = new google.maps.Map($('.postsMap'+1+"")[0], mapOptions);
-
-
-              var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
-              var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: response.items[i].title
-              })
-          }
-          if (i+1<response.items.length) {
-            $(".postsText"+i+"").append("<hr/>");
-          }
+        //populate the country array with blog content
+        for(var b = 0; b <response.items.length; b++){
+          for(var i = 0; i< myTrip.length; i++){
+            if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
+              myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
+            }
+          };  
         }
-
       }
     });
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+    $('.countryFlag').click(function(){
+      var countryID = $("img", this).attr("alt");
 
-      
-// Code using $ as usual goes here.
+      for(var i = 0; i<myTrip.length; i++){
+       if(myTrip[i].name === countryID){
+        if (displayCountry != myTrip[i]){
+          displayCountry = myTrip[i];
+          populateBlogs(myTrip[i]);
+        }
+       };
+      };
+    });
+
+
+      function populateBlogs(countryObj){ 
+        $('.blog').empty();
+
+        for(var i = 0; i<countryObj.blogArray.length; i++){
+          //open a div for blog unique with the location in the response array
+          $('<div></div>').addClass('posts'+i).appendTo('.blog');
+
+          //add a div for the post content
+          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
+
+          //Add blog text and titles
+          $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
+          $('#postsText'+i).append(countryObj.blogArray[i].content);
+
+
+          for (lat in countryObj.blogArray[i].location) {
+
+            //add a div for the post map
+            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
+
+            var mapOptions = {
+                center: new google.maps.LatLng(countryObj.blogArray[i].location.lat,countryObj.blogArray[i].location.lng),
+                zoom: 6,
+                disableDefaultUI: true
+              };
+              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
+              $('#postsMap'+i).css('height', $('#postsText'+i).height());
+
+              var myLatlng = new google.maps.LatLng(countryObj.blogArray[i].location.lat,countryObj.blogArray[i].location.lng);
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: blogMap,
+                title: countryObj.blogArray[i].location.name
+              })
+          }
+        };
+      }
 });
