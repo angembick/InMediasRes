@@ -21,8 +21,6 @@ $(document).ready(function() {
     myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
     var displayCountry = myTrip[myTrip.length-1];
-    populateBlogs(displayCountry);
-
 
 
     $.ajax({
@@ -37,6 +35,10 @@ $(document).ready(function() {
             }
           };  
         }
+
+
+       //load the most recent country as a default
+       populateBlogs(displayCountry);
       }
     });
 
@@ -55,8 +57,7 @@ $(document).ready(function() {
 
 
       function populateBlogs(countryObj){ 
-        debugger;
-        console.log('populated')
+
         $('.blog').empty();
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
