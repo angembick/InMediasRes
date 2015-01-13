@@ -55,6 +55,7 @@ $(document).ready(function() {
 
 
       function populateBlogs(countryObj){ 
+        debugger;
         $('.blog').empty();
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
@@ -92,7 +93,7 @@ $(document).ready(function() {
         };
       }
 
-      
+
 
     //load the most recent country as a default
     populateBlogs(displayCountry);
