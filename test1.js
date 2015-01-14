@@ -50,6 +50,9 @@ $(document).ready(function() {
             url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+nextPage+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
             success: function(resp) {
               //populate the country array with blog content
+
+             nextPage = resp.nextPageToken;
+             alert('bottom'+nextPage);
               for(var b = 0; b <resp.items.length; b++){
                 for(var i = 0; i< myTrip.length; i++){
                   if((resp.items[b].published > myTrip[i].startDate) && (resp.items[b].published < myTrip[i].endDate)){
@@ -58,8 +61,6 @@ $(document).ready(function() {
                 };  
               }
 
-            nextPage = resp.nextPageToken;
-            alert('bottom'+nextPage);
             } 
           });
         }
