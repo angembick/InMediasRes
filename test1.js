@@ -27,6 +27,7 @@ $(document).ready(function() {
     //one ajax call that may be called on a url with or wothout the next page token
     //this function gets calles till the nextPage token is null
     //discard global var
+
     $.ajax({
       type: "GET",
       url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
@@ -42,7 +43,7 @@ $(document).ready(function() {
 
         var nextPage = response.nextPageToken;
        
-        if(nextPage != null){
+        for(var pg = 0; pg< 4;pg++){
           alert(nextPage); 
            $.ajax({
             type: "GET",
