@@ -42,16 +42,15 @@ $(document).ready(function() {
 
         var nextPage = response.nextPageToken;
        
-      if(nextPage != null){
+        if(nextPage != null){
         alert(nextPage); 
-         
-      }
+
+        }
       
        //load the most recent country as a default
        //must be in the success loop so that it is called after array is populated
        populateBlogs(displayCountry);
       }
-    }
 
     });
 
