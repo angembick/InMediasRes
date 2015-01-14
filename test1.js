@@ -43,7 +43,22 @@ $(document).ready(function() {
         var nextPage = response.nextPageToken;
        
       if(nextPage != null){
-        alert(response.nextPageToken);
+        alert(response.nextPageToken);  $.ajax({
+          type: "GET",
+          url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+          success: function(resp) {
+            //populate the country array with blog content
+            for(var b = 0; b <resp.items.length; b++){
+              for(var i = 0; i< myTrip.length; i++){
+                if((resp.items[b].published > myTrip[i].startDate) && (resp.items[b].published < myTrip[i].endDate)){
+                  myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(resp.items[b].content, respo.items[b].location,resp.items[b].title);
+                }
+              };  
+            }
+          }
+          nextPage = resp.nextPageToken;
+        });
+      }
       
        //load the most recent country as a default
        //must be in the success loop so that it is called after array is populated
