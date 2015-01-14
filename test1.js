@@ -25,7 +25,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: "GET",
-      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
       success: function(response) {
         //populate the country array with blog content
         for(var b = 0; b <response.items.length; b++){
@@ -35,11 +35,14 @@ $(document).ready(function() {
             }
           };  
         }
-
-
        //load the most recent country as a default
-       populateBlogs(displayCountry);
+       //must be in the success loop so that it is called after array is populated
+      if(response.nextPageToken != null){
+        alert(nextPageToken);
       }
+      }
+
+       populateBlogs(displayCountry);
     });
 
     $('.countryFlag').click(function(){
