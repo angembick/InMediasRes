@@ -37,8 +37,8 @@ $(document).ready(function() {
         }
        //load the most recent country as a default
        //must be in the success loop so that it is called after array is populated
-      if(response.items.nextPageToken != null){
-        alert(response.items.nextPageToken);
+      if(response.nextPageToken != null){
+        alert(response.nextPageToken);
       }
        populateBlogs(displayCountry);
       }
