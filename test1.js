@@ -58,7 +58,7 @@ $(document).ready(function() {
             }
           }
           nextPage = resp.nextPageToken;
-        }
+        });
       }
        //load the most recent country as a default
        //must be in the success loop so that it is called after array is populated
