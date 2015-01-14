@@ -42,7 +42,7 @@ $(document).ready(function() {
 
         var nextPage = response.nextPageToken;
        
-        if(nextPage != null){
+        while(nextPage != null){
           alert(nextPage); 
            $.ajax({
             type: "GET",
