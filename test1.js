@@ -49,6 +49,7 @@ $(document).ready(function() {
        //must be in the success loop so that it is called after array is populated
        populateBlogs(displayCountry);
       }
+    }
 
     });
 
