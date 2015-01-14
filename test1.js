@@ -58,10 +58,9 @@ $(document).ready(function() {
                 };  
               }
 
-            } 
-
             nextPage = resp.nextPageToken;
             alert('bottom'+nextPage);
+            } 
           });
         }
       
