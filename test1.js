@@ -35,7 +35,7 @@ $(document).ready(function() {
     function insertBlogs(thisBlogUrl){
       $.ajax({
         type: "GET",
-        url: blogUrl
+        url: thisblogUrl,
         success: function(response) {
           //populate the country array with blog content
           for(var b = 0; b <response.items.length; b++){
