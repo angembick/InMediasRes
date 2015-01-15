@@ -27,47 +27,36 @@ $(document).ready(function() {
     //one ajax call that may be called on a url with or wothout the next page token
     //this function gets calles till the nextPage token is null
     //discard global var
+    var blogUrl = "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",;
+    var nextPage = "";
 
-    $.ajax({
-      type: "GET",
-      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
-      success: function(response) {
-        //populate the country array with blog content
-        for(var b = 0; b <response.items.length; b++){
-          for(var i = 0; i< myTrip.length; i++){
-            if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
-              myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
-            }
-          };  
-        }
+    insertBlogs(blogUrl);
 
-        var nextPage = response.nextPageToken;
-       
-        if(nextPage != null){
-           $.ajax({
-            type: "GET",
-            url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+nextPage+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
-            success: function(resp) {
-              //populate the country array with blog content
-              for(var b = 0; b <resp.items.length; b++){
-                for(var i = 0; i< myTrip.length; i++){
-                  if((resp.items[b].published > myTrip[i].startDate) && (resp.items[b].published < myTrip[i].endDate)){
-                    myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(resp.items[b].content, resp.items[b].location,resp.items[b].title);
-                  }
-                };  
+    function insertBlogs(thisBlogUrl){
+      $.ajax({
+        type: "GET",
+        url: blogUrl
+        success: function(response) {
+          //populate the country array with blog content
+          for(var b = 0; b <response.items.length; b++){
+            for(var i = 0; i< myTrip.length; i++){
+              if((response.items[b].published > myTrip[i].startDate) && (response.items[b].published < myTrip[i].endDate)){
+                myTrip[i].blogArray[myTrip[i].blogArray.length] = new Blog(response.items[b].content, response.items[b].location,response.items[b].title);
               }
+            };  
+          }
 
-            nextPage = resp.nextPageToken;
-            } 
-          });
+          nextPage = response.nextPageToken;
+          if(nextPage != null){
+            insertBlogs("https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+nextPage+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ");
+          }
+
+          //load the most recent country as a default
+          //must be in the success loop so that it is called after array is populated
+          populateBlogs(displayCountry);
         }
-      
-       //load the most recent country as a default
-       //must be in the success loop so that it is called after array is populated
-       populateBlogs(displayCountry);
-      }
-
-    });
+      });
+    };
 
     $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
