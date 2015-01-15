@@ -23,15 +23,9 @@ $(document).ready(function() {
     var displayCountry = myTrip[myTrip.length-1];
 
 
-    //REWRITE THIS 
-    //one ajax call that may be called on a url with or wothout the next page token
-    //this function gets calles till the nextPage token is null
-    //discard global var
-    var blogUrl = "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ";
-    var nextPage = "";
-
-    insertBlogs(blogUrl);
-
+    //calls the function to populate the blogs into the blog array of each country object
+    insertBlogs("https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ");
+    //this function will call itself recursively until the last blog has been added to the country object
     function insertBlogs(thisBlogUrl){
       $.ajax({
         type: "GET",
@@ -45,12 +39,9 @@ $(document).ready(function() {
               }
             };  
           }
-
-          nextPage = response.nextPageToken;
-          if(nextPage != null){
-            insertBlogs("https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+nextPage+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ");
+          if(response.nextPageToken != null){
+            insertBlogs("https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+response.nextPageToken+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ");
           }
-
           //load the most recent country as a default
           //must be in the success loop so that it is called after array is populated
           populateBlogs(displayCountry);
@@ -60,7 +51,6 @@ $(document).ready(function() {
 
     $('.countryFlag').click(function(){
       var countryID = $("img", this).attr("alt");
-
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
         if (displayCountry != myTrip[i]){
