@@ -42,7 +42,7 @@ $(document).ready(function() {
           if(response.nextPageToken != null){
             insertBlogs("https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&pageToken="+response.nextPageToken+"&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)%2CnextPageToken&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ");
           }
-          if(response.nextPageToken === null){
+          else if(response.nextPageToken === null){
           //only load once
           //load the most recent country as a default
           //must be in the success loop so that it is called after array is populated
