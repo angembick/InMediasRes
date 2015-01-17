@@ -20,6 +20,10 @@ body {
   height: 10%;
   width: 23%;
 }
+#countryTitle{
+  font-size: large;
+  position: center;
+}
 .blog{
   height: 100%;
   width: 90%;
