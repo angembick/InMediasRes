@@ -67,15 +67,16 @@ $(document).ready(function() {
       };
     });
 
-    function updateCountryTitle(countryTitleObj){
+    function updateCountryTitle(countryObj){
       $('#countryTitle h1').effect('puff',500);
       $('#countryTitle').empty();
-      $('#countryTitle').append($('<h1>'+countryTitleObj.name+'</h1>').fadeIn(500));
+      $('#countryTitle').append($('<h1>'+countryObj.name+'</h1>').fadeIn(500));
     };
 
       function populateBlogs(countryObj){ 
 
         $('.blog').empty();
+            $('#countryTitle').empty();
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
