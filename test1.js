@@ -47,7 +47,7 @@ $(document).ready(function() {
           //load the most recent country as a default
           //must be in the success loop so that it is called after array is populated
           populateBlogs(displayCountry);
-          $('#countryTitle').append($('<h1>'+displayCountry.name+'</h1>').fadeIn(500));
+          $('#countryTitle').append($('<h1>'+displayCountry.name+'</h1>'));
           }
           
         }
@@ -68,7 +68,7 @@ $(document).ready(function() {
     });
 
     function updateCountryTitle(countryTitleObj){
-      $('#countryTitle').effect('puff',500);
+      $('#countryTitle h1').effect('puff',500);
       $('#countryTitle').empty();
       $('#countryTitle').append($('<h1>'+countryTitleObj.name+'</h1>').fadeIn(500));
     };
