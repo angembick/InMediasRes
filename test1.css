@@ -22,8 +22,8 @@ body {
 }
 #countryTitle h1{
   font-size: 40; 
-  margin-right: auto;
-  margin-left: auto;
+  right:50%;
+  left:50%;
 }
 .blog{
   height: 100%;
