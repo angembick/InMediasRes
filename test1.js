@@ -68,10 +68,12 @@ $(document).ready(function() {
     });
 
     function updateCountryTitle(countryObj){
-      $('#countryTitle').fadeOut(10000, function(){
+      $('#countryTitle').fadeOut(5000, function(){
         $(this).empty()});
-      $('#countryTitle').append($('<h1>'+countryObj.name+'</h1>').fadeIn(500));
+      $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
     };
+
+
 
       function populateBlogs(countryObj){ 
 
