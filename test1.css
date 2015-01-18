@@ -11,10 +11,11 @@ body {
   position: center;
   margin: 0; 
   width: "230";
+  background-color: black;
 }
 .countryFlag{
-  position: center;
   display: inline;
+  margin: 7px;
 }
 .countryFlag img{
   height: 10%;
