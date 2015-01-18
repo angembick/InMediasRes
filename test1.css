@@ -20,7 +20,7 @@ body {
   height: 10%;
   width: 23%;
 }
-#countryTitle{
+#countryTitle h1{
   font-size: 40; 
   margin-right: auto;
   margin-left: auto;
