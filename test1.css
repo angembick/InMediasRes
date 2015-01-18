@@ -20,8 +20,12 @@ body {
   height: 10%;
   width: 23%;
 }
+#countryTitle{
+  width: 100%;
+}
 #countryTitle h1{
-  font-size: 40; 
+  font-size: 40px;
+  text-align: center; 
 }
 .blog{
   height: 100%;
