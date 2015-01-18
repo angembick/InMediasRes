@@ -76,7 +76,7 @@ $(document).ready(function() {
       function populateBlogs(countryObj){ 
 
         $('.blog').empty();
-      $('#countryTitle').fadeOut(500, $('#countryTitle').empty());
+      $('#countryTitle').fadeOut();
             
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
