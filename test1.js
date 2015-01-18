@@ -68,10 +68,11 @@ $(document).ready(function() {
     });
 
     function updateCountryTitle(countryObj){
-      $('#countryTitle').fadeOut('slow', function(){
-        $(this).empty()
+      $('#countryTitle h1').fadeOut('slow', function(){
+        $('#countryTitle').empty()
         $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
       });
+      $('#countryTitle h1').fadeIn();
     };
 
 
