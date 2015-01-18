@@ -21,8 +21,8 @@ body {
   width: 23%;
 }
 #countryTitle{
-  font-size: 40px;
-  position: center;
+  font-size: 40;
+  float: center;
 }
 .blog{
   height: 100%;
