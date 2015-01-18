@@ -76,8 +76,8 @@ $(document).ready(function() {
       function populateBlogs(countryObj){ 
 
         $('.blog').empty();
-      $('#countryTitle').toggle('puff');
-            $('#countryTitle').empty();
+      $('#countryTitle').fadeOut(500, $('#countryTitle').empty());
+            
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
