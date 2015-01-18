@@ -72,8 +72,7 @@ $(document).ready(function() {
         $('#countryTitle').empty()
         $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
       });
-      $('#countryTitle h1').fadeIn(1000);
-      $('#countryTitle h1').animate({ left: '+=100px'}, 1000);
+      $('#countryTitle h1').animate({ right: '-=100px'}, 1000);
     };
 
 
