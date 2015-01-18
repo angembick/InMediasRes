@@ -72,7 +72,7 @@ $(document).ready(function() {
         $('#countryTitle').empty()
         $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
       });
-      $('#countryTitle h1').animate({ right: '-=100px'}, 1000);
+      $('#countryTitle h1').animate({ right: '-=300px'}, 2000);
     };
 
 
