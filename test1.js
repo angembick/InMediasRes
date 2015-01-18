@@ -68,16 +68,15 @@ $(document).ready(function() {
     });
 
     function updateCountryTitle(countryObj){
-      $('#countryTitle h1').effect('puff',500);
-      $('#countryTitle').empty();
+      $('#countryTitle').fadeOut(10000, function(){
+        $(this).empty()});
       $('#countryTitle').append($('<h1>'+countryObj.name+'</h1>').fadeIn(500));
     };
 
       function populateBlogs(countryObj){ 
 
         $('.blog').empty();
-      $('#countryTitle').fadeOut(30000, function(){
-        $(this).remove()});
+      
             
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
