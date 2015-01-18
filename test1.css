@@ -21,14 +21,14 @@ body {
   width: 23%;
 }
 #countryTitle{
-  font-size: large;
+  font-size: 40px;
   position: center;
 }
 .blog{
   height: 100%;
   width: 90%;
   float:center; 
-  position: center;
+  float: center;
 }
 .postsText{
   height:100%;
@@ -36,7 +36,6 @@ body {
   display: inline;
   float: right;
   margin: 10px;
-  font-size: 100%;
 }
 .postsMap{
   width: 20%;
