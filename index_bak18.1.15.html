@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+  <title> In Medias Res </title>
+    <link rel="stylesheet" href="test1.css">
+    
+
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script  type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ" >
+    </script>
+  </head>
+
+  <body>
+
+    <div class="nav">
+      <div class="container">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="blog" >
+      </div>
+    </div>
+
+
+
+    <script>
+     
+
+
+    
+    $.ajax({
+      type: "GET",
+      url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?fetchBodies=true&fields=items(content%2Clocation(lat%2Clng%2Cname)%2Cpublished%2Ctitle)&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
+      success: function(response) {
+
+      
+        for (var i = 0; i < response.items.length; i++) {
+          //open a div for blog unique with the location in the response array
+          $('<div></div>').addClass('posts'+i).appendTo('.blog');
+
+          //add a div for the post content
+          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
+
+          //Add blog text and titles
+          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
+          $('#postsText'+i).append(response.items[i].content);
+
+
+
+          for (lat in response.items[i].location) {
+
+            //add a div for the post map
+            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
+
+            var mapOptions = {
+                center: new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng),
+                zoom: 4,
+                disableDefaultUI: true
+              };
+              var blogMap = new google.maps.Map($('#postsMap'+i)[0], mapOptions);
+              $('#postsMap'+i).css('height', $('#postsText'+i).height());
+
+              var myLatlng = new google.maps.LatLng(response.items[i].location.lat,response.items[i].location.lng);
+              var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: blogMap,
+                title: response.items[i].location.name
+              })
+          }
+        }
+
+      }
+    });
+
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+
+  </body>
+</html>
