@@ -24,7 +24,7 @@ $(document).ready(function(){
 
 	insertBlogs();   
 
-	function problem1(){
+	$('h2').click(function(){
 		var total = 0;
 		for(var i = 0; i<= 100; i++){
 			if ((i%3===0) && (i%5 ===0)){
@@ -32,9 +32,7 @@ $(document).ready(function(){
 			}
 		};
 		alert(total);
-	}
-
-	$('h2').click(problem1);
+	});
 
 
 
