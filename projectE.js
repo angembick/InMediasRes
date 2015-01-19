@@ -27,7 +27,7 @@ $(document).ready(function(){
 	function problem1(){
 		var total = 0;
 		for(var i = 0; i< 10; i++){
-			if ((3%i===0) && (5%i ===0)){
+			if ((i%3===0) || (i%5 ===0)){
 				total += i;
 			}
 		};
