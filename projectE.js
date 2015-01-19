@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 
 	function problem3(){
-		var number = 131
+		var number = 10
 
 		if((number/2) === 0){
 			alert(number/2);
