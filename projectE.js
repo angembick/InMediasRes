@@ -56,10 +56,10 @@ $(document).ready(function(){
 	function problem3(){
 		var number = 10;
 
-		if((number/2) === 0){
+		if((number%2) === 0){
 			alert(number/2);
 		}
-		for(var i = 3; i<number%2; i+=2){
+		for(var i = 3; i<number/2; i+=2){
 			if(number %i === 0){
 				alert(number/i);
 			}
@@ -68,7 +68,7 @@ $(document).ready(function(){
 
 
 
-		problem3();
+	problem3();
 
 
 
