@@ -59,7 +59,7 @@ $(document).ready(function(){
 		if((number%2) === 0){
 			alert(number/2);
 		}
-		for(var i = 3; i<number/2; i+=2){
+		for(var i = 3; i<=number/2; i+=2){
 			if(number %i === 0){
 				alert(number/i);
 			}
