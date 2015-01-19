@@ -17,7 +17,7 @@ $(document).ready(function(){
 	          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
 	          $('#postsText'+i).append(response.items[i].content);
 			};
-		};
+		}
 	   };
 	}; 
 
