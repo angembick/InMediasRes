@@ -42,7 +42,7 @@ $(document).ready(function(){
  //find the sum of the even-valued terms.
 
 	function problem2(){
-		var total = 0;
+		var total = 2;
 		var	first = 1;
 		var	second = 2;
 		var newFirst = 0;
@@ -53,7 +53,7 @@ $(document).ready(function(){
 			if(second %2 === 0){
 				total+= second;
 			}
-		}while(second < 10)
+		}while(second < 4000000)
 		alert(total);
 	};
 		problem2();
