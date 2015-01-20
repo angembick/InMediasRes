@@ -65,6 +65,7 @@ $(document).ready(function(){
 			if(number %i === 0){
 				if(isPrime(number/i) !== null){
 					alert(isPrime(number/i));
+					break;
 				}
 			}
 		}
