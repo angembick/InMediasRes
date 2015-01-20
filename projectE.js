@@ -54,18 +54,18 @@ $(document).ready(function(){
 
 
 	function problem3(){
-		//if num is <=5 call is prime on it directly and un comment out else if loop
 		var number = 10;
-		alert('10'+number);
-		alert('11'+isPrime(11));
-		alert('23'+isPrime(23));
-		alert('1'+isPrime(1));
+
 		if((number%2) === 0){
-			alert(isPrime(number/2));
+			if(isPrime(number/2) !== null){
+				alert(isPrime(number/2));
+			}
 		}
 		for(var i = 3; i<=number/2; i+=2){
 			if(number %i === 0){
-				alert(isPrime(number/i));
+				if(isPrime(number/i) !== null){
+					alert(isPrime(number/i));
+				}
 			}
 		}
 
@@ -73,9 +73,6 @@ $(document).ready(function(){
 			if((numQuo%2 === 0) & (numQuo !==2)){
 				return null;
 			}
-			//else if((numQuo === 5)||(numQuo === 3) ||(numQuo === 1)){
-			//	return numQuo;
-			//}
 
 			for(var j = 3; j <= numQuo/2; j+=2){
 				if(numQuo % j === 0){
