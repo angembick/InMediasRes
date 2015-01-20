@@ -93,20 +93,19 @@ $(document).ready(function(){
 			for(var j = 0; j<100; j++){
 				var quoStr = ((i*j)).toString();
 				var quoLen = quoStr.length;
-				for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
-					paliCheck();
-
-				}
+				paliCheck();
 			}
 		}
 		function paliCheck(){
 			//seperate each 
-			if( (quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)))!== (quoStr.substring((quoIndex-1), quoIndex))){
 
-				break;
-			}
-			else if((quoIndex === 0) & ((i * j)>paliProduct)){
-				paliProduct = i*j;
+			for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
+				if( (quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)))!== (quoStr.substring((quoIndex-1), quoIndex))){
+					break;
+				}
+				else if((quoIndex === 0) & ((i * j)>paliProduct)){
+					paliProduct = i*j;
+				}
 			}
 		};
 
