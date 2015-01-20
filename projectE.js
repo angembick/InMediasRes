@@ -74,7 +74,7 @@ $(document).ready(function(){
 				if(numQuo % i === 0){
 					return null
 				}
-				else if(i >= numQuo/2) && (numQuo%i != 0){
+				else if(i >= numQuo/2) & (numQuo%i != 0){
 					return numQuo;
 				}
 			}
