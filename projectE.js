@@ -101,6 +101,7 @@ $(document).ready(function(){
 		function paliCheck(){
 			//seperate each 
 			if( quoIndex!== 0){
+				alert('len '+quoLen+'.  index '+quoIndex);
 				alert('first sub '+quoStr.substr((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
 				alert('second sub '+ quoStr.substr((quoIndex-1), quoIndex));
 				//break;
