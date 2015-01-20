@@ -58,7 +58,8 @@ $(document).ready(function(){
 		var number = 10;
 		alert('10'+number);
 		alert('11'+isPrime(11));
-		alert('23'+isPrime(23))
+		alert('23'+isPrime(23));
+		alert('1'+isPrime(1));
 		if((number%2) === 0){
 			alert(isPrime(number/2));
 		}
@@ -72,19 +73,16 @@ $(document).ready(function(){
 			if(numQuo%2 === 0){
 				return null;
 			}
-			else if((numQuo === 5)||(numQuo === 3) ||(numQuo === 1)){
-				return numQuo;
-			}
+			//else if((numQuo === 5)||(numQuo === 3) ||(numQuo === 1)){
+			//	return numQuo;
+			//}
 
 			for(var j = 3; j <= numQuo/2; j+=2){
 				if(numQuo % j === 0){
 					return null
 				}
 			}
-
-			else{
-				return numQuo;
-			}
+			return numQuo;
 		}
 	};
 
