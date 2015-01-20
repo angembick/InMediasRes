@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 
 	function problem3(){
-		var number = 13195;
+		var number = 600851475;
 
 		if((number%2) === 0){
 			if(isPrime(number/2) !== null){
