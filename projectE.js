@@ -89,22 +89,30 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 99; i<100; i++){
+		for(var i = 91; i<92; i++){
 			for(var j = 99; j<100; j++){
 				for(var ixj = ((i*j)).toString().length; ixj>= 0; ixj--){
-					paliCheck(ixj);
+					paliCheck();
 				}
 			}
-		};
-		function paliCheck(quoLen){
-			alert(' i'+i+' j'+j+' ixj'+ixj);
+		}
+		function paliCheck(){
+			if(ixj === 0){
+				alert('first sub '+(((i*j)).toString().substr(((((i*j)).toString().length)-ixj), ((((i*j)).toString().length) - (ixj+1)))));
+				alert('second sub '+ (((i*j)).toString().substr((ixj-1), ixj)));
+				//break;
+			}
+			else if((ixj === 0) & ((i * j)>paliProduct)){
+				paliProduct = i*j;
+			}
 		};
 
 
-		//alert(paliCheck());
+		alert(test);
 	};
 
 	problem4();
+	alert('hellpo');
 
 
 
