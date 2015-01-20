@@ -105,7 +105,7 @@ $(document).ready(function(){
 			if( quoIndex!== 0){
 
 				alert('len '+quoLen+'.  index '+quoIndex);
-				alert('start '+(quoLen-quoIndex)+', end '+((quoLen-quoIndex)+1);
+				alert('start '+(quoLen-quoIndex)+', end '+((quoLen-quoIndex)+1));
 				alert('first sub '+quoStr.substr((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
 				alert('second sub '+ quoStr.substr((quoIndex-1), quoIndex));
 				//break;
