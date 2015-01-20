@@ -101,8 +101,8 @@ $(document).ready(function(){
 		function paliCheck(){
 			//seperate each 
 			if( quoIndex!== 0){
-				alert('first sub '+quoStr.substr((quoLen-quoIndex), (quoLen - (quoIndex+1))));
-				alert('second sub '+ quoLen.substr((ixj-1), quoIndex));
+				alert('first sub '+quoStr.substr((quoLen-quoIndex), (quoLen - (quoIndex-1))));
+				alert('second sub '+ quoStr.substr((quoIndex-1), quoIndex));
 				//break;
 			}
 			else if((ixj === 0) & ((i * j)>paliProduct)){
