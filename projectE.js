@@ -106,11 +106,11 @@ $(document).ready(function(){
 
 				alert('len '+quoLen+'.  index '+quoIndex);
 				alert('start '+(quoLen-quoIndex)+', end '+((quoLen-quoIndex)+1));
-				alert('first sub '+quoStr.substr((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
-				alert('second sub '+ quoStr.substr((quoIndex-1), quoIndex));
+				alert('first sub '+quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
+				alert('second sub '+ quoStr.substring((quoIndex-1), quoIndex));
 				//break;
 			}
-			else if((ixj === 0) & ((i * j)>paliProduct)){
+			else if((quoIndex === 0) & ((i * j)>paliProduct)){
 				paliProduct = i*j;
 			}
 		};
