@@ -26,11 +26,9 @@ $(document).ready(function(){
 
 	function problem1(){
 		var total = 0;
-		for(var i = 0; i< 100; i++){
+		for(var i = 0; i< 1000; i++){
 			if ((i%3===0) || (i%5 ===0)){
-				alert(i);
 				total += i;
-				alert('the total is now '+total);
 			}
 		};
 		alert(total);
@@ -88,7 +86,7 @@ $(document).ready(function(){
 
 
 
-	problem1();
+	problem3();
 
 
 
