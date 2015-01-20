@@ -70,7 +70,7 @@ $(document).ready(function(){
 		}
 
 		function isPrime(numQuo){
-			if(numQuo%2 === 0){
+			if((numQuo%2 === 0) & (numQuo !==2)){
 				return null;
 			}
 			//else if((numQuo === 5)||(numQuo === 3) ||(numQuo === 1)){
