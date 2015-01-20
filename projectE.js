@@ -77,7 +77,8 @@ $(document).ready(function(){
 					return null
 				}
 				else if((i >= numQuo/2) & (numQuo%i != 0)){
-					return 'is prime';
+					var result = numQuo;
+					return result;
 				}
 			}
 		}
