@@ -100,7 +100,7 @@ $(document).ready(function(){
 		}
 		function paliCheck(){
 			//seperate each 
-			if(ixj === 0){
+			if( quoIndex!== 0){
 				alert('first sub '+quoStr.substr((quoLen-quoIndex), (quoLen - (quoIndex+1))));
 				alert('second sub '+ quoLen.substr((ixj-1), quoIndex));
 				//break;
