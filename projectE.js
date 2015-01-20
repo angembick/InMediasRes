@@ -68,7 +68,19 @@ $(document).ready(function(){
 		}
 
 		function isPrime(numQuo){
-return numQuo;
+			if(numQuo%2 === 0){
+				return null;
+			}
+
+			for(var j = 3; j <= numQuo/2; j+=2){
+				if(numQuo % j === 0){
+					return null
+				}
+				else if((j >= numQuo/2) & (numQuo%j !== 0)){
+					var result = numQuo;
+					return result;
+				}
+			}
 		}
 	};
 
