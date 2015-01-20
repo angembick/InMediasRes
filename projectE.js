@@ -113,14 +113,13 @@ $(document).ready(function(){
 
 	function problem5(){
 		var product = null;
-		for(var i=1; product.isNan(); i++){
+		for(var i=1; i<30000; i++){
 			for(var j = 1; j<=10; j++){
 				if(i%j !==0){
 					break;
 				}
 				else if(j ===20){
 					product = i;
-					break;
 				}
 			}
 		}
