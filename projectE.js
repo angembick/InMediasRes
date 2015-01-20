@@ -89,21 +89,20 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 100; i<100; i++){
-			for(var j = 100; j<100; j++){
-				for(var ixj = ((i*j)).toString().length; ixj>= 0; ixj--){
+		for(var i = 99; i<100; i++){
+			for(var j = 99; j<100; j++){
+				var quoStr = ((i*j)).toString();
+				var quoLen = quoStr.length;
+				for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
 					paliCheck();
 				}
 			}
 		}
-		i = 99;
-		j = 91;
-		ixy = i*j;
-		paliCheck();
 		function paliCheck(){
+			//seperate each 
 			if(ixj === 0){
-				alert('first sub '+(((i*j)).toString().substr(((((i*j)).toString().length)-ixj), ((((i*j)).toString().length) - (ixj+1)))));
-				alert('second sub '+ (((i*j)).toString().substr((ixj-1), ixj)));
+				alert('first sub '+quoStr.substr((quoLen-quoIndex), (quoLen - (quoIndex+1))));
+				alert('second sub '+ quoLen.substr((ixj-1), quoIndex));
 				//break;
 			}
 			else if((ixj === 0) & ((i * j)>paliProduct)){
