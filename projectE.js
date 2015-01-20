@@ -89,8 +89,8 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 0; i<100; i++){
-			for(var j = 0; j<100; j++){
+		for(var i = 99; i<1000; i++){
+			for(var j = 99; j<1000; j++){
 				var quoStr = ((i*j)).toString();
 				var quoLen = quoStr.length;
 				paliCheck();
