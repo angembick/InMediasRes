@@ -55,7 +55,9 @@ $(document).ready(function(){
 
 	function problem3(){
 		var number = 10;
-
+		alert('10'+number);
+		alert('11'+isPrime(11));
+		alert('5'+isPrime(5))
 		if((number%2) === 0){
 			alert(isPrime(number/2));
 		}
