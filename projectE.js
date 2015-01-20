@@ -99,6 +99,7 @@ $(document).ready(function(){
 		i = 99;
 		j = 91;
 		ixy = i*j;
+		paliCheck();
 		function paliCheck(){
 			if(ixj === 0){
 				alert('first sub '+(((i*j)).toString().substr(((((i*j)).toString().length)-ixj), ((((i*j)).toString().length) - (ixj+1)))));
