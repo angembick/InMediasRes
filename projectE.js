@@ -96,9 +96,8 @@ $(document).ready(function(){
 				paliCheck();
 			}
 		}
-		function paliCheck(){
-			//seperate each 
 
+		function paliCheck(){
 			for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
 				if( (quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)))!== (quoStr.substring((quoIndex-1), quoIndex))){
 					break;
@@ -108,12 +107,27 @@ $(document).ready(function(){
 				}
 			}
 		};
-
-
 		alert(paliProduct);
 	};
 
-	problem4();
+
+	function problem5(){
+		var product = null;
+		for(var i=1; product = null; i++){
+			for(var j = 1; j<=10; j++){
+				if(i%j !==0){
+					break;
+				}
+				else if(j ===20){
+					product = i;
+					break;
+				}
+			}
+		}
+	};
+
+
+	problem5();
 
 
 
