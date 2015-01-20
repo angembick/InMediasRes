@@ -80,6 +80,9 @@ $(document).ready(function(){
 					var result = numQuo;
 					return result;
 				}
+				else{
+					return 'hi';
+				}
 			}
 		}
 	};
