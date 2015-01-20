@@ -71,6 +71,9 @@ $(document).ready(function(){
 			if(numQuo%2 === 0){
 				return null;
 			}
+			else if(numQuo === 5){
+				return numQuo;
+			}
 
 			for(var j = 3; j <= numQuo/2; j+=2){
 				if(numQuo % j === 0){
