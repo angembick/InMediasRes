@@ -54,7 +54,7 @@ $(document).ready(function(){
 
 
 	function problem3(){
-		var number = 13195;
+		var number = 10;
 
 		if((number%2) === 0){
 			alert(isPrime(number/2));
@@ -74,7 +74,7 @@ $(document).ready(function(){
 				if(numQuo % i === 0){
 					return null
 				}
-				else if(i > numQuo/2){
+				else if(i >= numQuo/2) && numQuo{
 					return numQuo;
 				}
 			}
