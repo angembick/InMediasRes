@@ -88,21 +88,21 @@ $(document).ready(function(){
 
 
 	function problem4(){
-		var polyProduct = 0;
+		var paliProduct = 0;
 		for(var i = 100; i<100; i++){
-			for(var j = 100; i<100; i++){
+			for(var j = 100; j<100; j++){
 				for(var ixj = (i*j).toString().length; ixj>= 0; ixj--){
 					if(((i*j).toString().substr((((i*j).toString().length)-ixj), (((i*j).toString().length) - (ixj+1)))) !== ((i*j).toString().substr((ixj-1), ixj))){
 						break;
 
 					}
-					else if((ixj === 0) & ((i * j)>polyProduct)){
-						polyProduct = i*j;
+					else if((ixj === 0) & ((i * j)>paliProduct)){
+						paliProduct = i*j;
 					}
 				}
 			}
 		}
-		alert(polyProduct);
+		alert(paliProduct);
 	};
 
 	problem4();
