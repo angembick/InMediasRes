@@ -89,13 +89,16 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 91; i<92; i++){
-			for(var j = 99; j<100; j++){
+		for(var i = 100; i<100; i++){
+			for(var j = 100; j<100; j++){
 				for(var ixj = ((i*j)).toString().length; ixj>= 0; ixj--){
 					paliCheck();
 				}
 			}
 		}
+		i = 99;
+		j = 91;
+		ixy = i*j;
 		function paliCheck(){
 			if(ixj === 0){
 				alert('first sub '+(((i*j)).toString().substr(((((i*j)).toString().length)-ixj), ((((i*j)).toString().length) - (ixj+1)))));
