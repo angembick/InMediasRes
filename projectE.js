@@ -54,14 +54,29 @@ $(document).ready(function(){
 
 
 	function problem3(){
-		var number = 10;
+		var number = 13195;
 
 		if((number%2) === 0){
-			alert(number/2);
+			alert(isPrime(number/2));
 		}
 		for(var i = 3; i<=number/2; i+=2){
 			if(number %i === 0){
-				alert(number/i);
+				alert(isPrime(number/i));
+			}
+		}
+
+		function isPrime(numQuo){
+			if(numQuo%2 === 0){
+				return null;
+			}
+
+			for(var i = 3; i <= numQuo/2; i+=2){
+				if(numQuo % i === 0){
+					return null
+				}
+				else if(i > numQuo/2){
+					return numQuo;
+				}
 			}
 		}
 	};
@@ -69,9 +84,6 @@ $(document).ready(function(){
 
 
 	problem3();
-
-
-
 
 
 
