@@ -89,11 +89,10 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 99; i<100; i++){
-			for(var j = 99; j<100; j++){
+		for(var i = 0; i<100; i++){
+			for(var j = 0; j<100; j++){
 				var quoStr = ((i*j)).toString();
 				var quoLen = quoStr.length;
-				alert('quo '+i*j);
 				for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
 					paliCheck();
 
@@ -102,13 +101,9 @@ $(document).ready(function(){
 		}
 		function paliCheck(){
 			//seperate each 
-			if( quoIndex!== 0){
+			if( (quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)))!== (quoStr.substring((quoIndex-1), quoIndex))){
 
-				alert('len '+quoLen+'.  index '+quoIndex);
-				alert('start '+(quoLen-quoIndex)+', end '+((quoLen-quoIndex)+1));
-				alert('first sub '+quoStr.substring((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
-				alert('second sub '+ quoStr.substring((quoIndex-1), quoIndex));
-				//break;
+				break;
 			}
 			else if((quoIndex === 0) & ((i * j)>paliProduct)){
 				paliProduct = i*j;
@@ -116,11 +111,10 @@ $(document).ready(function(){
 		};
 
 
-		alert(test);
+		alert(paliProduct);
 	};
 
 	problem4();
-	alert('hellpo');
 
 
 
