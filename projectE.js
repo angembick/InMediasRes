@@ -93,15 +93,19 @@ $(document).ready(function(){
 			for(var j = 99; j<100; j++){
 				var quoStr = ((i*j)).toString();
 				var quoLen = quoStr.length;
+				alert('quo '+i*j);
 				for(var quoIndex = quoStr.length; quoIndex>= 0; quoIndex--){
 					paliCheck();
+
 				}
 			}
 		}
 		function paliCheck(){
 			//seperate each 
 			if( quoIndex!== 0){
+
 				alert('len '+quoLen+'.  index '+quoIndex);
+				alert('start '+quoLen-quoIndex+', end '+(quoLen-quoIndex)+1);
 				alert('first sub '+quoStr.substr((quoLen-quoIndex), ((quoLen-quoIndex)+1)));
 				alert('second sub '+ quoStr.substr((quoIndex-1), quoIndex));
 				//break;
