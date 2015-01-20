@@ -86,7 +86,26 @@ $(document).ready(function(){
 
 
 
-	problem3();
+
+	function problem4(){
+		var polyProduct = 0;
+		for(var i = 100; i<100; i++){
+			for(var j = 100; i<100; i++){
+				for(var ixj = (i*j).toString().length; ixj>= 0; ixj--){
+					if(((i*j).toString().substr((((i*j).toString().length)-ixj), (((i*j).toString().length) - (ixj+1)))) !== ((i*j).toString().substr((ixj-1), ixj))){
+						break;
+
+					}
+					else if((ixj === 0) & ((i * j)>polyProduct)){
+						polyProduct = i*j;
+					}
+				}
+			}
+		}
+		alert(polyProduct);
+	};
+
+	problem4();
 
 
 
