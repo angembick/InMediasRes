@@ -89,8 +89,8 @@ $(document).ready(function(){
 
 	function problem4(){
 		var paliProduct = 0;
-		for(var i = 100; i<100; i++){
-			for(var j = 100; j<100; j++){
+		for(var i = 0; i<100; i++){
+			for(var j = 0; j<100; j++){
 				for(var ixj = (i*j).toString().length; ixj>= 0; ixj--){
 					if(((i*j).toString().substr((((i*j).toString().length)-ixj), (((i*j).toString().length) - (ixj+1)))) !== ((i*j).toString().substr((ixj-1), ixj))){
 						break;
