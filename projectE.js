@@ -118,7 +118,7 @@ $(document).ready(function(){
 				if(i%j !==0){
 					break;
 				}
-				else if(j ===20){
+				else if(j ===10){
 					product = i;
 				}
 			}
