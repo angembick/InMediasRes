@@ -169,7 +169,16 @@ $(document).ready(function(){
 		}
 
 	};
-	problem7();
+
+
+function problem8(){
+	var numArray = "73167176531330624919225119674426574742355349194934".split("");
+	for(var i = 0; i<5; i++){
+		alert(numArray[i]*numArray[i+1]);
+	}
+};
+	problem8();
+}
 
 
 
