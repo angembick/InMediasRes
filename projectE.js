@@ -149,7 +149,9 @@ $(document).ready(function(){
 		var p = 0;
 		for(var i = 0; p<7; i++){
 			if(isPrime(i)){
+				alert('i is '+i);
 				p++;
+				alert('p is '+p);
 			}
 		}		
 
