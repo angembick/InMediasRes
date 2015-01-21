@@ -127,9 +127,23 @@ $(document).ready(function(){
 	};
 
 
-	problem5();
 
+	function problem6(){
+		var sqrSum = 0;
+		var sumSqr = 0;
+		for(var i=1; i<=10;i++){
+			sqrSum +=(i*i);
+		}
+		for(var i=1; i<=10;i++){
+			sumSqr += i;
+			if(i===10){
+				sumSqr *= sumSqr;
+			}
+		}
+		alert(sumSqr - sqrSum);
+	};
 
+	problem6();
 
 
 });
