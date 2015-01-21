@@ -147,10 +147,10 @@ $(document).ready(function(){
 
 	function problem7(){
 		var p = 0;
-		for(var i = 2; p<6; i++){
+		for(var i = 2; p<10001; i++){
 			if(isPrime(i)){
 				p++;
-				if(p === 6){
+				if(p === 10001){
 					alert(i);
 				}
 			}
