@@ -145,31 +145,30 @@ $(document).ready(function(){
 
 
 
-function problem7(){
-	var p = 0;
-	for(var i = 0; p<14; i++){
-		if(isPrime(i)){
-			p++;
-		}
-		
-
-	}
-	function isPrime(numQuo){
-		if((numQuo%2 === 0) & (numQuo !==2)){
-			return false;
-		}
-		for(var j = 3; j <= numQuo/2; j+=2){
-			if(numQuo % j === 0){
-				return false
+	function problem7(){
+		var p = 0;
+		for(var i = 0; p<14; i++){
+			if(isPrime(i)){
+				p++;
 			}
-		}
-		return true;
-	}
-	alert(i);
+		}		
 
-};
+		function isPrime(numQuo){
+			if((numQuo%2 === 0) & (numQuo !==2)){
+				return false;
+			}
+			for(var j = 3; j <= numQuo/2; j+=2){
+				if(numQuo % j === 0){
+					return false
+				}
+			}
+			return true;
+		}
+		alert(i);
+
+	};
 	problem7();
-}
+
 
 
 });
