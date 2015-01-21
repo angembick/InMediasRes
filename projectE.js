@@ -147,7 +147,7 @@ $(document).ready(function(){
 
 	function problem7(){
 		var p = 0;
-		for(var i = 0; p<14; i++){
+		for(var i = 0; p<7; i++){
 			if(isPrime(i)){
 				p++;
 			}
