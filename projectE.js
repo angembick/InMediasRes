@@ -172,10 +172,14 @@ $(document).ready(function(){
 
 
 function problem8(){
+	var bigProduct = 0;
 	var numArray = "73167176531330624919225119674426574742355349194934".split("");
-	for(var i = 0; i<5; i++){
-		alert(numArray[i]*numArray[i+1]);
+	for(var i = 0; i<(numArray.length-4); i++){
+		if((numArray[i]*numArray[i+1]*numArray[i+2]*numArray[i+3])>bigProduct){
+			bigProduct = numArray[i]*numArray[i+1]*numArray[i+2]*numArray[i+3];
+		}
 	}
+	alert(bigProduct);
 };
 	problem8();
 
