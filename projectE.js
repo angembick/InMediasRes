@@ -143,7 +143,39 @@ $(document).ready(function(){
 		alert(sumSqr - sqrSum);
 	};
 
-	problem6();
+
+
+
+
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+What is the 10 001st prime number?
+
+function problem7(){
+	var p = 0;
+	for(var i = 0; p<14; i++){
+		if(isPrime(i)){
+			p++;
+		}
+		
+
+	}
+	function isPrime(numQuo){
+		if((numQuo%2 === 0) & (numQuo !==2)){
+			return false;
+		}
+		for(var j = 3; j <= numQuo/2; j+=2){
+			if(numQuo % j === 0){
+				return false
+			}
+		}
+		return true;
+	}
+	alert(i);
+
+};
+	problem7();
+}
 
 
 });
