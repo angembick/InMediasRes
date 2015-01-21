@@ -147,11 +147,12 @@ $(document).ready(function(){
 
 	function problem7(){
 		var p = 0;
-		for(var i = 0; p<7; i++){
+		for(var i = 2; p<6; i++){
 			if(isPrime(i)){
-				alert('i is '+i);
 				p++;
-				alert('p is '+p);
+				if(p === 6){
+					alert(i);
+				}
 			}
 		}		
 
@@ -166,7 +167,6 @@ $(document).ready(function(){
 			}
 			return true;
 		}
-		alert(i);
 
 	};
 	problem7();
