@@ -131,12 +131,12 @@ $(document).ready(function(){
 	function problem6(){
 		var sqrSum = 0;
 		var sumSqr = 0;
-		for(var i=1; i<=10;i++){
+		for(var i=1; i<=100;i++){
 			sqrSum +=(i*i);
 		}
-		for(var i=1; i<=10;i++){
+		for(var i=1; i<=100;i++){
 			sumSqr += i;
-			if(i===10){
+			if(i===100){
 				sumSqr *= sumSqr;
 			}
 		}
