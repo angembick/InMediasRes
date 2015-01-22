@@ -200,15 +200,12 @@ function problem9(){
 
 	function problem10(){
 		var primeSum = 2;
-		for(var i = 3; i<2000000 ; i+=2){
+		for(var i = 3; i<10 ; i+=2){
 			if(isPrime(i)){
 				primeSum +=i;
 			}
 		}
 		function isPrime(numQuo){
-			if((numQuo%2 === 0) & (numQuo !==2)){
-				return false;
-			}
 			for(var j = 3; j <= numQuo/2; j+=2){
 				if(numQuo % j === 0){
 					return false
