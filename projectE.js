@@ -197,7 +197,27 @@ function problem9(){
 		}
 	}
 };
-	problem9();
+
+	function problem10(){
+		var primeSum = 0;
+		for(var i = 0; i<10; i++){
+			if(isPrime(i)){
+				primeSum +=i;
+			}
+		}
+		function isPrime(numQuo){
+			if((numQuo%2 === 0) & (numQuo !==2)){
+				return false;
+			}
+			for(var j = 3; j <= numQuo/2; j+=2){
+				if(numQuo % j === 0){
+					return false
+				}
+			}
+			return true;
+		}
+	};
+	problem10();
 
 
 
