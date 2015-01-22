@@ -199,8 +199,8 @@ function problem9(){
 };
 
 	function problem10(){
-		var primeSum = 2;
-		for(var i = 3; i<10 ; i+=2){
+		var primeSum = 5;
+		for(var i = 5; i<1000000 ; i+=2){
 			if(isPrime(i)){
 				primeSum +=i;
 			}
