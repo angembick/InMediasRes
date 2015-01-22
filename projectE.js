@@ -197,7 +197,6 @@ $(document).ready(function(){
 
 	function problem10(){
 		//too slow
-		var start = new Date().getTime();
 		var primeSum = 5;
 		for(var i = 5; i<2000000 ; i+=2){
 			if(isPrime(i)){
@@ -212,8 +211,7 @@ $(document).ready(function(){
 			}
 			return true;
 		}
-		var end = new Date().getTime();
-		alert(primeSum+' Time: '+(end - start));
+		alert(primeSum);
 	};
 	problem10();
 
