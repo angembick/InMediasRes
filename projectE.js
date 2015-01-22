@@ -181,7 +181,23 @@ function problem8(){
 	}
 	alert(bigProduct);
 };
-	problem8();
+
+
+function problem9(){
+	var c = 'empty';
+	for(var a = 1; isNaN(c);a++){
+		for(var b = 2; b<500; b++){
+			if(Math.sqrt((a*a) + (b*b)) % 1 === 0 ){
+				if(a + b + (Math.sqrt((a*a) + (b*b))) === 1000){
+					c = Math.sqrt((a*a) + (b*b));
+					alert('a '+a+', b '+b+', c'+c);
+					break;
+				}
+			}
+		}
+	}
+};
+	problem9();
 
 
 
