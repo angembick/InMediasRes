@@ -216,6 +216,7 @@ function problem9(){
 			}
 			return true;
 		}
+		alert(primeSum);
 	};
 	problem10();
 
