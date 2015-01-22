@@ -157,9 +157,6 @@ $(document).ready(function(){
 		}		
 
 		function isPrime(numQuo){
-			if((numQuo%2 === 0) & (numQuo !==2)){
-				return false;
-			}
 			for(var j = 3; j <= numQuo/2; j+=2){
 				if(numQuo % j === 0){
 					return false
@@ -200,7 +197,7 @@ function problem9(){
 
 	function problem10(){
 		var primeSum = 5;
-		for(var i = 5; i<1000000 ; i+=2){
+		for(var i = 5; i<2000000 ; i+=2){
 			if(isPrime(i)){
 				primeSum +=i;
 			}
