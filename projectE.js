@@ -200,7 +200,7 @@ function problem9(){
 
 	function problem10(){
 		var primeSum = 0;
-		for(var i = 0; i<10; i++){
+		for(var i = 2; i<2000000; i++){
 			if(isPrime(i)){
 				primeSum +=i;
 			}
