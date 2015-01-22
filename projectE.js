@@ -213,7 +213,7 @@ $(document).ready(function(){
 		}
 		alert(primeSum);
 	};
-	problem10();
+	problem11();
 
 
 
