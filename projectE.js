@@ -190,7 +190,7 @@ function problem9(){
 			if(Math.sqrt((a*a) + (b*b)) % 1 === 0 ){
 				if(a + b + (Math.sqrt((a*a) + (b*b))) === 1000){
 					c = Math.sqrt((a*a) + (b*b));
-					alert('a '+a+', b '+b+', c'+c);
+					alert(a*b*c);
 					break;
 				}
 			}
