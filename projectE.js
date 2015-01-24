@@ -30,7 +30,7 @@ $(document).ready(function(){
 	          $('#postsText'+i).append(response.items[i].content);
 
 	          $('<div>').addClass('questionMark').appendTo('.posts'+i);
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.posts'+i+'.questionMark');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.posts'+i+' .questionMark');
 	          $('</div>').appendTo('.posts'+i);
 			}
 		   }
