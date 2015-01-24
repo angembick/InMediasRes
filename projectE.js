@@ -6,14 +6,14 @@ $(document).ready(function(){
         url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?startDate=2015-01-19T12%3A59%3A00-08%3A00&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
         success: function(response) {
          	 //populate the country array with blog content
-         	for(var i = 1; i <=response.items.length; i++){
+         	for(var i = 0; i <response.items.length; i++){
             
 	          //create row for every third container or id its the last item
-	          if((i%3 === 0) || (i=== response.items.length)){
+	          if((i%3 === 0)){
 	          	$('<div>').addClass('row').appendTo('.problems');
 	          }
 	          //close row
-	          else if((i-1)%3 === 0){
+	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
 	          	$('</div>').appendTo('.problems')
 	          }
 
