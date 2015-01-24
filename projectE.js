@@ -10,17 +10,15 @@ $(document).ready(function(){
             
 	          //create row for every third container or id its the last item
 	          if((i%3 === 0)){
-	          	$('<div>').addClass('row').appendTo('.problems');
-	          	$('<div>').addClass('row-same-height').appendTo('.problems');
+	          	$('<div>').addClass('row tableRow').appendTo('.problems');
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
 	          	$('</div>').appendTo('.problems');
-		    	$('</div>').appendTo('.problems');
 	          }
 
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1').appendTo('.problems');
+	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1 tableCell').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
