@@ -1,4 +1,7 @@
 .questionMark .glyphicon{
 	font-size: 50px;
-	position: center;
+	color: #9AFEFF;
+}
+.row{
+	height: 50%;
 }
