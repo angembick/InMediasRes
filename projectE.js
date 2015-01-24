@@ -9,7 +9,7 @@ $(document).ready(function(){
          	for(var i = 0; i <response.items.length; i++){
             
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i).appendTo('.problems');
+	          $('<div></div>').addClass('posts'+i+' container col-md-4').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
