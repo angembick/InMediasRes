@@ -8,4 +8,5 @@
 .tableCell{
 	display: table-cell;
 	float: none;
+	border:15px;
 } 
