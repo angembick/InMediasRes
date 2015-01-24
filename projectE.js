@@ -10,16 +10,17 @@ $(document).ready(function(){
             
 	          //create row for every third container or id its the last item
 	          if((i%3 === 0)){
-	          	$('<div>').addClass('row tableRow').appendTo('.problems');
+	          	$('<div>').addClass('row').appendTo('.problems');
+	          	$('<div>').addClass('row-same-height').appendTo('.problems');
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
-	          	$('</div>').appendTo('.problems');
+	          	$('</div>').appendTo('.problems')
+		    	$('</div>').appendTo('.problems')
 	          }
 
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('tableCell t'+i).appendTo.('.problems');
-	          $('<div></div>').addClass('posts'+i+' container well col-sm-3').appendTo('.problems .t'i);
+	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
@@ -29,7 +30,7 @@ $(document).ready(function(){
 	          $('#postsText'+i).append(response.items[i].content);
 
 	          $('<div>').addClass('questionMark').appendTo('.posts'+i);
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign text-center well-lg').appendTo('.posts'+i+' .questionMark');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign text-center well').appendTo('.posts'+i+' .questionMark');
 	          $('</div>').appendTo('.posts'+i);
 			}
 		   }
