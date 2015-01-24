@@ -11,14 +11,16 @@ $(document).ready(function(){
 	          //create row for every third container or id its the last item
 	          if((i%3 === 0)){
 	          	$('<div>').addClass('row').appendTo('.problems');
+	          	$('<div>').addClass('row-same-height').appendTo('.problems');
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
 	          	$('</div>').appendTo('.problems')
+		    	$('</div>').appendTo('.problems')
 	          }
 
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i+' container well col-md-4').appendTo('.problems');
+	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
@@ -32,6 +34,21 @@ $(document).ready(function(){
 	}; 
 
 	insertBlogs();   
+
+	var eulerSolutions=[];
+	eulerSolutions.push('');
+
+	var eulerNthPerson=[];
+	eulerNthPerson.push('427974');//1
+	eulerNthPerson.push('352126');//2
+	eulerNthPerson.push('256486');//3
+	eulerNthPerson.push('232481');//4
+	eulerNthPerson.push('245524');//5
+	eulerNthPerson.push('247366');//6
+	eulerNthPerson.push('212151');//7
+	eulerNthPerson.push('185761');//8
+	eulerNthPerson.push('184559');//9
+	eulerNthPerson.push('169342');//10
 
 	function problem1(){
 		var total = 0;
