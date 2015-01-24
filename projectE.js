@@ -15,8 +15,8 @@ $(document).ready(function(){
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
-	          	$('</div>').appendTo('.problems')
-		    	$('</div>').appendTo('.problems')
+	          	$('</div>').appendTo('.problems');
+		    	$('</div>').appendTo('.problems');
 	          }
 
 	          //open a div for blog unique with the location in the response array
