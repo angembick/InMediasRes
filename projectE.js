@@ -18,7 +18,8 @@ $(document).ready(function(){
 	          }
 
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1 tableCell').appendTo('.problems');
+	          $('<div></div>').addClass('tableCell t'+i).appendTo.('.problems');
+	          $('<div></div>').addClass('posts'+i+' container well col-sm-3').appendTo('.problems .t'i);
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
