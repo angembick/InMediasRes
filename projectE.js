@@ -6,10 +6,19 @@ $(document).ready(function(){
         url: "https://www.googleapis.com/blogger/v3/blogs/2096447250273390307/posts?startDate=2015-01-19T12%3A59%3A00-08%3A00&key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ",
         success: function(response) {
          	 //populate the country array with blog content
-         	for(var i = 0; i <response.items.length; i++){
+         	for(var i = 1; i <=response.items.length; i++){
             
+	          //create row for every third container or id its the last item
+	          if((i%3 === 0) || (i=== response.items.length)){
+	          	$('<div>').addClass('row').appendTo('.problems');
+	          }
+	          //close row
+	          else if((i-1)%3 === 0){
+	          	$('</div>').appendTo('.problems')
+	          }
+
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i+' container col-md-4').appendTo('.problems');
+	          $('<div></div>').addClass('posts'+i+' container well col-md-4').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
