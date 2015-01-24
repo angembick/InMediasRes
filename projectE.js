@@ -20,7 +20,7 @@ $(document).ready(function(){
 	          }
 
 	          //open a div for blog unique with the location in the response array
-	          $('<div></div>').addClass('posts'+i+' container well col-sm-3 col-sm-offset-1').appendTo('.problems');
+	          $('<div></div>').addClass('posts'+i+' container well col-sm-3').appendTo('.problems');
 
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
@@ -28,6 +28,10 @@ $(document).ready(function(){
 	          //Add blog text and titles
 	          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
 	          $('#postsText'+i).append(response.items[i].content);
+
+	          $('<div>').addClass('questionMark'+i).appendTo('.posts'+i);
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.questionMark'+i);
+	          $('</div>').appendTo('.posts'+i);
 			}
 		   }
 		})
