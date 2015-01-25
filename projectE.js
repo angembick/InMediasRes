@@ -29,9 +29,9 @@ $(document).ready(function(){
 	          $('.postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
 	          //create dropdown div and show text when clicked
 	          $('<div></div>').addClass('dropdown').appendTo('.postsText'+i);
-	          $('<button data-toggle="dropdown"></button').addClass('dropdown-toggle').appendTo('.postsText'+i+' .dropdown');
+	          $('<button data-toggle="dropdown"></button').addClass('btn btn-link dropdown-toggle').appendTo('.postsText'+i+' .dropdown');
 	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.postsText'+i+' .dropdown-toggle');
-	          $('<ul></ul>').addClass('dropdown-menu').appendTo('.postsText'+i+' .dropdown-toggle');
+	          $('<ul></ul>').addClass('dropdown-menu').appendTo('.postsText'+i+' .dropdown');
 	          $('<li>'+response.items[i].content+'</li>').appendTo('.postsText'+i+' .dropdown-menu');
 
 
