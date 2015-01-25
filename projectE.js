@@ -25,13 +25,16 @@ $(document).ready(function(){
 	          //add a div for the post content
 	          $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
 
-	          //Add blog text and titles
+	          //Add titles
 	          $('#postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
-	          $('#postsText'+i).append(response.items[i].content);
+	          //create dropdown div and show text when clicked
+	          $('<div></div>').addClass('dropdown').appendTo('.postsText'+i);
+	          $('<button data-toggle="dropdown"></button').addClass('dropdown-toggle');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.posts'+i+' .dropdown .dropdown-toggle');
+	          $('<ul></ul>').addClass('dropdown-menu').appendTo.appendTo('.posts'+i+' .dropdown .dropdown-toggle');
+	          $('<li>'+response.items[i].content+'</li>').appendTo('.posts'+i+' .dropdown-menu');
 
-	          $('<div>').addClass('questionMark').appendTo('.posts'+i);
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.posts'+i+' .questionMark');
-	          $('</div>').appendTo('.posts'+i);
+
 			}
 		   }
 		})
