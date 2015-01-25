@@ -28,11 +28,11 @@ $(document).ready(function(){
 	          //Add titles
 	          $('.postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
 	          //create dropdown div and show text when clicked
-	          $('.postsText'+i).append('<div></div>').addClass('dropdown');
-	          $('<button data-toggle="dropdown"></button').addClass('dropdown-toggle').appendTo('.postsText'+i+' dropdown-toggle');
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.posts'+i+' .dropdown .dropdown-toggle');
-	          $('<ul></ul>').addClass('dropdown-menu').appendTo('.posts'+i+' .dropdown .dropdown-toggle');
-	          $('<li>'+response.items[i].content+'</li>').appendTo('.posts'+i+' .dropdown-menu');
+	          $(('<div></div>').addClass('dropdown').appendTo('.postsText'+i);
+	          $('<button data-toggle="dropdown"></button').addClass('dropdown-toggle').appendTo('.postsText'+i+' .dropdown');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.postsText'+i+' .dropdown-toggle');
+	          $('<ul></ul>').addClass('dropdown-menu').appendTo('.postsText'+i+' .dropdown-toggle');
+	          $('<li>'+response.items[i].content+'</li>').appendTo('.postsText'+i+' .dropdown-menu');
 
 
 			}
