@@ -31,7 +31,7 @@ $(document).ready(function(){
 	          $('#postsText'+i).append('<div></div>').addClass('dropdown');
 	          $('<button data-toggle="dropdown"></button').addClass('dropdown-toggle').appendTo('#postsText'+i+' dropdown-toggle');
 	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('#posts'+i+' .dropdown .dropdown-toggle');
-	          $('<ul></ul>').addClass('dropdown-menu').appendTo.('#posts'+i+' .dropdown .dropdown-toggle');
+	          $('<ul></ul>').addClass('dropdown-menu').appendTo('#posts'+i+' .dropdown .dropdown-toggle');
 	          $('<li>'+response.items[i].content+'</li>').appendTo('#posts'+i+' .dropdown-menu');
 
 
