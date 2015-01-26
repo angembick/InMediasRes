@@ -28,7 +28,7 @@ $(document).ready(function(){
 	          //create dropdown div and show text when clicked
 	          $('<div></div>').addClass('panel-group').appendTo('.postsText'+i);
 	          $('<div ></div').addClass('panel panel-success').appendTo('.postsText'+i+' .panel-group');
-	          $('<div></div>').addClass('panel-heading').appendTo.('.postsText'+i+' .panel-success');
+	          $('<div></div>').addClass('panel-heading').appendTo('.postsText'+i+' .panel-success');
 	          $('<i></i>').addClass('glyphicon glyphicon-question-sign panel-title').appendTo('.postsText'+i+' .panel-heading');
 	          $('<div></div>').addClass('panel-collapse').appendTo('.postsText'+i+' .panel-success');
 	          $('<div>'+response.items[i].content+'</div>').addClass('panel-body').appendTo('.postsText'+i+' .panel-collapse');
