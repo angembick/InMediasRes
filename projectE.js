@@ -10,13 +10,11 @@ $(document).ready(function(){
             
 	          //create row for every third container or id its the last item
 	          if((i%3 === 0)){
-	          	$('<div>').addClass('row').appendTo('.problems');
-	          	$('<div>').addClass('row-same-height').appendTo('.problems');
+	          	$('<div>').addClass('row text-center').appendTo('.problems');
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
-	          	$('</div>').appendTo('.problems')
-		    	$('</div>').appendTo('.problems')
+	          	$('</div>').appendTo('.problems');
 	          }
 
 	          //open a div for blog unique with the location in the response array
@@ -28,11 +26,12 @@ $(document).ready(function(){
 	          //Add titles
 	          $('.postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
 	          //create dropdown div and show text when clicked
-	          $('<div></div>').addClass('dropdown').appendTo('.postsText'+i);
-	          $('<button ></button').addClass('btn btn-link dropdown-toggle').attr('data-toggle','dropdown').appendTo('.postsText'+i+' .dropdown');
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign').appendTo('.postsText'+i+' .dropdown-toggle');
-	          $('<ul></ul>').addClass('dropdown-menu').appendTo('.postsText'+i+' .dropdown');
-	          $('<li>'+response.items[i].content+'</li>').appendTo('.postsText'+i+' .dropdown-menu');
+	          $('<div></div>').addClass('panel-group').appendTo('.postsText'+i);
+	          $('<div ></div').addClass('panel panel-success').attr('data-toggle','dropdown').appendTo('.postsText'+i+' .panel-group';
+	          $('<div></div>').addClass('panel-heading').appendTo.('.postsText'+i+' .panel-success');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign panel-title').appendTo('.postsText'+i+' .panel-heading');
+	          $('<div></div>').addClass('panel-collapse').appendTo('.postsText'+i+' .panel-success');
+	          $('<div><p>'+response.items[i].content+'</p></div>').addClass('panel-body').appendTo('.postsText'+i+' .panel-collapse');
 
 
 			}
