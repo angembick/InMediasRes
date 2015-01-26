@@ -296,6 +296,14 @@ $(document).ready(function(){
 				}
 			}
 		}
+		for(var l = 3; l<(arrayOfRows.length); l++){
+			for(var li = 0; li<(arrayOfRows[0].length-4); li++){
+				if((arrayOfRows[l][li] * arrayOfRows[l-1][li+1] * arrayOfRows[l-2][li+2] * arrayOfRows[l-3][li+3])>bigQuo){
+					bigQuo =(arrayOfRows[l][li] * arrayOfRows[l-1][li+1] * arrayOfRows[l-2][li+2] * arrayOfRows[l-3][li+3]);
+				}
+			}
+		}
+
 		alert(bigQuo);
 	};
 	problem11();
