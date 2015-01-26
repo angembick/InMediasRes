@@ -296,7 +296,7 @@ $(document).ready(function(){
 				}
 			}
 		}
-		alert('0 0'+arrayOfRows[0][0]+'0 0 0'+arrayOfRows[0][0][0]+' end '+arrayOfRows[19][0]);
+		alert('top'+arrayOfRows[0][0][0]+'bot'+arrayOfRows[0][19][0]+' end '+arrayOfRows[0][0][19]);
 	};
 	problem11();
 
