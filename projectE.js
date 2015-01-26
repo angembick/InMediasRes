@@ -10,7 +10,7 @@ $(document).ready(function(){
             
 	          //create row for every third container or id its the last item
 	          if((i%3 === 0)){
-	          	$('<div>').addClass('row text-center').appendTo('.problems');
+	          	$('<div>').addClass('row').appendTo('.problems');
 	          }
 	          //close row
 	          else if((i-1)%3 === 0 || (i=== response.items.length-1)){
@@ -28,9 +28,9 @@ $(document).ready(function(){
 	          //create dropdown div and show text when clicked
 	          $('<div></div>').addClass('panel-group').appendTo('.postsText'+i);
 	          $('<div ></div').addClass('panel panel-success').appendTo('.postsText'+i+' .panel-group');
-	          $('<div></div>').addClass('panel-heading').appendTo('.postsText'+i+' .panel-success');
-	          $('<i></i>').addClass('glyphicon glyphicon-question-sign panel-title').appendTo('.postsText'+i+' .panel-heading');
-	          $('<div></div>').addClass('panel-collapse').appendTo('.postsText'+i+' .panel-success');
+	          $('<div></div>').addClass('panel-heading text-center').appendTo('.postsText'+i+' .panel-success');
+	          $('<i></i>').addClass('glyphicon glyphicon-question-sign panel-title').attr('data-toggle','collapse').attr('data-target','#question'+i).appendTo('.postsText'+i+' .panel-heading');
+	          $('<div></div>').addClass('panel-collapse collapse').attr('id','question'+i).appendTo('.postsText'+i+' .panel-success');
 	          $('<div>'+response.items[i].content+'</div>').addClass('panel-body').appendTo('.postsText'+i+' .panel-collapse');
 
 
