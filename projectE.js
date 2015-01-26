@@ -291,8 +291,9 @@ $(document).ready(function(){
 
 		for(var d = 0; d<(arrayOfRows[0].length-3); d++){
 			for(var di = 0; di<(arrayOfRows.length-3); di++){
-				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
-					bigQuo =(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
+				if((arrayOfRows[d][di] === 26) & (arrayOfRows[d+1][di+1]===63)){
+					alert(arrayOfRows[d+2][di+2]+' n'+arrayOfRows[d+3][di+3]);
+					alert(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
 				}
 			}
 		}
