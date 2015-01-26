@@ -289,14 +289,14 @@ $(document).ready(function(){
 //			}
 //		}
 //
-//		for(var d = 0; d<(arrayOfRows[0].length-4); d++){
-//			for(var di = 0; di<(arrayOfRows.length-4); di++){
-//				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
-//					bigQuo =(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
-//				}
-//			}
-//		}
-		alert('top'+arrayOfRows[0][0]+'top'+arrayOfRows[2][0]);
+		for(var d = 0; d<(arrayOfRows[0].length-4); d++){
+			for(var di = 0; di<(arrayOfRows.length-4); di++){
+				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
+					bigQuo =(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
+				}
+			}
+		}
+		alert(bigQuo);
 	};
 	problem11();
 
