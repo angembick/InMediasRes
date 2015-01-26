@@ -273,7 +273,7 @@ $(document).ready(function(){
 		var bigQuo = 0;
 
 		for(var r = 0; r<arrayOfRows.length-19; r++){
-			for(var ri = 0; ri<(arrayOfRows[0].length-4); ri++){
+			for(var ri = 0; ri<(arrayOfRows[0].length-3); ri++){
 				if((arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3])>bigQuo){
 					bigQuo = (arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3]);
 				}
@@ -282,22 +282,22 @@ $(document).ready(function(){
 		}
 
 		for(var c = 0; c<arrayOfRows[0].length; c++){
-			for(var ci = 0; ci<(arrayOfRows.length-4); ci++){
+			for(var ci = 0; ci<(arrayOfRows.length-3); ci++){
 				if((arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c])>bigQuo){
 					bigQuo = (arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c]);
 				}
 			}
 		}
 
-		for(var d = 0; d<(arrayOfRows[0].length-4); d++){
-			for(var di = 0; di<(arrayOfRows.length-4); di++){
+		for(var d = 0; d<(arrayOfRows[0].length-3); d++){
+			for(var di = 0; di<(arrayOfRows.length-3); di++){
 				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
 					bigQuo =(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
 				}
 			}
 		}
 		for(var l = 3; l<(arrayOfRows.length); l++){
-			for(var li = 0; li<(arrayOfRows[0].length-4); li++){
+			for(var li = 0; li<(arrayOfRows[0].length-3); li++){
 				if((arrayOfRows[l][li] * arrayOfRows[l-1][li+1] * arrayOfRows[l-2][li+2] * arrayOfRows[l-3][li+3])>bigQuo){
 					bigQuo =(arrayOfRows[l][li] * arrayOfRows[l-1][li+1] * arrayOfRows[l-2][li+2] * arrayOfRows[l-3][li+3]);
 				}
