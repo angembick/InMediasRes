@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 	          //Add titles
 	          $('.postsText'+i).append("<h2>" + response.items[i].title + "</h2>");
-	          //create panel div and show text when clicked
+	          //create dropdown div and show text when clicked
 	          $('<div></div>').addClass('panel-group').appendTo('.postsText'+i);
 	          $('<div ></div').addClass('panel panel-success').appendTo('.postsText'+i+' .panel-group');
 	          $('<div></div>').addClass('panel-heading text-center').appendTo('.postsText'+i+' .panel-success');
@@ -245,15 +245,7 @@ $(document).ready(function(){
 		}
 		alert(primeSum);
 	};
-
-
-
-	function problem11(){
-		
-
-		alert('bigQuo');
-	};
-	problem11();
+	//problem11();
 
 
 
