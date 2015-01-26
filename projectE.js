@@ -44,6 +44,7 @@ $(document).ready(function(){
 	var eulerSolutions=[];
 	eulerSolutions.push('');
 
+	//You are the 126635th person to have solved this problem.
 	var eulerNthPerson=[];
 	eulerNthPerson.push('427974');//1
 	eulerNthPerson.push('352126');//2
@@ -55,6 +56,7 @@ $(document).ready(function(){
 	eulerNthPerson.push('185761');//8
 	eulerNthPerson.push('184559');//9
 	eulerNthPerson.push('169342');//10
+	eulerNthPerson.push('126635');//11
 
 	function problem1(){
 		var total = 0;
@@ -283,17 +285,16 @@ $(document).ready(function(){
 
 		for(var c = 0; c<arrayOfRows[0].length; c++){
 			for(var ci = 0; ci<(arrayOfRows.length-3); ci++){
-				if((arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c])>bigQuo){
-					bigQuo = (arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c]);
+				if((arrayOfRows[ci][c] * arrayOfRows[ci+1][c] * arrayOfRows[ci+2][c] * arrayOfRows[ci+3][c])>bigQuo){
+					bigQuo = (arrayOfRows[ci][c] * arrayOfRows[ci+1][c] * arrayOfRows[ci+2][c] * arrayOfRows[ci+3][c]);
 				}
 			}
 		}
 
 		for(var d = 0; d<(arrayOfRows[0].length-3); d++){
 			for(var di = 0; di<(arrayOfRows.length-3); di++){
-				if((arrayOfRows[d][di] === 26) & (arrayOfRows[d+1][di+1]===63)){
-					alert(arrayOfRows[d+2][di+2]+' n'+arrayOfRows[d+3][di+3]);
-					alert(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
+				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
+					bigQuo =(arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3]);
 				}
 			}
 		}
