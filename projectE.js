@@ -273,11 +273,10 @@ $(document).ready(function(){
 		var bigQuo = 0;
 
 		for(var r = 0; r<arrayOfRows.length-19; r++){
-			for(var ri = 0; ri<(arrayOfRows[0].length-4); ri+1){
-				alert('ri '+ri);
-				//if((arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3])>bigQuo){
-				//	bigQuo = (arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3]);
-				//}
+			for(var ri = 0; ri<(arrayOfRows[0].length-4); ri++){
+				if((arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3])>bigQuo){
+					bigQuo = (arrayOfRows[r][ri] * arrayOfRows[r][ri+1] * arrayOfRows[r][ri+2] * arrayOfRows[r][ri+3]);
+				}
 			}
 
 		}
