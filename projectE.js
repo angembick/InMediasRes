@@ -281,14 +281,14 @@ $(document).ready(function(){
 //
 //		}
 //
-//		for(var c = 0; c<arrayOfRows[0].length; c++){
-//			for(var ci = 0; ci<(arrayOfRows.length-4); ci++){
-//				if((arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c])>bigQuo){
-//					bigQuo = (arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c]);
-//				}
-//			}
-//		}
-//
+		for(var c = 0; c<arrayOfRows[0].length; c++){
+			for(var ci = 0; ci<(arrayOfRows.length-4); ci++){
+				if((arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c])>bigQuo){
+					bigQuo = (arrayOfRows[ci][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c] * arrayOfRows[ci+3][c]);
+				}
+			}
+		}
+
 		for(var d = 0; d<(arrayOfRows[0].length-4); d++){
 			for(var di = 0; di<(arrayOfRows.length-4); di++){
 				if((arrayOfRows[d][di] * arrayOfRows[d+1][di+1] * arrayOfRows[d+2][di+2] * arrayOfRows[d+3][di+3])>bigQuo){
