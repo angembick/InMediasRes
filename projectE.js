@@ -295,7 +295,7 @@ $(document).ready(function(){
 				}
 			}
 		}
-		alert(bigQuo);
+		alert(arrayOfRows[0][0]+' end '+arrayOfRows[19][19]);
 	};
 	problem11();
 
