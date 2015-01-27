@@ -308,7 +308,8 @@ $(document).ready(function(){
 
 		alert(bigQuo);
 	};
-	problem11();
+	
+	//problem11();
 
 
 
