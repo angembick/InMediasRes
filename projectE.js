@@ -308,8 +308,51 @@ $(document).ready(function(){
 
 		alert(bigQuo);
 	};
-	
-	//problem11();
+
+
+	function problem12(){
+		//print out triangle numbers
+		var value = 0
+		var notFound = true;
+		for(var i = 1; notFound; i++){
+			value=0;
+			for(var j = i; j>0; j--){
+				value +=j;
+			}
+			if(findDivisors(value)>500){
+				alert(value+ ' divisors '+ findDivisors(value));
+				notFound = false;
+			}
+		}
+
+		//find out how many divisors a number has
+		function findDivisors(quotient){
+			var arrJ = [];
+			var arrI = [];
+
+			for (var p = 1; p<=quotient/2; p++){
+				if(quotient%p === 0){
+					//if the divisor hasent already been identified add it 
+					if(p !== arrJ[arrJ.length-1]){
+						if(p !== quotient/p){
+							arrI.push(p);
+							arrJ.push(quotient/p);
+						}
+						//but dont add it twice
+						else{
+							arrI.push(p);
+						}
+					}
+					else
+						break;
+					
+				}
+			}
+
+			return (arrI.length+arrJ.length);
+		};
+	};
+	//problem12();
 
 
 
