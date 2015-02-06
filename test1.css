@@ -62,12 +62,19 @@ body {
   #blog {
     float:none;
     width: 100%;
-    font-size: medium;
+    font-size: large;
   }
 .countryFlags{
   position: center;
   margin: 0; 
   width: 100%;
 }
+.imgDescription{
+  font-size: 40px;
+}
+#countryTitle{
+  font-size: 55px;
+}
+
 
 }
