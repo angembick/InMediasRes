@@ -62,6 +62,7 @@ body {
   #blog {
     float:none;
     width: 100%;
+    font-size: medium;
   }
 .countryFlags{
   position: center;
