@@ -63,7 +63,7 @@ body {
     float:none;
     width: 100%;
   }
-  .postsText{
+  .postsText p{
     font-size: large;
   }
 .countryFlags{
