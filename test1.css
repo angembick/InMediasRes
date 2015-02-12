@@ -94,5 +94,8 @@ body {
   .postsMap {
     display: none;
   }
+  .postsText{
+    width: 90%;
+  }
 
 }
