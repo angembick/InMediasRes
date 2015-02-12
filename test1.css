@@ -63,8 +63,6 @@ body {
 .showCountry .imgDescription {
   visibility: hidden;
 }
-.nopadding {
-}
 
 
 @media only screen and (max-device-width: 480px) {
@@ -94,9 +92,5 @@ body {
   .postsText{
     width: 100%;
   }
-  .nopadding {
-   padding: 0 !important;
-   margin: 0 !important;
-}
 
 }
