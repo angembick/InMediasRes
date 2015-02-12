@@ -97,7 +97,8 @@ $(document).ready(function() {
 
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
-          $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.replace(/<\/?span[^>]*>/g,"") + "</p>");
+          //remove all of the span elements embeded into the blog content
+          $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.replace(/<\/?span[^>]*>|<\/?div[^>]*>/g,"") + "</p>");
 
 
           for (lat in countryObj.blogArray[i].location) {
