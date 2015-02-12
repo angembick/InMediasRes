@@ -97,7 +97,7 @@ $(document).ready(function() {
 
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
-          $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.unwrap(); + "</p>");
+          $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.unwrap() + "</p>");
 
 
           for (lat in countryObj.blogArray[i].location) {
