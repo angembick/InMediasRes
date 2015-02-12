@@ -21,7 +21,6 @@ $(document).ready(function() {
     myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
     var displayCountry = myTrip[myTrip.length-1];
-    $('#argentinaButton').removeClass('hideCountry').addClass('showCountry');
 
 
     //calls the function to populate the blogs into the blog array of each country object
@@ -60,11 +59,7 @@ $(document).ready(function() {
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
         if (displayCountry != myTrip[i]){
-
-          $('#'+displayCountry.name.toLowerCase()+'Button').removeClass('showCountry').addClass('hideCountry');
           displayCountry = myTrip[i];
-          $('#'+displayCountry.name.toLowerCase()+'Button').removeClass('hideCountry').addClass('showCountry');
-
           populateBlogs(myTrip[i]);
           updateCountryTitle(myTrip[i]);
         }
@@ -73,10 +68,10 @@ $(document).ready(function() {
     });
 
     function updateCountryTitle(countryObj){
-      $('#countryTitle h1').fadeOut(500, function(){
+      $('#countryTitle h1').fadeOut(1000, function(){
         $('#countryTitle').empty()
-        $('#countryTitle').append('<h1>'+countryObj.name+'</br></h1>');
-        $('#countryTitle h1').fadeIn(500);
+        $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
+        $('#countryTitle h1').fadeIn(1000);
       });
     };
 
@@ -97,8 +92,7 @@ $(document).ready(function() {
 
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
-          //remove all of the span& div elements embeded into the blog content
-          $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.replace(/<\/?span[^>]*>|<\/?div[^>]*>/g,"") + "</p>");
+          $('#postsText'+i).append(countryObj.blogArray[i].content);
 
 
           for (lat in countryObj.blogArray[i].location) {

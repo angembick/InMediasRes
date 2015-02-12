@@ -3,13 +3,14 @@
 
   <head>
 
-  <title> In Medias Res</title>
+  <title> In Medias Res </title>
     <link rel="stylesheet" href="ihome.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     
 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script  type="text/javascript" src="https://apis.google.com/js/client.js?onload=init"></script>
-    <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZGvhqAz0grBbzAbGdI_htb72q8uA_KlQ" >
+    <script type="text/javascript"  src="https://maps.googleapis.com/maps/api/js?" >
     </script>
   </head>
 
@@ -21,32 +22,34 @@
     </div>
 
     <div class="content">
-      <div class="country">
-        <div class="countryName">
-        </div>
-        <div id="countryFlags" >
-          <div class="countryFlag">
-            <img id ="peruButton" src="/images/PeruPic.jpg" alt="Peru">
+      <div class="country container-fluid">
+          <div class="countryName">
           </div>
-          <div class="countryFlag">
-            <img  id ="boliviaButton" src="/images/BoliviaPic.jpg" alt="Bolivia">
+          <div id="countryFlags" class="row" >
+              <div id ="peruButton" class="countryFlag col-xs-3 hideCountry">
+                <img class="img-responsive img-circle" src="/images/PeruPic.jpg" alt="Peru"><p class="imgDescription"><span> PE</span></p>
+              </div>
+              <div  id ="boliviaButton" class="countryFlag col-xs-3 hideCountry">
+                <img  class="img-responsive img-circle" src="/images/BoliviaPic.jpg" alt="Bolivia"><p class="imgDescription"><span> BO</span></p>
+              </div>
+              <div id ="chileButton" class="countryFlag col-xs-3 hideCountry" >
+                <img class="img-responsive img-circle"  src="/images/ChilePic.jpg" alt="Chile"><p class="imgDescription"><span> CL</span></p>
+              </div>
+              <div id ="argentinaButton" class="countryFlag col-xs-3 hideCountry" >
+                <img class="img-responsive img-circle" src="/images/ArgentinaPic.jpg" alt="Argentina" ><p class="imgDescription"><span> AR</span></p>
+              </div>
           </div>
-          <div class="countryFlag" >
-            <img id ="chileButton"  src="/images/ChilePic.jpg" alt="Chile">
-          </div>
-          <div class="countryFlag" >
-            <img id ="argentinaButton"  src="/images/ArgentinaPic.jpg" alt="Argentina" >
-          </div>
-        </div>
         <div id = "countryTitle"></div>
       </div>
-		  <div class="blog" >
-	    </div>
-	  </div>
+      <div class="blog containter" >
+      </div>
+    </div>
 
 
 
     <script src = "ihome.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
   </body>
 </html>
