@@ -76,12 +76,12 @@ body {
     width: 100%;
   }
   .imgDescription{
-    font-size: 40px;
+    font-size: 55px;
   }
   #countryTitle h1{
     font-size: 55px;
   }
-  .blog p{
+  .blog {
     font-size: 30px;
   }
   .postsMap {
