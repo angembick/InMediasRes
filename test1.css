@@ -79,19 +79,19 @@ body {
     font-size: 55px;
   }
   #countryTitle h1{
-    font-size: 55px;
+    font-size: 65px;
   }
-  .blog {
-    font-size: 30px;
+  .blog p{
+    font-size: 40px;
   }
   .postsMap {
     display: none;
   }
   .postsText{
     height:100%;
-    width: 80%;
+    width: 75%;
     display: inline;
-    float: center;
+    float: right;
     margin: 10px;
   }
 
