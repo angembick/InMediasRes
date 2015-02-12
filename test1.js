@@ -75,7 +75,7 @@ $(document).ready(function() {
     function updateCountryTitle(countryObj){
       $('#countryTitle h1').fadeOut(1000, function(){
         $('#countryTitle').empty()
-        $('#countryTitle').append('<h1>'+countryObj.name+'</h1>');
+        $('#countryTitle').append('<h1>'+countryObj.name+'</br></h1>');
         $('#countryTitle h1').fadeIn(1000);
       });
     };
