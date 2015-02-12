@@ -97,7 +97,7 @@ $(document).ready(function() {
 
           //Add blog text and titles
           $('#postsText'+i).append("<h2>" + countryObj.blogArray[i].title + "</h2>");
-          //remove all of the span elements embeded into the blog content
+          //remove all of the span& div elements embeded into the blog content
           $('#postsText'+i).append("<p>" + countryObj.blogArray[i].content.replace(/<\/?span[^>]*>|<\/?div[^>]*>/g,"") + "</p>");
 
 
