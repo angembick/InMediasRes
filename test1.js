@@ -61,9 +61,9 @@ $(document).ready(function() {
        if(myTrip[i].name === countryID){
         if (displayCountry != myTrip[i]){
 
-          $('#'+displayCountry[0]+'Button').removeClass('showCountry');
+          $('#'+displayCountry[0].toLowerCase()+'Button').removeClass('showCountry');
           displayCountry = myTrip[i];
-          $('#'+displayCountry[0]+'Button').addClass('showCountry');
+          $('#'+displayCountry[0].toLowerCase()+'Button').addClass('showCountry');
 
           populateBlogs(myTrip[i]);
           updateCountryTitle(myTrip[i]);
