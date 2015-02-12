@@ -83,10 +83,13 @@ body {
   }
   .blog p{
     font-size: 40px;
+    text-indent: 8px;
   }
   .blog h2{
     font-size: 50px;
     font-weight: bolder;
+    float: left;
+    text-indent: 5px;
   }
   .postsMap {
     display: none;
