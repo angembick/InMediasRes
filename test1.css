@@ -70,29 +70,29 @@ body {
     float:none;
     width: 100%;
   }
-.countryFlags{
-  position: center;
-  margin: 0; 
-  width: 100%;
-}
-.imgDescription{
-  font-size: 40px;
-}
-#countryTitle h1{
-  font-size: 55px;
-}
-.postsText p{
-  font-size: 30px;
-}
-.postsMap {
-  display: none;
-}
-.postsText{
-  height:100%;
-  width: 80%;
-  display: inline;
-  float: center;
-  margin: 10px;
-}
+  .countryFlags{
+    position: center;
+    margin: 0; 
+    width: 100%;
+  }
+  .imgDescription{
+    font-size: 40px;
+  }
+  #countryTitle h1{
+    font-size: 55px;
+  }
+  .blog p{
+    font-size: 30px;
+  }
+  .postsMap {
+    display: none;
+  }
+  .postsText{
+    height:100%;
+    width: 80%;
+    display: inline;
+    float: center;
+    margin: 10px;
+  }
 
 }
