@@ -21,6 +21,7 @@ $(document).ready(function() {
     myTrip[myTrip.length] = new Country('Argentina', '2014-12-08T11:00:00', '2014-12-18T11:00:00' );
 
     var displayCountry = myTrip[myTrip.length-1];
+    $('#'+displayCountry[0]+'Button').addClass('showCountry');
 
 
     //calls the function to populate the blogs into the blog array of each country object
