@@ -75,6 +75,11 @@
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+.showwCountry img {
+  -webkit-transition: all .6s ease; 
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 .countries .imgDescription {
   position: absolute;
   top:10px;
@@ -93,6 +98,10 @@
 
 
 .countries .thumbnail:hover .imgDescription {
+  visibility: hidden;
+  opacity: 0;
+}
+.showCountry .imgDescription {
   visibility: hidden;
   opacity: 0;
 }

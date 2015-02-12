@@ -59,7 +59,11 @@ $(document).ready(function() {
       for(var i = 0; i<myTrip.length; i++){
        if(myTrip[i].name === countryID){
         if (displayCountry != myTrip[i]){
+
+          $('#'+displayCountry+'Button').removeClass('showCountry');
           displayCountry = myTrip[i];
+          $('#'+displayCountry+'Button').addClass('showCountry');
+
           populateBlogs(myTrip[i]);
           updateCountryTitle(myTrip[i]);
         }

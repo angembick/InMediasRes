@@ -38,6 +38,11 @@ body {
   -webkit-filter: grayscale(1);
   filter: grayscale(1);
 }
+.showCountry img {
+  -webkit-transition: all .6s ease; 
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 #countryFlags img:hover {
   -webkit-transition: all .6s ease; 
   filter: none;
@@ -55,7 +60,9 @@ body {
 .countryFlag:hover .imgDescription{
   visibility: hidden;
 }
-
+.showCountry .imgDescription {
+  visibility: hidden;
+}
 
 
 @media only screen and (max-device-width: 480px) {
