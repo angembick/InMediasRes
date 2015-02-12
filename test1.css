@@ -91,15 +91,5 @@ body {
     float: left;
     text-indent: 5px;
   }
-  .postsMap {
-    display: none;
-  }
-  .postsText{
-    height:100%;
-    width: 100%;
-    display: inline;
-    text-align: center;
-    margin: 15px;
-  }
 
 }

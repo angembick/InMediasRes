@@ -90,7 +90,7 @@ $(document).ready(function() {
 
         for(var i = 0; i<countryObj.blogArray.length; i++){
           //open a div for blog unique with the location in the response array
-          $('<div></div>').addClass('posts'+i).appendTo('.blog');
+          $('<div></div>').addClass('col-xs-10 col-md-7 col-md-offset-1 posts'+i).appendTo('.blog');
 
           //add a div for the post content
           $('<div></div>').addClass('postsText').attr('id','postsText'+i).appendTo('.posts'+i);
@@ -104,7 +104,7 @@ $(document).ready(function() {
           for (lat in countryObj.blogArray[i].location) {
 
             //add a div for the post map
-            $('<div></div>').addClass('postsMap').attr('id','postsMap'+i).appendTo('.posts'+i);
+            $('<div></div>').addClass('postsMap col-xs-0 col-md-4').attr('id','postsMap'+i).appendTo('.posts'+i);
 
             var mapOptions = {
                 center: new google.maps.LatLng(countryObj.blogArray[i].location.lat,countryObj.blogArray[i].location.lng),
